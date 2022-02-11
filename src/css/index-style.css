@@ -1,0 +1,75 @@
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: #000000;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display";
+  font-weight: bold;
+}
+
+.navbar-custom {
+  background-color: #ffffff00;
+  justify-content: space-between;
+  width: 100%;
+  /* position: fixed;
+  z-index: 999; */
+}
+
+.container-custom {
+  padding: 5rem 0rem;
+}
+
+.grid-container {
+  padding: 2rem 0rem;
+}
+
+.grid-container img {
+  max-height: 395px;
+}
+
+.btn-transparent-custom {
+  background-color: #ffffff00;
+  color: black;
+  border-style: none none solid none;
+  padding: 0.4rem;
+}
+
+.btn-custom {
+  border-radius: 0rem;
+  letter-spacing: 2px;
+}
+
+.main-container,
+.content-container {
+  padding: 3rem 0rem;
+}
+
+.footer-custom {
+  background-color: #fff;
+  color: #000;
+}
+
+.footer-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/placeholder-footer.jpg");
+  height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
