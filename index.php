@@ -278,34 +278,63 @@
           </div>
           <?php
           print_r($cities);
+          echo $cities[6];
           ?>
-          <form action="" method="get">   
+          <form action="" method="get" name="citiesForm">
+
             <div style="max-width: 50%;">
               <div class="input-group mb-3" >
-                <input type="text" name="city1" class="form-control" placeholder="Recipient's username" value="aaa">
+                <select class="form-select" name="amountOfForms">
+                    <option selected>Open this select menu</option>
+                    <option value="one">1</option>
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                    <option value="four">4</option>
+                    <option value="five">5</option>
+                    <option value="six">6</option>
+                  </select>
+                  
+                  <button type="button" class="btn btn-success" onclick="showHideForms()">Success</button>
+
+              </div>
+                
+              <div class="input-group mb-3" >
+                <input type="text" name="city1" class="form-control" placeholder="Recipient's username">
               </div>
               <div class="input-group mb-3" >
-                <input type="text" name="city2" class="form-control" placeholder="Recipient's username" value="aaa">
+                <input type="text" name="city2" class="form-control" placeholder="Recipient's username">
               </div>
               <div class="input-group mb-3" >
-                <input type="text" name="city3" class="form-control" placeholder="Recipient's username" value="aaa">
+                <input type="text" name="city3" class="form-control" placeholder="Recipient's username">
               </div>
               <div class="input-group mb-3" >
-                <input type="text" name="city4" class="form-control" placeholder="Recipient's username" value="aaa">
+                <input type="text" name="city4" class="form-control" placeholder="Recipient's username">
               </div>
               <div class="input-group mb-3" >
-                <input type="text" name="city5" class="form-control" placeholder="Recipient's username" value="aaa">
+                <input type="text" name="city5" class="form-control" placeholder="Recipient's username">
               </div>
               <div class="input-group mb-3" >
-                <input type="text" name="city6" class="form-control" placeholder="Recipient's username" value="aaa">
+                <input type="text" name="city6" class="form-control" placeholder="Recipient's username">
               </div>
-          </div>          
-            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
+              <div class="input-group mb-3" >
+                <select class="form-select" name="amountOfCards">
+                  <option selected>Open this select menu</option>
+                  <option value="one">1</option>
+                  <option value="two">2</option>
+                  <option value="three">3</option>
+                </select>    
+                <button class="btn btn-danger" type="button" id="button-addon1" onclick="showHideCards()">Button</button>
+
+              </div>
+              
+              <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
+            </div>
+
           </form>
         </div>
 
         <div class="row">
-          <div class="col">
+          <div class="col" id="card1" style="max-width: 33%;">
             <img
               src="./src/img/placeholder-grid-01.jpg"
               class="img-fluid"
@@ -332,7 +361,7 @@
               </a>
             </div>
           </div>
-          <div class="col">
+          <div class="col" id="card2" style="max-width: 33%;">
             <img
               src="./src/img/placeholder-grid-02.jpg"
               class="img-fluid"
@@ -358,7 +387,7 @@
               </a>
             </div>
           </div>
-          <div class="col">
+          <div class="col" id="card3" style="max-width: 33%;">
             <img
               src="./src/img/placeholder-grid-03.jpg"
               class="img-fluid"
@@ -430,6 +459,8 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Custom Script -->
+    <script src="./index.js"></script>
     <!-- <script src="src/script/hero.js"></script> -->
   </body>
 </html>
