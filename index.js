@@ -6,19 +6,19 @@ function showHideCards() {
     let card3 = document.getElementById("card3");
 
     if(amountOfCards == "one") {
-        card1.style.display = "block"
+        card1.style.display = "grid"
         card2.style.display = "none"
         card3.style.display = "none"
     }
     if(amountOfCards == "two") {
-        card1.style.display = "block"
-        card2.style.display = "block"
+        card1.style.display = "grid"
+        card2.style.display = "grid"
         card3.style.display = "none"
     }
     if(amountOfCards == "three") {
-        card1.style.display = "block"
-        card2.style.display = "block"
-        card3.style.display = "block"
+        card1.style.display = "grid"
+        card2.style.display = "grid"
+        card3.style.display = "grid"
     }
 }
 

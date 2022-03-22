@@ -30,6 +30,8 @@
     array_push($cities, $city6 );
   }
 
+  $cities = \array_diff($cities, [""]);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -277,12 +279,10 @@
             </div>
           </div>
           <?php
-          print_r($cities);
-          echo $cities[6];
+            print_r($cities);
           ?>
           <form action="" method="get" name="citiesForm">
-
-            <div style="max-width: 50%;">
+            <div class="mx-auto" style="max-width: 50%;">
               <div class="input-group mb-3" >
                 <select class="form-select" name="amountOfForms">
                     <option selected>Open this select menu</option>
@@ -293,28 +293,31 @@
                     <option value="five">5</option>
                     <option value="six">6</option>
                   </select>
-                  
                   <button type="button" class="btn btn-success" onclick="showHideForms()">Success</button>
-
               </div>
-                
-              <div class="input-group mb-3" >
-                <input type="text" name="city1" class="form-control" placeholder="Recipient's username">
-              </div>
-              <div class="input-group mb-3" >
-                <input type="text" name="city2" class="form-control" placeholder="Recipient's username">
-              </div>
-              <div class="input-group mb-3" >
-                <input type="text" name="city3" class="form-control" placeholder="Recipient's username">
-              </div>
-              <div class="input-group mb-3" >
-                <input type="text" name="city4" class="form-control" placeholder="Recipient's username">
-              </div>
-              <div class="input-group mb-3" >
-                <input type="text" name="city5" class="form-control" placeholder="Recipient's username">
-              </div>
-              <div class="input-group mb-3" >
-                <input type="text" name="city6" class="form-control" placeholder="Recipient's username">
+              <div class="row">
+                <div class="col">
+                  <div class="input-group mb-3" >
+                    <input type="text" name="city1" class="form-control" placeholder="Recipient's username">
+                  </div>
+                  <div class="input-group mb-3" >
+                    <input type="text" name="city2" class="form-control" placeholder="Recipient's username">
+                  </div>
+                  <div class="input-group mb-3" >
+                    <input type="text" name="city3" class="form-control" placeholder="Recipient's username">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="input-group mb-3" >
+                    <input type="text" name="city4" class="form-control" placeholder="Recipient's username">
+                  </div>
+                  <div class="input-group mb-3" >
+                    <input type="text" name="city5" class="form-control" placeholder="Recipient's username">
+                  </div>
+                  <div class="input-group mb-3" >
+                    <input type="text" name="city6" class="form-control" placeholder="Recipient's username">
+                  </div>
+                </div>
               </div>
               <div class="input-group mb-3" >
                 <select class="form-select" name="amountOfCards">
@@ -334,13 +337,13 @@
         </div>
 
         <div class="row">
-          <div class="col" id="card1" style="max-width: 33%;">
+          <div class="col" id="card1">
             <img
               src="./src/img/placeholder-grid-01.jpg"
               class="img-fluid"
               style="min-width: 315px; max-height: 390px"
             />
-            <div class="grid-container">
+            <div class="grid-container" >
               <h3>Paris</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni a
@@ -361,7 +364,7 @@
               </a>
             </div>
           </div>
-          <div class="col" id="card2" style="max-width: 33%;">
+          <div class="col" id="card2">
             <img
               src="./src/img/placeholder-grid-02.jpg"
               class="img-fluid"
@@ -387,7 +390,7 @@
               </a>
             </div>
           </div>
-          <div class="col" id="card3" style="max-width: 33%;">
+          <div class="col" id="card3">
             <img
               src="./src/img/placeholder-grid-03.jpg"
               class="img-fluid"
