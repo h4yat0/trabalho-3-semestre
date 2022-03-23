@@ -32,6 +32,15 @@
 
   $cities = \array_diff($cities, [""]);
 
+  if(isset($_GET['amountOfCards'])){
+    $amountOfCards = $_GET['amountOfCards'];
+  }
+
+  
+
+  
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -85,6 +94,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./src/css/hero.css" />
     <link rel="stylesheet" href="./src/css/index-style.css" />
+    <link rel="stylesheet" href="./src/css/formCitiess.css">
 
     <title>01</title>
   </head>
@@ -269,7 +279,7 @@
         <div class="container container-custom">
           <h1>Lorem ipsum dolor sit.</h1>
           <div class="row" style="justify-content: space-evenly">
-            <div class="col-12">
+            <div class="col-10">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quaerat, eius voluptatibus illo temporibus obcaecati est totam
@@ -277,93 +287,109 @@
                 quos ea!
               </p>
             </div>
+            <div class="col">
+            <button type="button" class="btn btn-dark btn-custom" onclick="ShowHideTripForms()">Lorem, ipsum.</button>
+            </div>
           </div>
           <?php
             print_r($cities);
           ?>
-          <form action="" method="get" name="citiesForm">
-            <div class="mx-auto" style="max-width: 50%;">
-              <div class="input-group mb-3" >
-                <select class="form-select" name="amountOfForms">
+          <div id="divformCities" class="formCities">
+            <form action="" method="get" name="citiesForm">
+              <div class="mx-auto" style="max-width: 50%;">
+                <div class="input-group mb-3" >
+                  <select class="form-select" name="amountOfForms">
+                      <option selected>Open this select menu</option>
+                      <option value="one">1</option>
+                      <option value="two">2</option>
+                      <option value="three">3</option>
+                      <option value="four">4</option>
+                      <option value="five">5</option>
+                      <option value="six">6</option>
+                    </select>
+                    <button type="button" class="btn btn-success" onclick="showHideForms()">Success</button>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="input-group mb-3" >
+                      <input type="text" name="city1" class="form-control" placeholder="Digite um país">
+                    </div>
+                    <div class="input-group mb-3" >
+                      <input type="text" name="city2" class="form-control" placeholder="Digite um país">
+                    </div>
+                    <div class="input-group mb-3" >
+                      <input type="text" name="city3" class="form-control" placeholder="Digite um país">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="input-group mb-3" >
+                      <input type="text" name="city4" class="form-control" placeholder="Digite um país">
+                    </div>
+                    <div class="input-group mb-3" >
+                      <input type="text" name="city5" class="form-control" placeholder="Digite um país">
+                    </div>
+                    <div class="input-group mb-3" >
+                      <input type="text" name="city6" class="form-control" placeholder="Digite um país">
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group mb-3" >
+                  <select class="form-select" name="amountOfCards">
                     <option selected>Open this select menu</option>
                     <option value="one">1</option>
                     <option value="two">2</option>
                     <option value="three">3</option>
-                    <option value="four">4</option>
-                    <option value="five">5</option>
-                    <option value="six">6</option>
-                  </select>
-                  <button type="button" class="btn btn-success" onclick="showHideForms()">Success</button>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <div class="input-group mb-3" >
-                    <input type="text" name="city1" class="form-control" placeholder="Recipient's username">
-                  </div>
-                  <div class="input-group mb-3" >
-                    <input type="text" name="city2" class="form-control" placeholder="Recipient's username">
-                  </div>
-                  <div class="input-group mb-3" >
-                    <input type="text" name="city3" class="form-control" placeholder="Recipient's username">
-                  </div>
+                  </select>    
+                  <button class="btn btn-danger" type="button" id="button-addon1" onclick="showHideCards()">Button</button>
+  
                 </div>
-                <div class="col">
-                  <div class="input-group mb-3" >
-                    <input type="text" name="city4" class="form-control" placeholder="Recipient's username">
-                  </div>
-                  <div class="input-group mb-3" >
-                    <input type="text" name="city5" class="form-control" placeholder="Recipient's username">
-                  </div>
-                  <div class="input-group mb-3" >
-                    <input type="text" name="city6" class="form-control" placeholder="Recipient's username">
-                  </div>
-                </div>
+  
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
               </div>
-              <div class="input-group mb-3" >
-                <select class="form-select" name="amountOfCards">
-                  <option selected>Open this select menu</option>
-                  <option value="one">1</option>
-                  <option value="two">2</option>
-                  <option value="three">3</option>
-                </select>    
-                <button class="btn btn-danger" type="button" id="button-addon1" onclick="showHideCards()">Button</button>
+  
+            </form>
 
-              </div>
-              
-              <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
-            </div>
+            <?php
+              for($i=0; $i < count($cities); $i++){
+                $rando = $cities[mt_rand(0, count($cities))];
+                if($rando == 'Paris'){
 
-          </form>
+                }
+
+              }
+            ?>
+
+          </div>
         </div>
 
         <div class="row">
-          <div class="col" id="card1">
-            <img
-              src="./src/img/placeholder-grid-01.jpg"
-              class="img-fluid"
-              style="min-width: 315px; max-height: 390px"
-            />
-            <div class="grid-container" >
-              <h3>Paris</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni a
-                exercitationem debitis neque provident dicta, ab tenetur
-                repellat, recusandae rerum commodi voluptas sapiente, minima
-                atque nostrum obcaecati vitae laudantium accusamus earum facere?
-                Harum, cumque ea. Ab numquam enim laudantium qui cumque, officia
-                eveniet sapiente labore, saepe et accusamus delectus quasi.
-              </p>
-              <a href="city.php?cidade=paris">
-                <button
-                  type="button"
-                  class="btn btn-dark btn-custom btn-transparent-custom"
-                >
-                  SAIBA MAIS
-                </button>
-                
-              </a>
+            <div class="col" id="card1" >
+              <img
+                src="./src/img/placeholder-grid-01.jpg"
+                class="img-fluid"
+                style="min-width: 315px; max-height: 390px"
+              />
+              <div class="grid-container mx-auto" >
+                <h3>Paris</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni a
+                  exercitationem debitis neque provident dicta, ab tenetur
+                  repellat, recusandae rerum commodi voluptas sapiente, minima
+                  atque nostrum obcaecati vitae laudantium accusamus earum facere?
+                  Harum, cumque ea. Ab numquam enim laudantium qui cumque, officia
+                  eveniet sapiente labore, saepe et accusamus delectus quasi.
+                </p>
+                <a href="city.php?cidade=paris">
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-custom btn-transparent-custom"
+                  >
+                    SAIBA MAIS
+                  </button>
+                  
+                </a>
+              </div>
             </div>
-          </div>
           <div class="col" id="card2">
             <img
               src="./src/img/placeholder-grid-02.jpg"
@@ -464,6 +490,7 @@
 
     <!-- Custom Script -->
     <script src="./index.js"></script>
+    <script src="./showHide.js"></script>
     <!-- <script src="src/script/hero.js"></script> -->
   </body>
 </html>
