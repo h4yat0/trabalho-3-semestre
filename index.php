@@ -30,16 +30,7 @@
     array_push($cities, $city6 );
   }
 
-  $cities = \array_diff($cities, [""]);
-
-  if(isset($_GET['amountOfCards'])){
-    $amountOfCards = $_GET['amountOfCards'];
-  }
-
-  
-
-  
-
+  $cities = array_diff($cities, [""]);
 
 ?>
 <!DOCTYPE html>
@@ -291,75 +282,74 @@
             <button type="button" class="btn btn-dark btn-custom" onclick="ShowHideTripForms()">Lorem, ipsum.</button>
             </div>
           </div>
-          <?php
-            print_r($cities);
-          ?>
-          <div id="divformCities" class="formCities">
-            <form action="" method="get" name="citiesForm">
-              <div class="mx-auto" style="max-width: 50%;">
-                <div class="input-group mb-3" >
-                  <select class="form-select" name="amountOfForms">
-                      <option selected>Open this select menu</option>
-                      <option value="one">1</option>
-                      <option value="two">2</option>
-                      <option value="three">3</option>
-                      <option value="four">4</option>
-                      <option value="five">5</option>
-                      <option value="six">6</option>
-                    </select>
-                    <button type="button" class="btn btn-success" onclick="showHideForms()">Success</button>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <div class="input-group mb-3" >
-                      <input type="text" name="city1" class="form-control" placeholder="Digite um país">
-                    </div>
-                    <div class="input-group mb-3" >
-                      <input type="text" name="city2" class="form-control" placeholder="Digite um país">
-                    </div>
-                    <div class="input-group mb-3" >
-                      <input type="text" name="city3" class="form-control" placeholder="Digite um país">
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="input-group mb-3" >
-                      <input type="text" name="city4" class="form-control" placeholder="Digite um país">
-                    </div>
-                    <div class="input-group mb-3" >
-                      <input type="text" name="city5" class="form-control" placeholder="Digite um país">
-                    </div>
-                    <div class="input-group mb-3" >
-                      <input type="text" name="city6" class="form-control" placeholder="Digite um país">
-                    </div>
-                  </div>
-                </div>
-                <div class="input-group mb-3" >
-                  <select class="form-select" name="amountOfCards">
-                    <option selected>Open this select menu</option>
-                    <option value="one">1</option>
-                    <option value="two">2</option>
-                    <option value="three">3</option>
-                  </select>    
-                  <button class="btn btn-danger" type="button" id="button-addon1" onclick="showHideCards()">Button</button>
-  
-                </div>
-  
-                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
-              </div>
-  
-            </form>
-
+          <br>
+          <div style="border-radius: 5px; border: 2px solid red; padding: 20px;">
+          <p class="text-center">
             <?php
-              for($i=0; $i < count($cities); $i++){
-                $rando = $cities[mt_rand(0, count($cities))];
-                if($rando == 'Paris'){
-
-                }
-
-              }
+              print_r($cities);
+              
+              echo '<p class= "text-center"> Cidade: ' . $cities[mt_rand(0, count($cities)-1)] . '</p>';
             ?>
 
-          </div>
+          </p>
+            <div id="divformCities" class="formCities">
+              <form action="" method="get" name="citiesForm">
+                <div class="mx-auto" style="max-width: 50%;">
+                  <div class="input-group mb-3" >
+                    <select class="form-select" name="amountOfForms">
+                        <option selected>Open this select menu</option>
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                        <option value="four">4</option>
+                        <option value="five">5</option>
+                        <option value="six">6</option>
+                      </select>
+                      <button type="button" class="btn btn-success" onclick="showHideForms()">Success</button>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group mb-3" >
+                        <input type="text" name="city1" class="form-control" placeholder="Digite um país">
+                      </div>
+                      <div class="input-group mb-3" >
+                        <input type="text" name="city2" class="form-control" placeholder="Digite um país">
+                      </div>
+                      <div class="input-group mb-3" >
+                        <input type="text" name="city3" class="form-control" placeholder="Digite um país">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group mb-3" >
+                        <input type="text" name="city4" class="form-control" placeholder="Digite um país">
+                      </div>
+                      <div class="input-group mb-3" >
+                        <input type="text" name="city5" class="form-control" placeholder="Digite um país">
+                      </div>
+                      <div class="input-group mb-3" >
+                        <input type="text" name="city6" class="form-control" placeholder="Digite um país">
+                      </div>
+                    </div>
+                  </div>
+                  <!--  EM DESENVOLVIMENTO
+
+                    <div class="input-group mb-3" >
+                      <select class="form-select" name="amountOfCards">
+                        <option selected>Open this select menu</option>
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                      </select>    
+                      <button class="btn btn-danger" type="button" id="button-addon1" onclick="showHideCards()">Button</button>
+                    </div>
+                   -->
+                  <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
+    
+                </div>
+              </form>
+            </div>
+        
+        </div>
         </div>
 
         <div class="row">
