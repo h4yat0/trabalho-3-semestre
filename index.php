@@ -87,7 +87,7 @@
     <link rel="stylesheet" href="./src/css/index-style.css" />
     <link rel="stylesheet" href="./src/css/formCitiess.css">
 
-    <title>01</title>
+    <title>Site de viagens</title>
   </head>
 
   <body>
@@ -231,11 +231,10 @@
                 transform: translateY(-50%);
               "
             >
-              <h1>Lorem ipsum dolor sit, amet consectetur</h1>
+              <h1>Site de viagens</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Adipisci error earum similique consequatur repudiandae fuga
-                omnis animi ipsa ea ad!
+                Nos forneceremos a melhor experiencia possível em sua viagem <br>
+                "Quer fazer a viagem dos seus sonhos? Venha conosco. Nos fornecemos o melhor experiência possível em sua viagem dos sonhos"
               </p>
             </div>
           </div>
@@ -251,31 +250,23 @@
           <div class="col">
             <img src="./src/img/placeholder-05.jpg" class="img-fluid" />
             <p style="padding: 1rem 0rem">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              laudantium voluptatum ut laboriosam officiis odit, error sed
-              similique perferendis debitis? Magnam deleniti eligendi
-              repudiandae quos!
+            Em nossos pacotes nos abrangemos os mais variados preços, para assim caber em seu bolso. E varias formas de locomoções como: avião, navio, trem, entre outros. E por ultimo reservamos pacotes com estadias em hotéis ou em casa, sempre visando a melhor experiência possível em  sua viajem dos sonhos
             </p>
           </div>
-          
           <div class="col">
-            <h2>Lorem ipsum dolor sit.</h2>
+            <h2>Lugares</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              quia totam, deserunt eius nam adipisci!
+              Nos trabalhos com viagens ao redor do mundo todo, com diferentes tipos de transportes 
             </p>
             <img src="./src/img/placeholder-06.jpg" class="img-fluid" />
           </div>
         </div>
         <div class="container container-custom">
-          <h1>Lorem ipsum dolor sit.</h1>
+          <h1>Está com dúvida para onde ir?</h1>
           <div class="row" style="justify-content: space-evenly">
             <div class="col-10">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat, eius voluptatibus illo temporibus obcaecati est totam
-                nobis, perferendis libero itaque dignissimos inventore, alias
-                quos ea!
+                Deixe nosso software decidir por você, clicando nesse botão na lateral. Você pode ver alguns países de exemplo abaixo também.
               </p>
             </div>
             <div class="col">
@@ -285,11 +276,27 @@
           <br>
           <div style="border-radius: 5px; border: 2px solid red; padding: 20px;">
           <p class="text-center">
+
             <?php
               print_r($cities);
-              
-              echo '<p class= "text-center"> Cidade: ' . $cities[mt_rand(0, count($cities)-1)] . '</p>';
+
             ?>
+          <div class="d-flex">
+            <?php
+              echo '<ul class="list-group list-group-horizontal mx-auto">';
+
+              for($i = 0; $i < count($cities); $i++){
+                echo '<li class="list-group-item">' . $cities[$i] . '</li>';
+
+              }
+
+              echo '</ul>';
+
+              
+              // echo '<p class= "text-center"> Cidade: ' . $cities[mt_rand(0, count($cities)-1)] . '</p>';
+            ?>
+
+          </div>
 
           </p>
             <div id="divformCities" class="formCities">
