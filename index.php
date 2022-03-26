@@ -85,7 +85,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./src/css/hero.css" />
     <link rel="stylesheet" href="./src/css/index-style.css" />
-    <link rel="stylesheet" href="./src/css/formCitiess.css">
+    <link rel="stylesheet" href="./src/css/formCitiess.css" />
 
     <title>Site de viagens</title>
   </head>
@@ -270,7 +270,7 @@
               </p>
             </div>
             <div class="col">
-            <button type="button" class="btn btn-dark btn-custom" onclick="ShowHideTripForms()">Lorem, ipsum.</button>
+              <button type="button" class="btn btn-dark btn-custom" onclick="showHideTripForms()">Lorem, ipsum.</button>
             </div>
           </div>
           <br>
@@ -279,7 +279,6 @@
 
             <?php
               print_r($cities);
-
             ?>
           <div class="d-flex">
             <?php
@@ -287,17 +286,13 @@
 
               for($i = 0; $i < count($cities); $i++){
                 echo '<li class="list-group-item">' . $cities[$i] . '</li>';
-
               }
 
               echo '</ul>';
 
-              
               // echo '<p class= "text-center"> Cidade: ' . $cities[mt_rand(0, count($cities)-1)] . '</p>';
             ?>
-
           </div>
-
           </p>
             <div id="divformCities" class="formCities">
               <form action="" method="get" name="citiesForm">

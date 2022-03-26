@@ -1,4 +1,4 @@
-function ShowHideTripForms() {
+function showHideTripForms() {
     let tripForms = document.getElementById("divformCities");
 
     if(tripForms.style.display == "none") {
