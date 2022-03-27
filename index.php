@@ -470,7 +470,7 @@
       <div class="text-center p-3 footer-custom">
       <?php 
       $dt = new DateTime("now", new DateTimeZone('America/Recife'));
-      echo 'Jundiaí - São Paulo | '.$dt->format('d/m/Y, s:H:i');
+      echo 'Jundiaí, São Paulo. '.$dt->format('d/m/Y, s:H:i');
       ?>  
       © 2022 Copyright: CantinhoWeb
       </div>
