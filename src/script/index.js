@@ -81,3 +81,13 @@ function showHideForms() {
         city6.style.display = "block";
     }
 }
+
+function showHideTripForms() {
+    let tripForms = document.getElementById("divformCities");
+
+    if (tripForms.style.display == "none") {
+        tripForms.style.display = "block"; 
+    } else {
+        tripForms.style.display = "none";
+    }
+}

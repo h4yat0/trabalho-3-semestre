@@ -1,5 +1,6 @@
 <?php
   $cities = array('Paris', 'Orlando', 'Bahamas');
+
   if(isset($_GET['city1'])){
     $city1 = $_GET['city1'];
     array_push($cities, $city1 );
@@ -85,7 +86,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./src/css/hero.css" />
     <link rel="stylesheet" href="./src/css/index-style.css" />
-    <link rel="stylesheet" href="./src/css/formCitiess.css" />
 
     <title>Site de viagens</title>
   </head>
@@ -270,7 +270,7 @@
               </p>
             </div>
             <div class="col">
-              <button type="button" class="btn btn-dark btn-custom" onclick="showHideTripForms()">Lorem, ipsum.</button>
+              <button type="button" class="btn btn-dark btn-custom" onclick="showHideTripForms()">Lorem</button>
             </div>
           </div>
           <br>
@@ -280,22 +280,23 @@
             <?php
               print_r($cities);
             ?>
-          <div class="d-flex">
-            <?php
-              echo '<ul class="list-group list-group-horizontal mx-auto">';
-
-              for($i = 0; $i < count($cities); $i++){
-                echo '<li class="list-group-item">' . $cities[$i] . '</li>';
-              }
-
-              echo '</ul>';
-
-              // echo '<p class= "text-center"> Cidade: ' . $cities[mt_rand(0, count($cities)-1)] . '</p>';
-            ?>
-          </div>
           </p>
-            <div id="divformCities" class="formCities">
+          <div id="divformCities" class="formCities">
+              <div class="d-flex">
+                <?php
+                  echo '<ul class="list-group list-group-horizontal mx-auto">';
+    
+                  for($i = 0; $i < count($cities); $i++){
+                    echo '<li class="list-group-item">' . $cities[$i] . '</li>';
+                  }
+    
+                  echo '</ul>';
+    
+                  // echo '<p class= "text-center"> Cidade: ' . $cities[mt_rand(0, count($cities)-1)] . '</p>';
+                ?>
+              </div>
               <form action="" method="get" name="citiesForm">
+              <br>
                 <div class="mx-auto" style="max-width: 50%;">
                   <div class="input-group mb-3" >
                     <select class="form-select" name="amountOfForms">
@@ -333,24 +334,23 @@
                       </div>
                     </div>
                   </div>
+                  <div class="input-group mb-3" >
+                    <select class="form-select" name="amountOfCards">
+                      <option selected>Open this select menu</option>
+                      <option value="one">1</option>
+                      <option value="two">2</option>
+                      <option value="three">3</option>
+                    </select>    
+                    <button class="btn btn-danger" type="button" id="button-addon1" onclick="showHideCards()">Button</button>
+                  </div>
                   <!--  EM DESENVOLVIMENTO
 
-                    <div class="input-group mb-3" >
-                      <select class="form-select" name="amountOfCards">
-                        <option selected>Open this select menu</option>
-                        <option value="one">1</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                      </select>    
-                      <button class="btn btn-danger" type="button" id="button-addon1" onclick="showHideCards()">Button</button>
-                    </div>
                    -->
                   <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
     
                 </div>
               </form>
             </div>
-        
         </div>
         </div>
 
@@ -481,8 +481,6 @@
     ></script>
 
     <!-- Custom Script -->
-    <script src="./index.js"></script>
-    <script src="./showHide.js"></script>
-    <!-- <script src="src/script/hero.js"></script> -->
+    <script src="./src/script/index.js"></script>
   </body>
 </html>
