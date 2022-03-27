@@ -261,6 +261,8 @@
             <img src="./src/img/placeholder-06.jpg" class="img-fluid" />
           </div>
         </div>
+
+
         <div class="container container-custom">
           <h1>Está com dúvida para onde ir?</h1>
           <div class="row" style="justify-content: space-evenly">
@@ -274,27 +276,25 @@
             </div>
           </div>
           <br>
-          <div style="border-radius: 5px; border: 2px solid red; padding: 20px;">
+          <div id="divformCities" class="formCities" style="border: 2px solid black; padding: 20px;">
           <p class="text-center">
-
             <?php
-              print_r($cities);
+              // print_r($cities);
             ?>
           </p>
-          <div id="divformCities" class="formCities">
-              <div class="d-flex">
+          <div >
+            <div class="row align-items-center">
                 <?php
-                  echo '<ul class="list-group list-group-horizontal mx-auto">';
-    
                   for($i = 0; $i < count($cities); $i++){
-                    echo '<li class="list-group-item">' . $cities[$i] . '</li>';
+                    if($i%5 == 0){
+                      echo '<div class="w-100"></div>';
+                    }
+
+                    echo '<div class="col displayCities text-center">' . $cities[$i] . '</div>';
                   }
-    
-                  echo '</ul>';
-    
-                  // echo '<p class= "text-center"> Cidade: ' . $cities[mt_rand(0, count($cities)-1)] . '</p>';
+                  echo '<p class= "text-center"> Cidade: ' . $cities[mt_rand(0, count($cities)-1)] . '</p>';
                 ?>
-              </div>
+            </div>
               <form action="" method="get" name="citiesForm">
               <br>
                 <div class="mx-auto" style="max-width: 50%;">
@@ -313,24 +313,24 @@
                   <div class="row">
                     <div class="col">
                       <div class="input-group mb-3" >
-                        <input type="text" name="city1" class="form-control" placeholder="Digite um país">
+                        <input type="text" name="city1" class="form-control" placeholder="Digite um país" maxlength="13">
                       </div>
                       <div class="input-group mb-3" >
-                        <input type="text" name="city2" class="form-control" placeholder="Digite um país">
+                        <input type="text" name="city2" class="form-control" placeholder="Digite um país" maxlength="13">
                       </div>
                       <div class="input-group mb-3" >
-                        <input type="text" name="city3" class="form-control" placeholder="Digite um país">
+                        <input type="text" name="city3" class="form-control" placeholder="Digite um país" maxlength="13">
                       </div>
                     </div>
                     <div class="col">
                       <div class="input-group mb-3" >
-                        <input type="text" name="city4" class="form-control" placeholder="Digite um país">
+                        <input type="text" name="city4" class="form-control" placeholder="Digite um país" maxlength="13">
                       </div>
                       <div class="input-group mb-3" >
-                        <input type="text" name="city5" class="form-control" placeholder="Digite um país">
+                        <input type="text" name="city5" class="form-control" placeholder="Digite um país" maxlength="13">
                       </div>
                       <div class="input-group mb-3" >
-                        <input type="text" name="city6" class="form-control" placeholder="Digite um país">
+                        <input type="text" name="city6" class="form-control" placeholder="Digite um país" maxlength="13">
                       </div>
                     </div>
                   </div>
@@ -347,13 +347,11 @@
 
                    -->
                   <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
-    
                 </div>
               </form>
             </div>
         </div>
         </div>
-
         <div class="row">
             <div class="col" id="card1" >
               <img
@@ -378,7 +376,6 @@
                   >
                     SAIBA MAIS
                   </button>
-                  
                 </a>
               </div>
             </div>
