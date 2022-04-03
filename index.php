@@ -21,16 +21,6 @@
     array_push($cities, $city4 );
   }
 
-  if(isset($_GET['city5'])){
-    $city5 = $_GET['city5'];
-    array_push($cities, $city5 );
-  }
-
-  if(isset($_GET['city6'])){
-    $city6 = $_GET['city6'];
-    array_push($cities, $city6 );
-  }
-
   $cities = array_diff($cities, [""]);
 
 ?>
@@ -277,13 +267,8 @@
           </div>
           <br>
           <div id="divformCities" class="formCities" style="border: 2px solid black; padding: 20px;">
-          <p class="text-center">
-            <?php
-              // print_r($cities);
-            ?>
-          </p>
-          <div >
-            <div class="row align-items-center">
+            <div>
+              <div class="row align-items-center">
                 <?php
                   for($i = 0; $i < count($cities); $i++){
                     if($i%5 == 0){
@@ -292,11 +277,20 @@
 
                     echo '<div class="col displayCities text-center">' . $cities[$i] . '</div>';
                   }
-                  echo '<p class= "text-center"> Cidade: ' . $cities[mt_rand(0, count($cities)-1)] . '</p>';
                 ?>
-            </div>
-              <form action="" method="get" name="citiesForm">
+              </div>
               <br>
+              <div class="row">
+                <div class="col"></div>
+                <div class="col align-self-center">
+                  <?php
+                    echo '<p class= " displayCities text-center"> Cidade: ' . $cities[mt_rand(0, count($cities)-1)] . '</p>';
+                  ?>
+                </div>
+                <div class="col"></div>
+              </div>
+              <form action="" method="get" name="citiesForm">
+                <br>
                 <div class="mx-auto" style="max-width: 50%;">
                   <div class="input-group mb-3" >
                     <select class="form-select" name="amountOfForms">
@@ -305,8 +299,6 @@
                         <option value="two">2</option>
                         <option value="three">3</option>
                         <option value="four">4</option>
-                        <option value="five">5</option>
-                        <option value="six">6</option>
                       </select>
                       <button type="button" class="btn btn-success" onclick="showHideForms()">Success</button>
                   </div>
@@ -316,21 +308,15 @@
                         <input type="text" name="city1" class="form-control" placeholder="Digite um país" maxlength="13">
                       </div>
                       <div class="input-group mb-3" >
-                        <input type="text" name="city2" class="form-control" placeholder="Digite um país" maxlength="13">
-                      </div>
-                      <div class="input-group mb-3" >
                         <input type="text" name="city3" class="form-control" placeholder="Digite um país" maxlength="13">
                       </div>
                     </div>
                     <div class="col">
                       <div class="input-group mb-3" >
+                        <input type="text" name="city2" class="form-control" placeholder="Digite um país" maxlength="13">
+                      </div>
+                      <div class="input-group mb-3" >
                         <input type="text" name="city4" class="form-control" placeholder="Digite um país" maxlength="13">
-                      </div>
-                      <div class="input-group mb-3" >
-                        <input type="text" name="city5" class="form-control" placeholder="Digite um país" maxlength="13">
-                      </div>
-                      <div class="input-group mb-3" >
-                        <input type="text" name="city6" class="form-control" placeholder="Digite um país" maxlength="13">
                       </div>
                     </div>
                   </div>
@@ -343,9 +329,6 @@
                     </select>    
                     <button class="btn btn-danger" type="button" id="button-addon1" onclick="showHideCards()">Button</button>
                   </div>
-                  <!--  EM DESENVOLVIMENTO
-
-                   -->
                   <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
                 </div>
               </form>
@@ -469,7 +452,8 @@
       $dt = new DateTime("now", new DateTimeZone('America/Recife'));
       $dataFinal = 'Jundiaí, São Paulo. '.$dt->format('d/m/Y, H:i:s');
       echo $dataFinal;
-      ?>  
+      ?>
+      <br>  
       © 2022 Copyright: CantinhoWeb
       </div>
     </footer>
