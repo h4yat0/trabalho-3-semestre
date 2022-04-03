@@ -497,9 +497,10 @@ $arquivo = fopen("./cidade.txt","a");
 fwrite($arquivo, "================ CIDADES ================= \n" );
 fwrite($arquivo, "\nDATA | ". $dataFinal."\n\n" );
 
-foreach ($cities as $key) {
-  fwrite($arquivo, "- ".$key ."\n"  );
-}
+  foreach ($cities as $key) {
+    fwrite($arquivo, "- ".$key ."\n"  );
+  }
+  
 fwrite($arquivo, "\n=======================//================= \n" );
 fclose($arquivo);
 ?>
