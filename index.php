@@ -1,5 +1,5 @@
 <?php
-  $cities = array('Paris', 'Orlando', 'Bahamas');
+  $cities = array('paris', 'dubai', 'phuket', 'hong kong', 'bankok', 'londres', 'singapura');
 
   if(isset($_GET['city1'])){
     $city1 = $_GET['city1'];
@@ -20,6 +20,22 @@
     $city4 = $_GET['city4'];
     array_push($cities, $city4 );
   }
+
+  $cityCard1 = '<img
+    src="./src/img/'. $cities[0] .'City.jpg"
+    class="img-fluid"
+    style="min-width: 315px; max-height: 390px"
+    />';
+  $cityCard2 = '<img
+    src="./src/img/'. $cities[1] .'City.jpg"
+    class="img-fluid"
+    style="min-width: 315px; max-height: 390px"
+    />';
+  $cityCard3 = '<img
+    src="./src/img/'. $cities[2] .'City.jpg"
+    class="img-fluid"
+    style="min-width: 315px; max-height: 390px"
+    />';
 
   $cities = array_diff($cities, [""]);
 
@@ -274,8 +290,7 @@
                     if($i%5 == 0){
                       echo '<div class="w-100"></div>';
                     }
-
-                    echo '<div class="col displayCities text-center">' . $cities[$i] . '</div>';
+                    echo '<div class="col displayCities text-center">' . ucfirst($cities[$i]) . '</div>';
                   }
                 ?>
               </div>
@@ -284,7 +299,7 @@
                 <div class="col"></div>
                 <div class="col align-self-center">
                   <?php
-                    echo '<p class= " displayCities text-center"> Cidade: ' . $cities[mt_rand(0, count($cities)-1)] . '</p>';
+                    echo '<p class= "displayCities text-center" style="border: 2px solid black; padding: 10px;"> Cidade: ' . ucfirst($cities[mt_rand(0, count($cities)-1)]) . '</p>';
                   ?>
                 </div>
                 <div class="col"></div>
@@ -294,13 +309,13 @@
                 <div class="mx-auto" style="max-width: 50%;">
                   <div class="input-group mb-3" >
                     <select class="form-select" name="amountOfForms">
-                        <option selected>Open this select menu</option>
+                        <option selected>Escolha quantos cidades deseja inserir:</option>
                         <option value="one">1</option>
                         <option value="two">2</option>
                         <option value="three">3</option>
                         <option value="four">4</option>
                       </select>
-                      <button type="button" class="btn btn-success" onclick="showHideForms()">Success</button>
+                      <button type="button" class="btn btn-success" onclick="showHideForms()">confirmar</button>
                   </div>
                   <div class="row">
                     <div class="col">
@@ -322,7 +337,7 @@
                   </div>
                   <div class="input-group mb-3" >
                     <select class="form-select" name="amountOfCards">
-                      <option selected>Open this select menu</option>
+                      <option selected>escolha quantas cidades deseja como resultado:</option>
                       <option value="one">1</option>
                       <option value="two">2</option>
                       <option value="three">3</option>
@@ -333,17 +348,13 @@
                 </div>
               </form>
             </div>
-        </div>
+          </div>
         </div>
         <div class="row">
             <div class="col" id="card1" >
-              <img
-                src="./src/img/placeholder-grid-01.jpg"
-                class="img-fluid"
-                style="min-width: 315px; max-height: 390px"
-              />
+              <?php echo $cityCard1;?>
               <div class="grid-container mx-auto" >
-                <h3>Paris</h3>
+                <h3><?php echo ucfirst($cities[0]);?></h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni a
                   exercitationem debitis neque provident dicta, ab tenetur
@@ -352,24 +363,22 @@
                   Harum, cumque ea. Ab numquam enim laudantium qui cumque, officia
                   eveniet sapiente labore, saepe et accusamus delectus quasi.
                 </p>
-                <a href="city.php?cidade=paris">
-                  <button
-                    type="button"
-                    class="btn btn-dark btn-custom btn-transparent-custom"
-                  >
-                    SAIBA MAIS
-                  </button>
-                </a>
+                <?php 
+                echo '<a href="city.php?cidade='.$cities[0].'">
+                    <button
+                      type="button"
+                      class="btn btn-dark btn-custom btn-transparent-custom"
+                    >
+                      SAIBA MAIS
+                    </button>
+                  </a>'            
+              ?>
               </div>
             </div>
           <div class="col" id="card2">
-            <img
-              src="./src/img/placeholder-grid-02.jpg"
-              class="img-fluid"
-              style="min-width: 315px; max-height: 390px"
-            />
+            <?php echo $cityCard2;?>
             <div class="grid-container">
-              <h3>Orlando</h3>
+              <h3><?php echo ucfirst($cities[1]);?></h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni a
                 exercitationem debitis neque provident dicta, ab tenetur
@@ -378,24 +387,22 @@
                 Harum, cumque ea. Ab numquam enim laudantium qui cumque, officia
                 eveniet sapiente labore, saepe et accusamus delectus quasi.
               </p>
-              <a href="city.php?cidade=orlando">
-                <button
-                  type="button"
-                  class="btn btn-dark btn-custom btn-transparent-custom"
-                >
-                  SAIBA MAIS
-                </button>
-              </a>
+              <?php 
+                echo '<a href="city.php?cidade='.$cities[1].'">
+                    <button
+                      type="button"
+                      class="btn btn-dark btn-custom btn-transparent-custom"
+                    >
+                      SAIBA MAIS
+                    </button>
+                  </a>'            
+              ?>
             </div>
           </div>
           <div class="col" id="card3">
-            <img
-              src="./src/img/placeholder-grid-03.jpg"
-              class="img-fluid"
-              style="min-width: 315px; max-height: 390px"
-            />
+          <?php echo $cityCard3;?>
             <div class="grid-container">
-              <h3>Bahamas</h3>
+              <h3><?php echo ucfirst($cities[2]);?></h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni a
                 exercitationem debitis neque provident dicta, ab tenetur
@@ -404,14 +411,16 @@
                 Harum, cumque ea. Ab numquam enim laudantium qui cumque, officia
                 eveniet sapiente labore, saepe et accusamus delectus quasi.
               </p>
-              <a href="city.php?cidade=bahamas">
-                <button
-                  type="button"
-                  class="btn btn-dark btn-custom btn-transparent-custom"
-                >
-                  SAIBA MAIS
-                </button>
-              </a>
+              <?php 
+                echo '<a href="city.php?cidade='.$cities[2].'">
+                    <button
+                      type="button"
+                      class="btn btn-dark btn-custom btn-transparent-custom"
+                    >
+                      SAIBA MAIS
+                    </button>
+                  </a>'            
+              ?>
             </div>
           </div>
         </div>
