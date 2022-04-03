@@ -470,7 +470,8 @@
       <div class="text-center p-3 footer-custom">
       <?php 
       $dt = new DateTime("now", new DateTimeZone('America/Recife'));
-      echo 'Jundiaí, São Paulo. '.$dt->format('d/m/Y, s:H:i');
+      $dataFinal = 'Jundiaí, São Paulo. '.$dt->format('d/m/Y, H:i:s');
+      echo $dataFinal;
       ?>  
       © 2022 Copyright: CantinhoWeb
       </div>
@@ -488,3 +489,17 @@
     <script src="./src/script/index.js"></script>
   </body>
 </html>
+
+<?php
+error_reporting(0);
+$arquivo = fopen("./cidade.txt","a");
+
+fwrite($arquivo, "================ CIDADES ================= \n" );
+fwrite($arquivo, "\nDATA | ". $dataFinal."\n\n" );
+
+foreach ($cities as $key) {
+  fwrite($arquivo, "- ".$key ."\n"  );
+}
+fwrite($arquivo, "\n=======================//================= \n" );
+fclose($arquivo);
+?>
