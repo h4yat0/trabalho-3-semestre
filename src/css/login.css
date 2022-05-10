@@ -73,3 +73,17 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.sucesso {
+  background: #2ac874;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.oculto {
+  display: none;
+}

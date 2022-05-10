@@ -1,3 +1,7 @@
+<?php
+require('src/db/conexao.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -49,6 +53,8 @@
     <link rel="stylesheet" href="./src/css/hamburguer-icon.css" />
     <link rel="stylesheet" href="./src/css/index-style.css" />
     <link rel="stylesheet" href="./src/css/login.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -65,7 +71,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
     />
 
-    <title>NXS</title>
+    <title>Login</title>
   </head>
 
   <body>
@@ -175,6 +181,18 @@
               <form>
                 <h3>Login</h3>
 
+                  <?php if (isset($_GET['result']) && ($_GET['result']) === 'ok') { ?>
+                      <div class="sucesso animate__animated animate__rubberBand">
+                          Cadastrado com sucesso!
+                      </div>
+
+                      <script>
+                          setTimeout(() => {
+                              $('.sucesso').addClass('animate__animated animate__fadeOutUp');
+                          }, 3000);
+                      </script>
+                  <?php } ?>
+
                 <label for="username">Nome de usuário</label>
                 <input type="text" placeholder="Email" id="username" />
 
@@ -183,7 +201,7 @@
 
                 <button>Log In</button>
                 <br /><br />
-                <a href="">Não tem uma conta? Inscreva-se agora</a>
+                <a href="cadastrar.php">Não tem uma conta? Inscreva-se agora</a>
               </form>
               <div
                 class="container"
@@ -213,5 +231,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>
