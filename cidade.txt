@@ -666,3 +666,29 @@ DATA | Jundiaí, São Paulo. 10/05/2022, 08:08:58
 - singapura
 
 =======================//================= 
+================ CIDADES ================= 
+
+DATA | Jundiaí, São Paulo. 14/05/2022, 14:09:04
+
+- paris
+- dubai
+- phuket
+- hong kong
+- bankok
+- londres
+- singapura
+
+=======================//================= 
+================ CIDADES ================= 
+
+DATA | Jundiaí, São Paulo. 14/05/2022, 16:34:12
+
+- paris
+- dubai
+- phuket
+- hong kong
+- bankok
+- londres
+- singapura
+
+=======================//================= 

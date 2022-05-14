@@ -4,6 +4,8 @@
 //$usuario = "root";
 //$senha = "";
 //$banco = "login";
+session_start();
+
 
 $servidor = "localhost";
 $usuarioDB = "root";
@@ -22,4 +24,20 @@ function limparPost($dados) {
     $dados = stripslashes($dados);
     $dados = htmlspecialchars($dados);
     return $dados;
+}
+
+function verificaAuth($tokenSessao){
+    global $pdo;
+
+    // Verifica autorização
+    $sql = $pdo -> prepare("SELECT * FROM usuarios WHERE token=? LIMIT 1");
+    $sql -> execute(array($tokenSessao));
+    $usuario = $sql-> fetch(PDO::FETCH_ASSOC);
+
+//Se não encontrar usuario
+    if (!$usuario) {
+        return false;
+    } else {
+        return $usuario;
+    }
 }

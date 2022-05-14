@@ -1,5 +1,61 @@
 <?php
 require('src/db/conexao.php');
+
+if (isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) && !empty($_POST['senha'])) {
+    //Recebe dados vindos do post e limpa
+    $emailLogin = limparPost($_POST['email']);
+    $senhaLogin = limparPost($_POST['senha']);
+    $senhaLoginCript = sha1($senhaLogin);
+
+    //CURL
+    $curl = curl_init();
+
+    //DEFINICOES DA REQUISIÇÃO
+    curl_setopt_array($curl, [
+        CURLOPT_URL => 'https://www.google.com/recaptcha/api/siteverify',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => [
+            'secret' => '6LfNEe0fAAAAAJiKNXzQrvmoTx1rp0FqXBelutZA',
+            'response' => $_POST['g-recaptcha-response'] ?? ''
+        ]
+    ]);
+
+    //EXECUTA A REQUISIÇÃO
+    $response = curl_exec($curl);
+
+    //FECHA A CONEXÃO CURL
+    curl_close($curl);
+
+    //RESPONSE EM ARRAY
+    $responseArray = json_decode($response, true);
+
+    //SUCESSO DO RECAPTCHA
+    $sucessoRecaptcha = $responseArray['success'] ?? false;
+
+    if (!isset($erroLogin) &&  $sucessoRecaptcha) {
+        // Verifica se existe esse usuario
+        $sql = $pdo -> prepare("SELECT * FROM usuarios WHERE email=? AND senha=? LIMIT 1");
+        $sql -> execute(array($emailLogin, $senhaLoginCript));
+        $usuario = $sql -> fetch(PDO::FETCH_ASSOC);
+        if ($usuario) {
+            //Existe usuario
+            //Criar um token(caracteres aleatorios com intenção de melhor identificação de cada usuario)
+            $token = sha1(uniqid().date('d-m-Y-H-i-s'));
+
+            //Atualizar o token do usuario no banco
+            $sql = $pdo -> prepare("UPDATE usuarios SET token=? WHERE email=? AND senha=?");
+            if ($sql -> execute(array($token, $emailLogin, $senhaLoginCript))) {
+                //Guardar o token na session
+                $_SESSION['TOKEN'] = $token;
+                header('location: restrita.php');
+            }
+        } else {
+            // Não existe usuario
+            $erroLogin = "Usuário ou senha incorretos!";
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +127,22 @@ require('src/db/conexao.php');
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
     />
 
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <title>Login</title>
+
+      <script>
+
+          function validarPost() {
+
+              //Verifica se o recaptcha foi selecionado
+              if (grecaptcha.getResponse() != "") return ture;
+
+              //ERRO: não selecionado
+              alert('Selecione a caixa de "não sou um robô"');
+              return false;
+          }
+      </script>
   </head>
 
   <body>
@@ -178,7 +249,7 @@ require('src/db/conexao.php');
               </a>
             </div>
             <div class="container-fluid col-5">
-              <form>
+              <form method="post" onsubmit="return validarPost()">
                 <h3>Login</h3>
 
                   <?php if (isset($_GET['result']) && ($_GET['result']) === 'ok') { ?>
@@ -194,13 +265,26 @@ require('src/db/conexao.php');
                   <?php } ?>
 
                 <label for="username">Nome de usuário</label>
-                <input type="text" placeholder="Email" id="username" />
+                <input <?php if (isset($erroLogin)) { echo 'class="erro-input"';} ?> type="text" name="email" placeholder="Email" id="username" <?php if (isset($emailLogin)) {
+                    echo "value='$emailLogin'";
+                } ?> required/>
+                  <?php if(isset($erroLogin)) { ?>
+                      <div class="erro"> <?php echo $erroLogin; ?> </div>
+                  <?php } ?>
 
                 <label for="password">Senha</label>
-                <input type="password" placeholder="Senha" id="password" />
+                <input <?php if (isset($erroLogin)) { echo 'class="erro-input"';} ?> type="password" name="senha" placeholder="Senha" id="password" <?php if (isset($senhaLogin)) {
+                    echo "value='$senhaLogin'";
+                } ?> required/>
+                  <?php if(isset($erroLogin)) { ?>
+                      <div class="erro"> <?php echo $erroLogin; ?> </div>
+                  <?php } ?>
 
-                <button>Log In</button>
-                <br /><br />
+                  <br /> <br />
+                  <div class="g-recaptcha" data-sitekey="6LfNEe0fAAAAAB1vHakYbEJomRv2PnkgTJfeTMO5"></div>
+
+                  <button>Log In</button>
+                <br /> <br />
                 <a href="cadastrar.php">Não tem uma conta? Inscreva-se agora</a>
               </form>
               <div
