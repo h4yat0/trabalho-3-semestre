@@ -285,74 +285,119 @@
             </div>
           </div>
           <br>
-          <div id="divformCities" class="formCities" style="border: 2px solid black; padding: 20px;">
-            <div>
-              <div class="row align-items-center">
-                <?php
-                  for($i = 0; $i < count($cities); $i++){
-                    if($i%5 == 0){
-                      echo '<div class="w-100"></div>';
-                    }
-                    echo '<div class="col displayCities text-center">' . ucfirst($cities[$i]) . '</div>';
-                  }
-                ?>
-              </div>
-              <br>
-              <div class="row">
-                <div class="col"></div>
-                <div class="col align-self-center">
-                  <?php
-                    echo '<p class= "displayCities text-center" style="border: 2px solid black; padding: 10px;"> Cidade: ' . ucfirst($cities[mt_rand(0, count($cities)-1)]) . '</p>';
-                  ?>
-                </div>
-                <div class="col"></div>
-              </div>
-              <form action="" method="get" name="citiesForm">
-                <br>
-                <div class="mx-auto" style="max-width: 50%;">
-                  <div class="input-group mb-3" >
-                    <select class="form-select" name="amountOfForms">
-                        <option selected>Escolha quantos cidades deseja inserir:</option>
-                        <option value="one">1</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                        <option value="four">4</option>
-                      </select>
-                      <button type="button" class="btn btn-success" onclick="showHideForms()">confirmar</button>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                      <div class="input-group mb-3" >
-                        <input type="text" name="city1" class="form-control" placeholder="Digite um país" maxlength="13">
-                      </div>
-                      <div class="input-group mb-3" >
-                        <input type="text" name="city3" class="form-control" placeholder="Digite um país" maxlength="13">
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="input-group mb-3" >
-                        <input type="text" name="city2" class="form-control" placeholder="Digite um país" maxlength="13">
-                      </div>
-                      <div class="input-group mb-3" >
-                        <input type="text" name="city4" class="form-control" placeholder="Digite um país" maxlength="13">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="input-group mb-3" >
-                    <select class="form-select" name="amountOfCards">
-                      <option selected>escolha quantas cidades deseja como resultado:</option>
-                      <option value="one">1</option>
-                      <option value="two">2</option>
-                      <option value="three">3</option>
-                    </select>    
-                    <button class="btn btn-danger" type="button" id="button-addon1" onclick="showHideCards()">Button</button>
-                  </div>
-                  <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
-                </div>
-              </form>
-            </div>
-          </div>
         </div>
+
+
+          <div class="cards-container-container">
+            <div class="row row-cols-3 row gy-4">
+              <div class="cow">
+                <div class="card-container">
+                    <div class="card" id="pais1">
+                      <h2>pais1</h2>
+                      <p>saiba mais</p>
+                    </div>
+                </div>
+              </div>
+
+              <div class="cow">
+                <div class="card-container">
+                   <div class="card" id="pais2">
+                      <h2>pais2</h2>
+                      <p>saiba mais</p>
+                   </div>
+                </div>
+              </div>
+                  
+              <div class="cow">
+                <div class="card-container">
+                    <div class="card" id="pais3">
+                      <h2>pais3</h2>
+                      <p>saiba mais</p>
+                    </div>
+                </div>
+              </div>
+
+              <div class="cow">
+                <div class="card-container">
+                    <div class="card" id="pais4">
+                      <h2>pais4</h2>
+                      <p>saiba mais</p>
+                    </div>
+                </div>
+              </div>
+
+              <div class="cow">
+                <div class="card-container">
+                    <div class="card" id="pais5">
+                      <h2>pais5</h2>
+                      <p>saiba mais</p>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="cow">
+                <div class="card-container">
+                    <div class="card" id="pais6">
+                      <h2>pais6</h2>
+                      <p>saiba mais</p>
+                    </div>
+                </div>
+              </div>
+
+              <div class="cow">
+                <div class="card-container">
+                    <div class="card" id="pais7">
+                      <h2>pais7</h2>
+                      <p>saiba mais</p>
+                    </div>
+                </div>
+              </div>
+
+              <div class="cow">
+                <div class="card-container">
+                    <div class="card" id="pais8">
+                      <h2>pais8</h2>
+                      <p>saiba mais</p>
+                    </div>
+                </div>
+              </div>
+
+              <div class="cow">
+                <div class="card-container">
+                   <div class="card" id="pais9">
+                      <h2>pais9</h2>
+                      <p>saiba mais</p>
+                   </div>
+                </div>
+              </div>
+
+
+          </div>
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         <div class="row">
             <div class="col" id="card1" >
               <?php echo $cityCard1;?>
