@@ -10,7 +10,6 @@ class HomeController
             $template = $twig->load('home.html');
 
             $parametros = array();
-            $parametros['nome'] = 'hyt';
 
             $content = $template->render($parametros);
             echo $content;
