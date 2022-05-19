@@ -1,22 +1,27 @@
 <?php
+require_once './Core/core.php';
 
-    require_once './Core/core.php';
+require_once './Controllers/HomeController.php';
+require_once './Controllers/ErrorController.php';
 
-    require_once './Controllers/HomeController.php';
-    require_once './Controllers/ErrorController.php';
+require_once 'vendor/autoload.php';
 
-    require_once 'vendor/autoload.php';
+$template = file_get_contents('./Views/Shared/__template.html');
 
-    $template = file_get_contents('./Views/Shared/__template.php');
+ob_start();
+$core = new Core;
+$core->start($_GET);
 
-    ob_start();
-        $core = new Core;
-        $core->start($_GET);
+$saida = ob_get_contents();
+ob_end_clean();
 
-        $saida = ob_get_contents();
-    ob_end_clean();
+$dt = new DateTime("now", new DateTimeZone('America/Recife'));
+$dataFinal = 'Jundiaí, São Paulo. ' . $dt->format('d/m/Y, H:i:s');
 
-    $tplReady = str_replace('{{content}}', $saida, $template);
+$dataToReplace = array('{{content}}', '{{time}}');
+$data = array($saida, $dataFinal);
 
-    echo $tplReady;
-?>
+$tplReady = str_replace($dataToReplace, $data, $template);
+
+
+echo $tplReady;
