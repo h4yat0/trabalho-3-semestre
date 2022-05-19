@@ -1,203 +1,148 @@
-
 <main>
-<div class="container container-custom" style="max-width: 70%">
-  <div class="row g-5">
-    <div class="col">
-      <img src="./src/img/placeholder-05.jpg" class="img-fluid" />
-      <p style="padding: 1rem 0rem">
-      Em nossos pacotes nos abrangemos os mais variados preços, para assim caber em seu bolso. E varias formas de locomoções como: avião, navio, trem, entre outros. E por ultimo reservamos pacotes com estadias em hotéis ou em casa, sempre visando a melhor experiência possível em  sua viajem dos sonhos
-      </p>
-    </div>
-    <div class="col">
-      <h2>Lugares</h2>
-      <p>
-        Nos trabalhos com viagens ao redor do mundo todo, com diferentes tipos de transportes 
-      </p>
-      <img src="./src/img/placeholder-06.jpg" class="img-fluid" />
-    </div>
-  </div>
-
-
-  <div class="container container-custom">
-    <h1>Está com dúvida para onde ir?</h1>
-    <div class="row" style="justify-content: space-evenly">
-      <div class="col-10">
-        <p>
-          Deixe nosso software decidir por você, clicando nesse botão na lateral. Você pode ver alguns países de exemplo abaixo também.
+  <div class="container container-custom" style="max-width: 70%">
+    <div class="row g-5">
+      <div class="col">
+        <img src="./src/img/placeholder-05.jpg" class="img-fluid" />
+        <p style="padding: 1rem 0rem">
+          Em nossos pacotes nos abrangemos os mais variados preços, para assim
+          caber em seu bolso. E varias formas de locomoções como: avião, navio,
+          trem, entre outros. E por ultimo reservamos pacotes com estadias em
+          hotéis ou em casa, sempre visando a melhor experiência possível em sua
+          viajem dos sonhos
         </p>
       </div>
       <div class="col">
-        <button type="button" class="btn btn-dark btn-custom" onclick="showHideTripForms()">Lorem</button>
+        <h2>Lugares</h2>
+        <p>
+          Nos trabalhos com viagens ao redor do mundo todo, com diferentes tipos
+          de transportes
+        </p>
+        <img src="./src/img/placeholder-06.jpg" class="img-fluid" />
       </div>
     </div>
-    <br>
-    <div id="divformCities" class="formCities" style="border: 2px solid black; padding: 20px;">
-      <div>
-        <div class="row align-items-center">
-          <?php
-            for($i = 0; $i < count($cities); $i++){
-              if($i%5 == 0){
-                echo '<div class="w-100"></div>';
-              }
-              echo '<div class="col displayCities text-center">' . ucfirst($cities[$i]) . '</div>';
-            }
-          ?>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col"></div>
-          <div class="col align-self-center">
-            <?php
-              echo '<p class= "displayCities text-center" style="border: 2px solid black; padding: 10px;"> Cidade: ' . ucfirst($cities[mt_rand(0, count($cities)-1)]) . '</p>';
-            ?>
-          </div>
-          <div class="col"></div>
-        </div>
-        <form action="" method="get" name="citiesForm">
-          <br>
-          <div class="mx-auto" style="max-width: 50%;">
-            <div class="input-group mb-3" >
-              <select class="form-select" name="amountOfForms">
-                  <option selected>Escolha quantos cidades deseja inserir:</option>
-                  <option value="one">1</option>
-                  <option value="two">2</option>
-                  <option value="three">3</option>
-                  <option value="four">4</option>
-                </select>
-                <button type="button" class="btn btn-success" onclick="showHideForms()">confirmar</button>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="input-group mb-3" >
-                  <input type="text" name="city1" class="form-control" placeholder="Digite um país" maxlength="13">
-                </div>
-                <div class="input-group mb-3" >
-                  <input type="text" name="city3" class="form-control" placeholder="Digite um país" maxlength="13">
-                </div>
-              </div>
-              <div class="col">
-                <div class="input-group mb-3" >
-                  <input type="text" name="city2" class="form-control" placeholder="Digite um país" maxlength="13">
-                </div>
-                <div class="input-group mb-3" >
-                  <input type="text" name="city4" class="form-control" placeholder="Digite um país" maxlength="13">
-                </div>
-              </div>
-            </div>
-            <div class="input-group mb-3" >
-              <select class="form-select" name="amountOfCards">
-                <option selected>escolha quantas cidades deseja como resultado:</option>
-                <option value="one">1</option>
-                <option value="two">2</option>
-                <option value="three">3</option>
-              </select>    
-              <button class="btn btn-danger" type="button" id="button-addon1" onclick="showHideCards()">Button</button>
-            </div>
-            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-      <div class="col" id="card1" >
-        <?php echo $cityCard1;?>
-        <div class="grid-container mx-auto" >
-          <h3><?php echo ucfirst($cities[0]);?></h3>
+
+    <div class="container container-custom">
+      <h1>Está com dúvida para onde ir?</h1>
+      <div class="row" style="justify-content: space-evenly">
+        <div class="col-10">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni a
-            exercitationem debitis neque provident dicta, ab tenetur
-            repellat, recusandae rerum commodi voluptas sapiente, minima
-            atque nostrum obcaecati vitae laudantium accusamus earum facere?
-            Harum, cumque ea. Ab numquam enim laudantium qui cumque, officia
-            eveniet sapiente labore, saepe et accusamus delectus quasi.
+            Deixe nosso software decidir por você, clicando nesse botão na
+            lateral. Você pode ver alguns países de exemplo abaixo também.
           </p>
-          <?php 
-          echo '<a href="city.php?cidade='.$cities[0].'">
-              <button
-                type="button"
-                class="btn btn-dark btn-custom btn-transparent-custom"
-              >
-                SAIBA MAIS
-              </button>
-            </a>'            
-        ?>
+        </div>
+        <div class="col">
+          <button
+            type="button"
+            class="btn btn-dark btn-custom"
+            onclick="showHideTripForms()"
+          >
+            Lorem
+          </button>
         </div>
       </div>
-    <div class="col" id="card2">
-      <?php echo $cityCard2;?>
-      <div class="grid-container">
-        <h3><?php echo ucfirst($cities[1]);?></h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni a
-          exercitationem debitis neque provident dicta, ab tenetur
-          repellat, recusandae rerum commodi voluptas sapiente, minima
-          atque nostrum obcaecati vitae laudantium accusamus earum facere?
-          Harum, cumque ea. Ab numquam enim laudantium qui cumque, officia
-          eveniet sapiente labore, saepe et accusamus delectus quasi.
-        </p>
-        <?php 
-          echo '<a href="city.php?cidade='.$cities[1].'">
-              <button
-                type="button"
-                class="btn btn-dark btn-custom btn-transparent-custom"
-              >
-                SAIBA MAIS
-              </button>
-            </a>'            
-        ?>
+      <br />
+      <div class="cards-container-container">
+        <div class="row row-cols-3 row gy-4">
+          <div class="cow">
+            <div class="card-container">
+              <div class="card" id="pais1">
+                <h2>pais1</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cow">
+            <div class="card-container">
+              <div class="card" id="pais2">
+                <h2>pais2</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cow">
+            <div class="card-container">
+              <div class="card" id="pais3">
+                <h2>pais3</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cow">
+            <div class="card-container">
+              <div class="card" id="pais4">
+                <h2>pais4</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cow">
+            <div class="card-container">
+              <div class="card" id="pais5">
+                <h2>pais5</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cow">
+            <div class="card-container">
+              <div class="card" id="pais6">
+                <h2>pais6</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cow">
+            <div class="card-container">
+              <div class="card" id="pais7">
+                <h2>pais7</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cow">
+            <div class="card-container">
+              <div class="card" id="pais8">
+                <h2>pais8</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cow">
+            <div class="card-container">
+              <div class="card" id="pais9">
+                <h2>pais9</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col" id="card3">
-    <?php echo $cityCard3;?>
-      <div class="grid-container">
-        <h3><?php echo ucfirst($cities[2]);?></h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni a
-          exercitationem debitis neque provident dicta, ab tenetur
-          repellat, recusandae rerum commodi voluptas sapiente, minima
-          atque nostrum obcaecati vitae laudantium accusamus earum facere?
-          Harum, cumque ea. Ab numquam enim laudantium qui cumque, officia
-          eveniet sapiente labore, saepe et accusamus delectus quasi.
-        </p>
-        <?php 
-          echo '<a href="city.php?cidade='.$cities[2].'">
-              <button
-                type="button"
-                class="btn btn-dark btn-custom btn-transparent-custom"
-              >
-                SAIBA MAIS
-              </button>
-            </a>'            
-        ?>
+    <div class="row"></div>
+  </div>
+  <div class="footer-image">
+    <div
+      class="container"
+      style="color: white; font-family: 'Poppins', sans-serif; max-width: 70%"
+    >
+      <div class="container">
+        <div class="text-center" style="padding: 8rem 0rem 4rem 0rem">
+          <h1>Lorem ipsum dolor sit, amet consectetur</h1>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+        <div class="text-center">
+          <h3>Lorem ipsum dolor</h3>
+          <h5>0000-0000</h5>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="footer-image">
-  <div
-    class="container"
-    style="
-      color: white;
-      font-family: 'Poppins', sans-serif;
-      max-width: 70%;
-    "
-  >
-    <div class="container">
-      <div class="text-center" style="padding: 8rem 0rem 4rem 0rem;">
-        <h1>Lorem ipsum dolor sit, amet consectetur</h1>
-        <p>
-          Lorem ipsum dolor sit amet
-        </p>
-      </div>
-      <div class="text-center">
-        <h3>Lorem ipsum dolor</h3>
-        <h5>
-          0000-0000
-        </h5>
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
 </main>
