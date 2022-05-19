@@ -83,3 +83,139 @@ h4 {
   padding-bottom: 0.75rem;
   border: 1px solid rgba(39,41,43,0.1);
 }
+
+/* Button page up */
+
+#botao {
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 140px;
+  right: 50px;
+  bottom: 50px;
+  position: fixed;
+  z-index: 999;
+  border-color: black;
+}
+
+/* animações dos paises*/
+
+.cards-container-container{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px 0 50px 0;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card {
+  border-radius: 0;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.card-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card-wrapper::before {
+  content: '';
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  display: block;
+  border: 2px solid #ffffff;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.card-wrapper h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 0;
+  transition: 0.5s ease-in-out;
+}
+
+
+.card-wrapper p {
+  font-size: 0;
+  visibility: hidden;
+  opacity: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+  filter: none;
+}
+
+.card:hover > .card-wrapper::before {
+  height: 265px;
+  width: 265px;
+  opacity: 1;
+}
+
+.card:hover > .card-wrapper p{
+  opacity: 1;
+  visibility: visible;
+  font-size: 14px;
+}
+
+/* imagens dos cards*/
+
+.card-container #pais1{
+  background-image: url(../img/bangkok1.jpg);
+}
+
+.card-container #pais2 {
+  background-image: url(../img/dubai1.jpg);
+}
+
+.card-container #pais3 {
+  background-image: url(../img/istanbul1.jpg);
+}
+.card-container #pais4{
+  background-image: url(../img/bangkok1.jpg);
+}
+
+.card-container #pais5 {
+  background-image: url(../img/dubai1.jpg);
+}
+
+.card-container #pais6 {
+  background-image: url(../img/istanbul1.jpg);
+}
+.card-container #pais7{
+  background-image: url(../img/bangkok1.jpg);
+}
+
+.card-container #pais8 {
+  background-image: url(../img/dubai1.jpg);
+}
+
+.card-container #pais9 {
+  background-image: url(../img/istanbul1.jpg);
+}
