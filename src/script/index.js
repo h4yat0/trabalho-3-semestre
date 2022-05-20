@@ -91,3 +91,12 @@ function showHideTripForms() {
         tripForms.style.display = "none";
     }
 }
+
+
+// Botão page-up
+
+let btn = document.querySelector("#botao");
+
+btn.addEventListener("click", function() {
+    window.scrollTo(0, 0);
+});
