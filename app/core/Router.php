@@ -45,7 +45,12 @@ class Router
 
         $ex = array_values(array_filter($ex));
 
+        for ($i = 0; $i < REMOVE_INDEX; $i++) {
+            unset($ex[$i]);
+        }
         $this->uriData = array_values($ex);
+
+        dd($this->uriData);
     }
 
     public function run()
