@@ -49,7 +49,7 @@ O projeto está estruturado utilizando a arquitetura de software **MVC**
 	- **/app/core**: armazena o núcleo do projeto (regras de views e routing);
 	- **/app/site**: armazena controllers, models e views;
 	- **/app/site/controllers**: armazena os controllers;
-	- **/app/site/models**: armazena os controllers;
+	- **/app/site/models**: armazena os models;
 	- **/app/site/views**: armazena as views;
 		- **/app/views/shared**: armazena views template e/ou partials;
 
