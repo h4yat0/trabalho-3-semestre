@@ -116,7 +116,7 @@ h4 {
 }
 
 .card {
-  border-radius: 0;
+  border-radius: 5%;
   width: 200px;
   height: 200px;
   display: flex;
@@ -228,3 +228,12 @@ h4 {
 }
 
 
+/*cards pacotes*/
+
+
+
+.pacotes{
+  width: 20vh;
+  height: 40vh;
+  background-color: red;
+}
