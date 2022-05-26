@@ -48,10 +48,12 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./src/css/hero.css" />
-    <link rel="stylesheet" href="./src/css/index-style.css" />
+    <link rel="stylesheet" href="{{BASE}}/public/assets/css/hero.css" />
+    <link rel="stylesheet" href="{{BASE}}/public/assets/css/index-style.css" />
 
-    <title>{{title}}</title>
+    {% block extraHead %}{% endblock %}
+
+    <title>{% block title %}{% endblock %}</title>
   </head>
 
   <body>
@@ -179,26 +181,24 @@
                     </li>
                   </ul>
                 </div>
-                <!-- login section
-                  <div class="nav-login-section" style="color: white">
-                    <a href="./src/pages/login.html">
-                      <button
-                        type="button"
-                        class="btn btn-outline-light btn-custom"
-                      >
-                        Login
-                      </button>
-                    </a>
-                    &ensp; | &ensp;
+                <!-- login section -->
+                <div class="nav-login-section" style="color: white">
+                  <a href="./src/pages/login.html">
                     <button
                       type="button"
                       class="btn btn-outline-light btn-custom"
                     >
-                      Sing in
+                      Login
                     </button>
-                  </div>
-                
-                -->
+                  </a>
+                  &ensp; | &ensp;
+                  <button
+                    type="button"
+                    class="btn btn-outline-light btn-custom"
+                  >
+                    Sing in
+                  </button>
+                </div>
               </div>
             </nav>
 
@@ -228,7 +228,7 @@
       <!-- Hero End -->
     </header>
 
-    <main>{{content}}</main>
+    <main>{% block main %}{% endblock %}</main>
     <br />
     <footer class="text-center text-white">
       <!-- Grid container -->
