@@ -1,5 +1,14 @@
 {
     "require": {
         "twig/twig": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }, 
+        "files": [
+            "app/config/config.php",
+            "app/functions/function.php"
+        ]
     }
 }

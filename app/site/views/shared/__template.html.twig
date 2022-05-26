@@ -26,11 +26,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./src/css/hero.css" />
-    <link rel="stylesheet" href="./src/css/index-style.css" />
+    <link rel="stylesheet" href="{{BASE}}/public/assets/css/hero.css" />
+    <link rel="stylesheet" href="{{BASE}}/public/assets/css/index-style.css" />
 
-    <title>{{title}}</title>
-</head>
+    {% block extraHead %}{% endblock %}
+
+    <title>{% block title %}{% endblock %}</title>
+  </head>
 
 <body>
     <div id="botao_inicio">
@@ -78,6 +80,45 @@
                         <a href="#" class="nav-item nav-link">Cadastro</a>
                     </div>
                 </div>
+                <!-- login section -->
+                <div class="nav-login-section" style="color: white">
+                  <a href="./src/pages/login.html">
+                    <button
+                      type="button"
+                      class="btn btn-outline-light btn-custom"
+                    >
+                      Login
+                    </button>
+                  </a>
+                  &ensp; | &ensp;
+                  <button
+                    type="button"
+                    class="btn btn-outline-light btn-custom"
+                  >
+                    Sing in
+                  </button>
+                </div>
+              </div>
+            </nav>
+
+            <!-- Navbar End -->
+
+            <div
+              style="
+                max-width: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+              "
+            >
+              <h1>Site de viagens</h1>
+              <p>
+                Nos forneceremos a melhor experiencia possível em sua viagem
+                <br />
+                "Quer fazer a viagem dos seus sonhos? Venha conosco. Nos
+                fornecemos o melhor experiência possível em sua viagem dos
+                sonhos"
+              </p>
             </div>
         </nav>
 
@@ -103,7 +144,7 @@
         <!-- Hero End -->
     </header>
 
-    <main>{{content}}</main>
+    <main>{% block main %}{% endblock %}</main>
     <br />
     <footer class="text-center text-white">
         <!-- Grid container -->
@@ -121,6 +162,6 @@
 
     <!-- Custom Script -->
     <script src="./src/script/index.js"></script>
-</body>
-
+    
+  </body>
 </html>
