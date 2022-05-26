@@ -2,9 +2,6 @@
 
 require_once('vendor/autoload.php');
 
-echo BASE;
-
-
 (new \app\core\Router());
 // (new \app\site\controllers\HomeController())->index();
 
