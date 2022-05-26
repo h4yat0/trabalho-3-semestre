@@ -692,3 +692,29 @@ DATA | Jundiaí, São Paulo. 14/05/2022, 16:34:12
 - singapura
 
 =======================//================= 
+================ CIDADES ================= 
+
+DATA | Jundiaí, São Paulo. 16/05/2022, 08:46:34
+
+- paris
+- dubai
+- phuket
+- hong kong
+- bankok
+- londres
+- singapura
+
+=======================//================= 
+================ CIDADES ================= 
+
+DATA | Jundiaí, São Paulo. 20/05/2022, 20:29:27
+
+- paris
+- dubai
+- phuket
+- hong kong
+- bankok
+- londres
+- singapura
+
+=======================//================= 
