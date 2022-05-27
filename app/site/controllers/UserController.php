@@ -6,17 +6,58 @@ use app\site\models\UserModel;
 class UserController extends Controller {
 
     public static function save() {
-        include '../models/UserModel.php';
 
-        $model = new UserModel();
+        if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['phoneNumber']) && isset($_POST['password']) && isset($_POST['repeatPassword'])) {
+            $model = new UserModel();
 
-        $model->name = $_POST['name'];
-        $model->email = $_POST['email'];
-        $model->phoneNumber = $_POST['phoneNumber'];
-        $model->password = $_POST['password'];
-        $model->repeatPassword = $_POST['repeatPassword'];
-        $model->setRegisterDate(date('d/m/Y'));
+            $model->name = parent::cleanPost($_POST['name']);
+            $model->email = parent::cleanPost($_POST['email']);
+            $model->phoneNumber = parent::cleanPost($_POST['phoneNumber']);
+            $model->password = parent::cleanPost($_POST['password']);
+            $model->criptPass = sha1($model->password);
+            $model->repeatPassword = parent::cleanPost($_POST['repeatPassword']);
+            date_default_timezone_set('America/Sao_Paulo');
+            $model->setRegisterDate(date('d/m/Y'));
 
-        $model->save();
+            // Valida se não tem nenhum campo vazio
+            if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phoneNumber']) || empty($_POST['password']) || empty($_POST['repeatPassword'])) {
+                $model->error = ['emptyError' => 'Um ou mais campos vazio'];
+            } else {
+
+                self::registerValidation($model);
+                if (empty($model->error)) {
+                    $model->save();
+                }
+            }
+
+
+        }
+    }
+
+    public static function registerValidation(UserModel $model): void {
+
+        //Valida nome
+        if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/", $model->name)) {
+            $model->error = ['nameError' => 'Nome inválido'];
+        }
+
+        //Valida email
+        if (!filter_var($model->email, FILTER_VALIDATE_EMAIL)) {
+            $model->error = ['emailError' => 'Email inválido'];
+        }
+
+        //Valida se senha tem mais que 6 dígitos
+        if (strlen($model->password) < 6) {
+            $model->error = ['passError' => 'Tamanho mínimo de senha não atingido'];
+        }
+
+        //Valida se senhas são iguais
+        if ($model->password !== $model->repeatPassword) {
+            $model->error = ['repeatPassError' => 'Senhas diferentes'];
+        }
+
+        if ($model->isRepeatedEmail($model->email)) {
+            $model->error = ['repeatedEmailError' => 'Email já cadastrado'];
+        }
     }
 }

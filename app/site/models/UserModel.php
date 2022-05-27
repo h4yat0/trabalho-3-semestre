@@ -8,11 +8,12 @@ class UserModel
     public string $name;
     public string $email;
     public string $password;
+    public string $criptPass;
     public string $repeatPassword;
     public string $phoneNumber;
     public string $token = "";
     public string $registerDate;
-    public array $erro = [];
+    public array $error = [];
 
     /**
      * @param string $registerDate
@@ -24,11 +25,16 @@ class UserModel
 
     public function save(): void
     {
-        include '../DAO/UserDAO.php';
 
         $dao = new UserDAO();
 
         $dao->insert($this);
     }
 
+    public function isRepeatedEmail(string $email): bool {
+        $dao = new UserDAO();
+
+
+        return $dao->selectEmail($email);
+    }
 }

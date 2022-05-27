@@ -4,10 +4,11 @@
     <list default="true" id="637c8579-468b-4873-b740-025f73042ea3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/env/phpN.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/env/phpN.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/controllers/CadastrarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/controllers/CadastrarController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/views/cadastrar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/views/cadastrar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/site/DAO/UserDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/DAO/UserDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/site/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/site/models/UserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/models/UserModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,22 +41,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\trabalho-3-semestre\app\core" />
       <recent name="C:\xampp\htdocs\trabalho-3-semestre\app\site\model" />
     </key>
   </component>
@@ -84,7 +86,8 @@
       <workItem from="1652701722830" duration="1105000" />
       <workItem from="1653587200612" duration="87000" />
       <workItem from="1653587328844" duration="3888000" />
-      <workItem from="1653591914764" duration="15693000" />
+      <workItem from="1653591914764" duration="16071000" />
+      <workItem from="1653645614280" duration="8102000" />
     </task>
     <servers />
   </component>
@@ -96,7 +99,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/deploy-aguiar" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
