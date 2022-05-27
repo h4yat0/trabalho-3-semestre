@@ -1,3 +1,13 @@
+{% extends './shared/__template.html.twig' %}
+
+{% block extraHead %}
+<link href="{{BASE}}public/assets/css/cadastro.css" rel="stylesheet">
+{% endblock %}
+
+{% block title %}Cadastro{% endblock %}
+
+{% block main %}
+
 <div
   class="container-fluid"
   style="padding: 2.5rem 0rem; background-color: #8cc8c4"
@@ -64,3 +74,4 @@
     </div>
   </div>
 </div>
+{% endblock %}

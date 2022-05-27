@@ -12,6 +12,8 @@ class HomeController extends Controller
     }
     public function index()
     {
-        $this->View('home');
+        $this->View('home', [
+            'BASE' => BASE
+        ]);
     }
 }
