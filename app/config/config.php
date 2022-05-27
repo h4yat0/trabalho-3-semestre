@@ -1,6 +1,6 @@
 <?php
 
-$xamp = true;
+$xamp = false;
 
 /*
     prod.php  => xamp

@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="637c8579-468b-4873-b740-025f73042ea3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cidade.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cidade.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/env/phpN.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/env/phpN.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/site/controllers/CadastrarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/controllers/CadastrarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/site/views/cadastrar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/views/cadastrar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
@@ -18,6 +23,14 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+    </include_path>
   </component>
   <component name="ProjectId" id="28y93KteHDSrEtX6mbwf8xlyICc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -27,14 +40,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\trabalho-3-semestre\app\site\model" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="cadastrar.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/trabalho-3-semestre/cadastrar.php" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -58,6 +82,9 @@
       <workItem from="1652548853609" duration="3654000" />
       <workItem from="1652556459316" duration="4186000" />
       <workItem from="1652701722830" duration="1105000" />
+      <workItem from="1653587200612" duration="87000" />
+      <workItem from="1653587328844" duration="3888000" />
+      <workItem from="1653591914764" duration="15693000" />
     </task>
     <servers />
   </component>
