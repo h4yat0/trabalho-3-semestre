@@ -26,9 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{BASE}}public/assets/css/hero.css" />
     <link rel="stylesheet" href="{{BASE}}public/assets/css/index-style.css" />
-    <link rel="stylesheet" href="{{BASE}}public/assets/css/login.css" />
 
     {% block extraHead %}{% endblock %}
 
@@ -36,10 +34,32 @@
   </head>
 
 <body>
-    <header>{% block header %}{% endblock %}</header>
-    
-    <main>{% block main %}{% endblock %}</main>
-    <br />
+    <div id="botao_inicio">
+        <button id="botao">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          color="white"
+          width="25"
+          height="25"
+          fill="currentColor"
+          class="bi bi-arrow-up"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
+          />
+        </svg>
+      </button>
+    </div>
+    <header>
+      {% include './shared/partials/navbar.html.twig' %}
+      {% block extraHeader %}{% endblock %}
+    </header>
+
+    <main>
+     {% block main %}{% endblock %}
+    </main>
     <footer class="text-center text-white">
         <!-- Grid container -->
 
