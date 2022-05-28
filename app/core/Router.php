@@ -49,8 +49,6 @@ class Router
             unset($ex[$i]);
         }
         $this->uriData = array_values($ex);
-
-        dd($this->uriData);
     }
 
     public function run()
