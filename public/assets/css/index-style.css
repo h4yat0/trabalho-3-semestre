@@ -246,21 +246,3 @@ body::-webkit-scrollbar-thumb {
 
 /*cards pacotes*/
 
-.card_pacotes{
-    margin-top: 5%;
-   
-}
-
-.pacotes{
-  width: 25vh;
-  height: 50vh;
-  background-color: red;
-  border-radius: 5%;
-  
-}
-
-.img_pacote{
-    background-image: url("bangkok1.jpg");
-    height: 20vh;
-    border-radius: 5% 5% 0% 0 ;
-}
