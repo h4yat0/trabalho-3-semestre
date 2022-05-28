@@ -121,6 +121,10 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-evenly;
   padding: 50px 0 50px 0;
+  width: 700px;
+  height: 700px;
+  margin-left: auto;
+  margin-right: auto; 
 }
 
 .card-container {
@@ -132,7 +136,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card {
-  border-radius: 5%;
+ 
   width: 200px;
   height: 200px;
   display: flex;
