@@ -34,7 +34,38 @@ class UserModel
     public function isRepeatedEmail(string $email): bool {
         $dao = new UserDAO();
 
+        if ($dao->selectEmail($email)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
-        return $dao->selectEmail($email);
+    public function isValidLogin(): bool
+    {
+        $dao = new UserDAO();
+
+        if ($dao->selectLogin($this)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function updateToken(): void
+    {
+        $dao = new UserDAO();
+
+        $dao->updateToken($this);
+    }
+    public function isValidSession(): bool
+    {
+        $dao = new UserDAO();
+
+        if ($dao->selectToken($this->token)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

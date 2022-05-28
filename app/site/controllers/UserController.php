@@ -34,7 +34,31 @@ class UserController extends Controller {
         }
     }
 
-    public static function registerValidation(UserModel $model): void {
+    public static function login()
+    {
+        if (isset($_POST['email']) && isset($_POST['password']) && !empty($_POST['email']) && !empty($_POST['password'])) {
+            $loginModel = new UserModel();
+
+            $loginModel->email = parent::cleanPost($_POST['email']);
+            $loginModel->password = parent::cleanPost($_POST['password']);
+            $loginModel->criptPass = sha1($loginModel->password);
+
+            // Verifica se existe esse usuário
+            if ($loginModel->isValidLogin($loginModel)) {
+                // Cria um token para session
+                $loginModel->token = sha1(uniqid().date('d-m-Y-H-i-s'));
+                $loginModel->updateToken();
+
+                // Guarda token na session
+                $_SESSION['TOKEN'] = $loginModel->token;
+
+                // Colocar para ir para algum lugar
+
+            }
+        }
+    }
+
+    private static function registerValidation(UserModel $model): void {
 
         //Valida nome
         if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/", $model->name)) {

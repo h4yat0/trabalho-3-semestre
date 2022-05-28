@@ -9,7 +9,7 @@ abstract class Controller
      * Não informar .twig.php junto ao nome da página, pois é inserido automaticamente
     */
 
-    protected function View(string $page, array $params = []): void
+    protected static function View(string $page, array $params = []): void
     {
         $page .= '.html.twig';
         $loader = new \Twig\Loader\FilesystemLoader('app/site/views');
