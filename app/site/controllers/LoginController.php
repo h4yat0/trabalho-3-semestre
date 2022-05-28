@@ -4,10 +4,10 @@ namespace app\site\controllers;
 
 use app\core\Controller;
 
-class CadastrarController extends Controller
+class LoginController extends Controller
 {
     public function index()
     {
-        $this->View('cadastrar');
+        $this->View('login');
     }
 }

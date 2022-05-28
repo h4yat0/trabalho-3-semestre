@@ -40,27 +40,29 @@
         class="container-fluid col-5"
         style="max-height: 85vh; overflow: auto"
       >
-        <form>
+        <form method="post" action="user/save">
           <h3>Login</h3>
 
-          <label for="password">Nome Completo</label>
-          <input type="text" placeholder="Nome Completo" id="name" />
+          <label for="name">Nome Completo</label>
+          <input type="text" placeholder="Nome Completo" name="name" id="name" required />
 
-          <label for="username">E-mail</label>
-          <input type="tel" placeholder="Email" id="e-mail" />
+          <label for="email">E-mail</label>
+          <input type="email" placeholder="Email" name="email" id="email" required/>
 
-          <label for="username">Telefone</label>
+          <label for="phoneNumber">Telefone</label>
           <input
-            type="text"
+            type="tel"
             placeholder="Número de telofone"
+            name="phoneNumber"
             id="phoneNumber"
+            required
           />
 
           <label for="password">Senha</label>
-          <input type="password" placeholder="Senha" id="password" />
+          <input type="password" placeholder="Senha" name="password" id="password" required/>
 
-          <label for="password">Repetir senha</label>
-          <input type="password" placeholder="Senha" id="password" />
+          <label for="repeatPassword">Repetir senha</label>
+          <input type="password" placeholder="Senha" name="repeatPassword" id="repeatPassword" required/>
 
           <button>Cadastrar</button>
           <br /><br />
