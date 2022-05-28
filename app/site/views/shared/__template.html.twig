@@ -26,9 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{BASE}}public/assets/css/hero.css" />
     <link rel="stylesheet" href="{{BASE}}public/assets/css/index-style.css" />
-    <link rel="stylesheet" href="{{BASE}}public/assets/css/login.css" />
 
     {% block extraHead %}{% endblock %}
 
@@ -55,59 +53,13 @@
       </button>
     </div>
     <header>
-        <!-- Hero Zone -->
-
-        <!-- Navbar Zone -->
-        <nav style="z-index: 999; width: 100%;" class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a href="#" class="navbar-brand">
-                   | Travel Dreams |
-                </a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                      <span class="navbar-toggler-icon"></span>
-                  </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav">
-                        <a href="#" class="nav-item nav-link active">Home</a>
-                        <a href="#" class="nav-item nav-link">x</a>
-                        <a href="#" class="nav-item nav-link">y</a>
-                        <a href="#" class="nav-item nav-link disabled" tabindex="-1">z</a>
-                    </div>
-
-
-
-                    <div class="navbar-nav ms-auto">
-                        <a href="#" class="nav-item nav-link">Login</a>
-                        <a href="#" class="nav-item nav-link">Cadastro</a>
-                    </div>
-                </div>
-                <!-- login section -->
-                <div class="nav-login-section" style="color: white">
-                  <a href="./src/pages/login.html">
-                    <button
-                      type="button"
-                      class="btn btn-outline-light btn-custom"
-                    >
-                      Login
-                    </button>
-                  </a>
-                  &ensp; | &ensp;
-                  <button
-                    type="button"
-                    class="btn btn-outline-light btn-custom"
-                  >
-                    Sing in
-                  </button>
-                </div>
-              </div>
-            </nav>
-
-            <!-- Navbar End -->
-            
+      {% include './shared/partials/navbar.html.twig' %}
+      {% block extraHeader %}{% endblock %}
     </header>
 
-    <main>{% block main %}{% endblock %}</main>
-    <br />
+    <main>
+     {% block main %}{% endblock %}
+    </main>
     <footer class="text-center text-white">
         <!-- Grid container -->
 
