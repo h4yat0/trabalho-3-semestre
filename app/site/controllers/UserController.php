@@ -31,6 +31,8 @@ class UserController extends Controller {
             }
 
 
+        } else {
+            echo "Erro no envio do post!";
         }
     }
 
@@ -55,6 +57,8 @@ class UserController extends Controller {
                 // Colocar para ir para algum lugar
 
             }
+        } else {
+            echo "Erro no envio do post";
         }
     }
 
