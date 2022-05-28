@@ -1,77 +1,52 @@
 {% extends './shared/__template.html.twig' %}
 
 {% block extraHead %}
-<link href="{{BASE}}public/assets/css/cadastro.css" rel="stylesheet">
+  <link href="{{BASE}}public/assets/css/cadastro.css" rel="stylesheet">
 {% endblock %}
 
 {% block title %}Cadastro{% endblock %}
 
 {% block main %}
+<div class="container-fluid ps-md-0">
+  <div class="row g-0">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+              <h3 class="login-heading mb-4">Cadastro</h3>
 
-<div
-  class="container-fluid"
-  style="padding: 2.5rem 0rem; background-color: #8cc8c4"
->
-  <div
-    class="container"
-    style="background-color: #ffffff; border-radius: 0.5rem"
-  >
-    <div class="row no-gutters">
-      <div class="col-5 login-img">
-        <a href="/index.html">
-          <div style="padding: 1rem; text-decoration: none; color: #fff">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="35"
-              height="35"
-              fill="currentColor"
-              class="bi bi-arrow-return-left"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"
-              />
-            </svg>
+              <!-- Sign In Form -->
+              <form method="post" action="user/save">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="name "id="name" placeholder="Seu nome completo" required>
+                  <label for="name">Nome completo</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+                  <label for="email">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="tel" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="(XX) XXXX-XXXX" required>
+                  <label for="phoneNumber">Telefone</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Senha" required>
+                  <label for="password">Senha</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control" name="repeatPassword" id="repeatPassword" placeholder="Repedir senha" required>
+                  <label for="repeatPassword">Repetir senha</label>
+                </div>
+
+                <div class="d-grid">
+                  <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Cadastrar</button>
+                </div>
+              </form>
+            </div>
           </div>
-        </a>
-      </div>
-      <div
-        class="container-fluid col-5"
-        style="max-height: 85vh; overflow: auto"
-      >
-        <form method="post" action="user/save">
-          <h3>Login</h3>
-
-          <label for="name">Nome Completo</label>
-          <input type="text" placeholder="Nome Completo" name="name" id="name" required />
-
-          <label for="email">E-mail</label>
-          <input type="email" placeholder="Email" name="email" id="email" required/>
-
-          <label for="phoneNumber">Telefone</label>
-          <input
-            type="tel"
-            placeholder="Número de telofone"
-            name="phoneNumber"
-            id="phoneNumber"
-            required
-          />
-
-          <label for="password">Senha</label>
-          <input type="password" placeholder="Senha" name="password" id="password" required/>
-
-          <label for="repeatPassword">Repetir senha</label>
-          <input type="password" placeholder="Senha" name="repeatPassword" id="repeatPassword" required/>
-
-          <button>Cadastrar</button>
-          <br /><br />
-          <a href="">Não tem uma conta? Inscreva-se agora</a>
-        </form>
-        <div
-          class="container"
-          style="background-color: #43bbac; padding: 0rem"
-        ></div>
+        </div>
       </div>
     </div>
   </div>
