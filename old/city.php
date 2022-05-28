@@ -1,14 +1,4 @@
-<?php
-  if(isset($_GET["cidade"])) {
-    $cidade = $_GET["cidade"];
-  } else {
-    $cidade = "paris";
-  }
 
-  $img1 = "<img src='./src/img/" . $cidade . "1.jpg' class='img-fluid' />";
-  $img2 = "<img src='./src/img/" . $cidade . "2.jpg' class='img-fluid' />";
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -185,13 +175,11 @@
 
       </div>
       <br>
-      <h1 class="text-center">O que ver em <?php echo ucfirst($cidade)?></h1>
+      <h1 class="text-center">O que ver em <!-- cidade dinamica--></h1>
       <br>
         <div class="row g-5">
           <div class="col">
-              <?php
-                echo $img1;
-              ?>
+             
             <p style="padding: 1rem 0rem">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
               laudantium voluptatum ut laboriosam officiis odit, error sed
@@ -209,9 +197,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
               quia totam, deserunt eius nam adipisci!
             </p>
-            <?php
-                echo $img2;
-            ?>
+            
           </div>
         </div>
         <div class="container container-custom">
@@ -227,10 +213,7 @@
             </div>
             <div class="col-2">
               <button type="button" class="btn btn-dark btn-custom">
-                <?php
-                    $valorDaviagem = mt_rand(200000, 1000000)/100;
-                    echo 'R$'.number_format($valorDaviagem,2,",", ".");
-                ?>
+                
               </button>
             </div>
           </div>
