@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="637c8579-468b-4873-b740-025f73042ea3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/DAO/UserDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/DAO/UserDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/models/UserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/models/UserModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/site/views/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/views/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/site/views/shared/__template.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/views/shared/__template.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +28,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
     </include_path>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="28y93KteHDSrEtX6mbwf8xlyICc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -87,7 +86,9 @@
       <workItem from="1653587200612" duration="87000" />
       <workItem from="1653587328844" duration="3888000" />
       <workItem from="1653591914764" duration="16071000" />
-      <workItem from="1653645614280" duration="8102000" />
+      <workItem from="1653645614280" duration="8212000" />
+      <workItem from="1653692665564" duration="107000" />
+      <workItem from="1653745670614" duration="2971000" />
     </task>
     <servers />
   </component>
