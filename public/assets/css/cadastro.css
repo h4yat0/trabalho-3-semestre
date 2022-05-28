@@ -1,10 +1,6 @@
 .login {
     min-height: 96vh;
   }
-
-  input {
-      border-radius: 0;
-  }
   
   .bg-image {
     background-image: url('../img/placeholder-01.jpg');
