@@ -1,76 +1,13 @@
 {% extends './shared/__template.html.twig' %}
 
-{% block extraHead %}{% endblock %}
+{% block extraHead %}
+    <link rel="stylesheet" href="{{BASE}}public/assets/css/hero.css" />
+{% endblock %}
 
 {% block title %}Home{% endblock %}
 
-{% block header %}
-  <div id="botao_inicio">
-    <button id="botao">
-      <svg
-              xmlns="http://www.w3.org/2000/svg"
-              color="white"
-              width="25"
-              height="25"
-              fill="currentColor"
-              class="bi bi-arrow-up"
-              viewBox="0 0 16 16"
-      >
-        <path
-                fill-rule="evenodd"
-                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
-        />
-      </svg>
-    </button>
-  </div>
+{% block extraHeader %}
   <!-- Hero Zone -->
-
-  <!-- Navbar Zone -->
-  <nav style="z-index: 999; width: 100%;" class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a href="#" class="navbar-brand">
-        | Travel Dreams |
-      </a>
-      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav">
-          <a href="#" class="nav-item nav-link active">Home</a>
-          <a href="#" class="nav-item nav-link">x</a>
-          <a href="#" class="nav-item nav-link">y</a>
-          <a href="#" class="nav-item nav-link disabled" tabindex="-1">z</a>
-        </div>
-
-
-
-        <div class="navbar-nav ms-auto">
-          <a href="#" class="nav-item nav-link">Login</a>
-          <a href="#" class="nav-item nav-link">Cadastro</a>
-        </div>
-      </div>
-      <!-- login section -->
-      <div class="nav-login-section" style="color: white">
-        <a href="#">
-          <button
-                  type="button"
-                  class="btn btn-outline-light btn-custom"
-          >
-            Login
-          </button>
-        </a>
-        &ensp; | &ensp;
-        <button
-                type="button"
-                class="btn btn-outline-light btn-custom"
-        >
-          Sing in
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Navbar End -->
 
   <div
           style="
@@ -80,7 +17,7 @@
                 transform: translateY(-50%);
               "
   >
-    <h1>Site de viagens</h1>
+    <h1 class="text-light">Site de viagens</h1>
     <p>
       Nos forneceremos a melhor experiencia possível em sua viagem
       <br />
@@ -89,8 +26,6 @@
       sonhos"
     </p>
   </div>
-
-  <!-- Navbar End -->
   <div class="hero-image">
     <div class="container" style="
                       color: white;
@@ -112,46 +47,6 @@
 {% endblock %}
 
 {% block main %}
-<!-- hero -->
-            <div
-              style="
-                max-width: 50%;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-              "
-            >
-              <h1>Site de viagens</h1>
-              <p>
-                Nos forneceremos a melhor experiencia possível em sua viagem
-                <br />
-                "Quer fazer a viagem dos seus sonhos? Venha conosco. Nos
-                fornecemos o melhor experiência possível em sua viagem dos
-                sonhos"
-              </p>
-            </div>
-        </nav>
-
-        <!-- Navbar End -->
-        <div class="hero-image">
-            <div class="container" style="
-                      color: white;
-                      font-family: 'Poppins', sans-serif;
-                      max-width: 70%;
-                    ">
-                <div class="container">
-                    <br><br><br><br><br><br>
-                    <h1>Site de viagens</h1>
-                    <p>
-                        Nos forneceremos a melhor experiencia possível em sua viagem
-                        <br /> "Quer fazer a viagem dos seus sonhos? Venha conosco. Nos fornecemos o melhor experiência possível em sua viagem dos sonhos"
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="hero-text"></div>
-        </div>
-        <!-- Hero End -->
 <div class="container container-custom" style="max-width: 70%">
   <div class="row g-5">
     <div class="col">
