@@ -1,11 +1,15 @@
 <?php
+
 namespace app\site\controllers;
+
 use app\core\Controller;
 use app\site\models\UserModel;
 
-class UserController extends Controller {
+class UserController extends Controller
+{
 
-    public static function save() {
+    public static function save()
+    {
 
         if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['phoneNumber']) && isset($_POST['password']) && isset($_POST['repeatPassword'])) {
             $model = new UserModel();
@@ -29,8 +33,6 @@ class UserController extends Controller {
                     $model->save();
                 }
             }
-
-
         } else {
             echo "Erro no envio do post!";
         }
@@ -48,7 +50,7 @@ class UserController extends Controller {
             // Verifica se existe esse usuário
             if ($loginModel->isValidLogin($loginModel)) {
                 // Cria um token para session
-                $loginModel->token = sha1(uniqid().date('d-m-Y-H-i-s'));
+                $loginModel->token = sha1(uniqid() . date('d-m-Y-H-i-s'));
                 $loginModel->updateToken();
 
                 // Guarda token na session
@@ -62,7 +64,8 @@ class UserController extends Controller {
         }
     }
 
-    private static function registerValidation(UserModel $model): void {
+    private static function registerValidation(UserModel $model): void
+    {
 
         //Valida nome
         if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/", $model->name)) {
