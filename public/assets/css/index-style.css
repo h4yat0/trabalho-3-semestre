@@ -39,6 +39,10 @@ body::-webkit-scrollbar-thumb {
     /* creates padding around scroll thumb */
 }
 
+main {
+  min-height: 100vh;
+}
+
 .navbar-custom {
     background-color: #ffffff00;
     justify-content: space-between;
