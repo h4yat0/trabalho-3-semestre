@@ -29,8 +29,6 @@ class UserController extends Controller {
                     $model->save();
                 }
             }
-
-
         } else {
             echo "Erro no envio do post!";
         }
