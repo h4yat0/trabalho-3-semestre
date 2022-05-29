@@ -14,7 +14,11 @@ body {
     border-color: #000
 }
 
+.border-custom {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
 
 .labels {
-    font-size: 12px
+    font-size: 14px
 }
