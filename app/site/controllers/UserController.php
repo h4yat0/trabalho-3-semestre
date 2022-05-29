@@ -14,7 +14,7 @@ class UserController extends Controller {
             $model->email = parent::cleanPost($_POST['email']);
             $model->phoneNumber = parent::cleanPost($_POST['phoneNumber']);
             $model->password = parent::cleanPost($_POST['password']);
-            $model->criptPass = sha1($model->password);
+            $model->criptPass = base64_encode($model->password);
             $model->repeatPassword = parent::cleanPost($_POST['repeatPassword']);
             date_default_timezone_set('America/Sao_Paulo');
             $model->setRegisterDate(date('d/m/Y'));
@@ -41,7 +41,7 @@ class UserController extends Controller {
 
             $loginModel->email = parent::cleanPost($_POST['email']);
             $loginModel->password = parent::cleanPost($_POST['password']);
-            $loginModel->criptPass = sha1($loginModel->password);
+            $loginModel->criptPass = base64_encode($loginModel->password);
 
             // Verifica se existe esse usuário
             if ($loginModel->isValidLogin($loginModel)) {
