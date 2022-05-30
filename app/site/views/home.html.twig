@@ -8,32 +8,9 @@
 
 {% block extraHeader %}
   <!-- Hero Zone -->
-
-  <div
-          style="
-                max-width: 50%;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-              "
-  >
-    <h1 class="text-light">Site de viagens</h1>
-    <p>
-      Nos forneceremos a melhor experiencia possível em sua viagem
-      <br />
-      "Quer fazer a viagem dos seus sonhos? Venha conosco. Nos
-      fornecemos o melhor experiência possível em sua viagem dos
-      sonhos"
-    </p>
-  </div>
   <div class="hero-image">
-    <div class="container" style="
-                      color: white;
-                      font-family: 'Poppins', sans-serif;
-                      max-width: 70%;
-                    ">
+    <div class="container" style="color: white; font-family: 'Poppins', sans-serif; max-width: 70%;"> <!-- estilos das letras do hero-->
       <div class="container">
-        <br><br><br><br><br><br>
         <h1>Site de viagens</h1>
         <p>
           Nos forneceremos a melhor experiencia possível em sua viagem
@@ -42,193 +19,372 @@
       </div>
     </div>
   </div>
-  <div class="hero-text"></div>
-  <!-- Hero End -->
+  <!-- Hero End-->
 {% endblock %}
 
 {% block main %}
-<div class="container container-custom" style="max-width: 70%">
-  <div class="row g-5">
-    <div class="col">
-      <img src="{{BASE}}public/assets/img/placeholder-05.jpg" class="img-fluid" />
-      <p style="padding: 1rem 0rem">
-        Em nossos pacotes nos abrangemos os mais variados preços, para assim
-        caber em seu bolso. E varias formas de locomoções como: avião, navio,
-        trem, entre outros. E por ultimo reservamos pacotes com estadias em
-        hotéis ou em casa, sempre visando a melhor experiência possível em sua
-        viajem dos sonhos
-      </p>
-    </div>
-    <div class="col">
-      <h2>Lugares</h2>
-      <p>
-        Nos trabalhos com viagens ao redor do mundo todo, com diferentes tipos
-        de transportes
-      </p>
-      <img src="{{BASE}}public/assets/img/placeholder-06.jpg" class="img-fluid" />
-    </div>
-  </div>
-
-
   
-    <h1>Veja algums pacotes</h1>
+  <div class="container container-custom" style="max-width: 70%"> <!--div que limita a largura da pagina-->
+      <!-- Descrição site-->
+      <div class="row g-6"> <!--dividindo em colulas-->
+        <div class="col-3"> <!-- coluna 2-->
+          <h2>Lugares</h2>
+          <p>
+          Nos trabalhos com viagens ao redor do mundo todo, com diferentes tipos
+          de transportes
+          </p>
+          <img src="{{BASE}}public/assets/img/placeholder-06.jpg" class="img-fluid" />
+        </div>
 
-    <div class="card_pacotes">
-      <div class="row">
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="col-3"> <!--coluna 1-->
+          <img src="{{BASE}}public/assets/img/placeholder-05.jpg" class="img-fluid" />
+          <p style="padding: 1rem 0rem">
+          Em nossos pacotes nos abrangemos os mais variados preços, para assim
+          caber em seu bolso. E varias formas de locomoções como: avião, navio,
+          trem, entre outros. E por ultimo reservamos pacotes com estadias em
+          hotéis ou em casa, sempre visando a melhor experiência possível em sua
+          viajem dos sonhos
+          </p>
+        </div>
+      </div>
+    <!-- Descrição End-->
+    <!--Pacotes-->
+    
+    <div class="container container-custom" style="padding: 3rem 0rem;">
+      <h1>Veja alguns pacotes</h1><br/>
+      <div class="card-pacotes">
+        <div class="row row-cols-3 row gy-3">
+
+          <div class="col">
+            <div class="pacotes">
+              <div class="card_pacote" >
+                <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                <div class="card-body">
+                  <h5 class="card-title" style="color:black;">Berlim</h5>
+                    <p class="card-text" style="color:black;">
+                      <strong>passagem de ida e volta</strong> <br>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                      10 de julho até 10 de agosto<br><br>
+                      R$5000    
+                    </p>
+                    <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" align="center">Go somewhere</a>
+                    </div><!--div d-flex justify-content-center END-->
+                </div>
               </div>
+            </div>
           </div>
+
+          <div class="col">
+            <div class="pacotes">
+              <div class="card_pacote" >
+                <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                <div class="card-body">
+                  <h5 class="card-title" style="color:black;">Sydney </h5>
+                    <p class="card-text" style="color:black;">
+                      <strong>passagem de ida e volta</strong> <br>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                      4 de janeiro até 19 de janeiro <br><br>
+                      R$3500
+                    </p>
+                    <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" align="center">Go somewhere</a>
+                    </div><!--div d-flex justify-content-center END-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="pacotes">
+              <div class="card_pacote" >
+                <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                <div class="card-body">
+                  <h5 class="card-title" style="color:black;">Atenas</h5>
+                    <p class="card-text" style="color:black;">
+                      <strong>passagem de ida e volta</strong> <br>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                      10 de março até 20 de março<br><br>
+                      R$2500
+                    </p>
+                    <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" align="center">Go somewhere</a>
+                    </div><!--div d-flex justify-content-center END-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="pacotes">
+              <div class="card_pacote">
+                <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                <div class="card-body">
+                  <h5 class="card-title" style="color:black;">Cidade do Cabo</h5>
+                    <p class="card-text" style="color:black;">
+                      <strong>passagem de ida e volta</strong> <br>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                      28 de novembro até 8 de dezembro<br><br>
+                      R$2500
+                    </p>
+                    <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" align="center">Go somewhere</a>
+                    </div><!--div d-flex justify-content-center END-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="pacotes">
+              <div class="card_pacote">
+                <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                <div class="card-body">
+                  <h5 class="card-title" style="color:black;">Machu Picchu</h5>
+                    <p class="card-text" style="color:black;">
+                      <strong>passagem de ida e volta</strong> <br>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                      15 de agosto até 30 de agosto  <br><br>
+                      R$1000
+                    </p>
+                    <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" align="center">Go somewhere</a>
+                    </div><!--div d-flex justify-content-center END-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="pacotes">
+              <div class="card_pacote">
+                <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                <div class="card-body">
+                  <h5 class="card-title" style="color:black;">Miami</h5>
+                    <p class="card-text" style="color:black;">
+                      <strong>passagem de ida e volta</strong> <br>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                      23 de fevereiro até 23 de abril <br><br>
+                      R$10000
+                    </p>
+                    <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" align="center">Go somewhere</a>
+                    </div><!--div d-flex justify-content-center END-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
         </div>
       </div>
-    <div>
+    </div>
 
-    
-    
+    <!--Pacotes End-->
+
+
+    <!--Duvidas-->
+    <!--Introdução duvidas-->
+    <div class="container container-custom" style="height: 50px; padding: 3rem 0rem;">
+      <div class="row" style="justify-content: space-evenly;">
+        <div class="col">
+         <h1>Ainda esta com duvida para onde ir?</h1>
+          <p>
+            Veja os paises mais populres, abaixo
+          </p>      
+        </div>
+      </div>
+    </div>
+    <!--Introdução End-->
+
+    <!--Cards duvidas-->
+    <div class="cards-container-container">
+      <div class="row row-cols-3 row gx-2 row gy-4">
+
+        <div class="col">
+          <a href="#card1" onclick="desc('pais1')">
+            <div class="card-container">
+              <div class="card" id="pais1">
+                <h2>China</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#card1" onclick="desc('pais2')">
+            <div class="card-container">
+              <div class="card" id="pais2">
+                <h2>Brasil</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#card1" onclick="desc('pais3')">
+            <div class="card-container">
+              <div class="card" id="pais3">
+                <h2>EUA</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#card1" onclick="desc('pais4')">
+            <div class="card-container">
+              <div class="card" id="pais4">
+                <h2>Tailandia</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#card1" onclick="desc('pais5')">
+            <div class="card-container">
+              <div class="card" id="pais5">
+                <h2>Inglaterra</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#card1" onclick="desc('pais6')">
+            <div class="card-container">
+              <div class="card" id="pais6">
+                <h2>Singapura</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#card1" onclick="desc('pais7')">
+            <div class="card-container">
+              <div class="card" id="pais7">
+                <h2>França</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#card1" onclick="desc('pais8')">
+            <div class="card-container">
+              <div class="card" id="pais8">
+                <h2>Itália</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#card1" onclick="desc('pais9')">
+            <div class="card-container">
+              <div class="card" id="pais9">
+                <h2>Japão</h2>
+                <p>saiba mais</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <!--fim cards duvidas-->
+
+    <!--Descrição-->
+
+    <div id="descricao_paises" style="display:none">
+      <div class="row row-cols-3">
+
+        <div class="col" id="card1">
+          <div class="grid-container mx-auto">
+            <div class="img_desc" style="background-size: cover; background-position: center;"></div> <!--div de uma linha-->
+            <h3 class="nome_cidade"></h3>
+            <p class="descricao"></p>
+            <button type="button" class="btn btn-dark btn-custom btn-transparent-custom">
+              SAIBA MAIS
+            </button>
+          </div><!--fim div grid-container mx-auto-->
+        </div>
+
+        <div class="col" id="card2">
+          <div class="grid-container mx-auto">
+            <div class="img_desc" style="background-size: cover; background-position: center;"></div> <!--div de uma linha-->
+            <h3 class="nome_cidade"></h3>
+            <p class="descricao"></p>
+            <button type="button" class="btn btn-dark btn-custom btn-transparent-custom">
+              SAIBA MAIS
+            </button>
+          </div><!--fim div grid-container mx-auto-->
+        </div>
+
+        <div class="col" id="card3">
+          <div class="grid-container mx-auto">
+            <div class="img_desc" style="background-size: cover; background-position: center;"></div> <!--div de uma linha-->
+            <h3 class="nome_cidade"></h3>
+            <p class="descricao"></p>
+            <button type="button" class="btn btn-dark btn-custom btn-transparent-custom">
+              SAIBA MAIS
+            </button>
+          </div><!--fim div grid-container mx-auto-->
+        </div>
+
+
+
+
+      </div>
+    </div>
+    <!--Descrição End-->
+
+
+
+  </div> <!--fim div largura-->
+
+  <div class="footer-image">
+    <div class="container" style="color:white; font-family:  'Poppins', sans-serif; max-width: 70%">
+      <div class="container">
+        <div class="text-center" style="padding: 8rem 0rem 4rem 0rem">
+          <h1>Lorem ipsumdafdsfasdfasffasdfasdffadsfasd</h1>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+
+        <div class="text-center">
+          <h3>Lorem ipsum dolor</h3>
+          <h5>0000-0000</h5>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="container container-custom">
-    <h1>Ainda está com dúvida para onde ir?</h1>
-    <div class="row" style="justify-content: space-evenly">
-      <div class="col-10">
-        <p>
-          Veja os paises mais populares, abaixo
-        </p>
-      </div>
-      <div class="col">
-        <button
-          type="button"
-          class="btn btn-dark btn-custom"
-          onclick="showHideTripForms()"
-        >
-          Lorem
-        </button>
-      </div>
-    </div>
-    <br />
-    <div class="cards-container-container">
-      <div class="row row-cols-3 row gy-4">
-        <div class="col">
-          <div class="card-container">
-            <div class="card" id="pais1">
-              <h2>pais1</h2>
-              <p>saiba mais</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card-container">
-            <div class="card" id="pais2">
-              <h2>pais2</h2>
-              <p>saiba mais</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card-container">
-            <div class="card" id="pais3">
-              <h2>pais3</h2>
-              <p>saiba mais</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card-container">
-            <div class="card" id="pais4">
-              <h2>pais4</h2>
-              <p>saiba mais</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card-container">
-            <div class="card" id="pais5">
-              <h2>pais5</h2>
-              <p>saiba mais</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card-container">
-            <div class="card" id="pais6">
-              <h2>pais6</h2>
-              <p>saiba mais</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card-container">
-            <div class="card" id="pais7">
-              <h2>pais7</h2>
-              <p>saiba mais</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card-container">
-            <div class="card" id="pais8">
-              <h2>pais8</h2>
-              <p>saiba mais</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card-container">
-            <div class="card" id="pais9">
-              <h2>pais9</h2>
-              <p>saiba mais</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row"></div>
-</div>
-<div class="footer-image">
-  <div
-    class="container"
-    style="color: white; font-family: 'Poppins', sans-serif; max-width: 70%"
-  >
-    <div class="container">
-      <div class="text-center" style="padding: 8rem 0rem 4rem 0rem">
-        <h1>Lorem ipsum dolor sit, amet consectetur</h1>
-        <p>Lorem ipsum dolor sit amet</p>
-      </div>
-      <div class="text-center">
-        <h3>Lorem ipsum dolor</h3>
-        <h5>0000-0000</h5>
-      </div>
-    </div>
-  </div>
-</div>
+  
+  
 {% endblock %}
