@@ -12,7 +12,7 @@ class ProfileController extends Controller
     {
         $model = new UserModel();
 
-        $userInfo = $model->userInfos('fe12d540915aa01627eb1b3d6e9582df3f624288');
+        $userInfo = $model->userInfos('6f94487da8362a5dbeb71e1b3c05de48944e28fd');
 
         //Descriptografa a senha
         $passCript = base64_decode($userInfo->senha);

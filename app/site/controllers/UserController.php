@@ -31,6 +31,7 @@ class UserController extends Controller
                 self::registerValidation($model);
                 if (empty($model->error)) {
                     $model->save();
+                    header('location: ../login/index');
                 }
             }
         } else {
