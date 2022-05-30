@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="637c8579-468b-4873-b740-025f73042ea3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/views/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/views/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/views/shared/__template.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/views/shared/__template.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="d75ca3c1-c080-4724-940f-7061d631ff48" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -25,97 +21,46 @@
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
     </include_path>
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectId" id="28y93KteHDSrEtX6mbwf8xlyICc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectId" id="29rHzP4bZpl8uIXtVMYPSXbuUzM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\trabalho-3-semestre\app\core" />
-      <recent name="C:\xampp\htdocs\trabalho-3-semestre\app\site\model" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="cadastrar.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/trabalho-3-semestre/cadastrar.php" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.cadastrar.php" />
-      </list>
-    </recent_temporary>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="637c8579-468b-4873-b740-025f73042ea3" name="Changes" comment="" />
-      <created>1652177778215</created>
+      <changelist id="d75ca3c1-c080-4724-940f-7061d631ff48" name="Changes" comment="" />
+      <created>1653864546200</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1652177778215</updated>
-      <workItem from="1652177785896" duration="12425000" />
-      <workItem from="1652548343167" duration="289000" />
-      <workItem from="1652548853609" duration="3654000" />
-      <workItem from="1652556459316" duration="4186000" />
-      <workItem from="1652701722830" duration="1105000" />
-      <workItem from="1653587200612" duration="87000" />
-      <workItem from="1653587328844" duration="3888000" />
-      <workItem from="1653591914764" duration="16071000" />
-      <workItem from="1653645614280" duration="8212000" />
-      <workItem from="1653692665564" duration="107000" />
-      <workItem from="1653745670614" duration="2971000" />
+      <updated>1653864546200</updated>
+      <workItem from="1653864548188" duration="68000" />
+      <workItem from="1653864641805" duration="7000" />
+      <workItem from="1653864825346" duration="6409000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/deploy-aguiar" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

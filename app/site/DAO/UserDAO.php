@@ -30,6 +30,13 @@ class UserDAO extends DAO {
         $stmt->execute(array($model->name, $model->email, $model->phoneNumber, $model->token));
     }
 
+    public function updateToken(UserModel $loginModel) {
+        $sql = "UPDATE usuarios SET token=? WHERE email=? AND senha=?";
+
+        $stmt = $this->connect->prepare($sql);
+        $stmt->execute(array($loginModel->token, $loginModel->email, $loginModel->criptPass));
+    }
+
     public function delete(int $id) {
         $sql = "DELETE FROM usuarios WHERE id=?";
 
@@ -38,25 +45,36 @@ class UserDAO extends DAO {
     }
 
     public function select(int $id) {
-        $sql = "SELECT * FROM usuarios WHERE id=";
+        $sql = "SELECT * FROM usuarios WHERE id=?";
 
         $stmt = $this->connect->prepare($sql);
         $stmt->execute(array($id));
     }
 
-    public function selectEmail(string $email) {
+    public function selectEmail(string $email)
+    {
         $sql = "SELECT * FROM usuarios WHERE email=? LIMIT 1";
 
         $stmt = $this->connect->prepare($sql);
         $stmt->execute(array($email));
-        $user = $stmt->fetch();
+        return $user = $stmt->fetch();
+    }
 
-        // Se não existir usuário
+    public function selectLogin(UserModel $loginModel)
+    {
+        $sql = "SELECT * FROM usuarios WHERE email=? AND senha=? LIMIT 1";
 
-        if (!$user) {
-            return false; // Se retornar false é pq não tem usuário
-        } else {
-            return true;
-        }
+        $stmt = $this->connect->prepare($sql);
+        $stmt->execute(array($loginModel->email, $loginModel->criptPass));
+        return $loginUser = $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function selectToken(string $token) {
+        $sql = "SELECT * FROM usuarios WHERE token=? LIMIT 1";
+
+        $stmt = $this->connect->prepare($sql);
+        $stmt->execute(array($token));
+
+        return $token = $stmt->fetch(PDO::FETCH_OBJ);
     }
 }
