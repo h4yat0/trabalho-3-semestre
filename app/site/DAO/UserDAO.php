@@ -45,7 +45,7 @@ class UserDAO extends DAO {
     }
 
     public function select(int $id) {
-        $sql = "SELECT * FROM usuarios WHERE id=";
+        $sql = "SELECT * FROM usuarios WHERE id=?";
 
         $stmt = $this->connect->prepare($sql);
         $stmt->execute(array($id));
@@ -75,6 +75,6 @@ class UserDAO extends DAO {
         $stmt = $this->connect->prepare($sql);
         $stmt->execute(array($token));
 
-        return $token = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $token = $stmt->fetch(PDO::FETCH_OBJ);
     }
 }

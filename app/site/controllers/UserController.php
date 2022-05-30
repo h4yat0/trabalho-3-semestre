@@ -18,7 +18,7 @@ class UserController extends Controller
             $model->email = parent::cleanPost($_POST['email']);
             $model->phoneNumber = parent::cleanPost($_POST['phoneNumber']);
             $model->password = parent::cleanPost($_POST['password']);
-            $model->criptPass = sha1($model->password);
+            $model->criptPass = base64_encode($model->password);
             $model->repeatPassword = parent::cleanPost($_POST['repeatPassword']);
             date_default_timezone_set('America/Sao_Paulo');
             $model->setRegisterDate(date('d/m/Y'));
@@ -31,6 +31,7 @@ class UserController extends Controller
                 self::registerValidation($model);
                 if (empty($model->error)) {
                     $model->save();
+                    header('location: ../login/index');
                 }
             }
         } else {
@@ -45,7 +46,7 @@ class UserController extends Controller
 
             $loginModel->email = parent::cleanPost($_POST['email']);
             $loginModel->password = parent::cleanPost($_POST['password']);
-            $loginModel->criptPass = sha1($loginModel->password);
+            $loginModel->criptPass = base64_encode($loginModel->password);
 
             // Verifica se existe esse usuário
             if ($loginModel->isValidLogin($loginModel)) {
@@ -57,7 +58,7 @@ class UserController extends Controller
                 $_SESSION['TOKEN'] = $loginModel->token;
 
                 // Colocar para ir para algum lugar
-
+                header('location: ../home/index');
             }
         } else {
             echo "Erro no envio do post";

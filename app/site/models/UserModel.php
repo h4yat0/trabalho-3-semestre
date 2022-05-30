@@ -68,4 +68,11 @@ class UserModel
             return false;
         }
     }
+
+    public function userInfos(string $token)
+    {
+        $dao = new UserDAO();
+
+        return $datas = $dao->selectToken($token);
+    }
 }
