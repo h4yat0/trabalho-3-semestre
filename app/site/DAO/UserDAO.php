@@ -24,10 +24,10 @@ class UserDAO extends DAO {
     }
 
     public function update(UserModel $model) {
-        $sql = "UPDATE usuarios SET nome=?, email=?, telefone=?, token=?";
+        $sql = "UPDATE usuarios SET nome=?, email=?, telefone=?, senha=? WHERE token=? LIMIT 1";
 
         $stmt = $this->connect->prepare($sql);
-        $stmt->execute(array($model->name, $model->email, $model->phoneNumber, $model->token));
+        $stmt->execute(array($model->name, $model->email, $model->phoneNumber, $model->criptPass, $model->token));
     }
 
     public function updateToken(UserModel $loginModel) {

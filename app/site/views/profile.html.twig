@@ -13,7 +13,7 @@
       <h4 class="text-right">Configurações</h4>
     </div>
     <div class="container border-custom" style="max-width: 70%">
-      <form method="post" action="">
+      <form method="post" action="profile/save">
         <div
           class="d-flex justify-content-between align-items-center experience"
         >
@@ -32,6 +32,7 @@
             <input
               type="text"
               class="form-control form-disabled"
+              name="name"
               placeholder="enter your name"
               value="{{name}}"
               required
@@ -44,6 +45,7 @@
             <input
               type="text"
               class="form-control form-disabled"
+              name="phoneNumber"
               placeholder="enter phone number"
               value="{{phoneNumber}}"
               required
@@ -56,6 +58,7 @@
             <input
               type="text"
               class="form-control form-disabled"
+              name="email"
               placeholder="enter email id"
               value="{{email}}"
               required
@@ -69,6 +72,7 @@
             <input
               type="text"
               class="form-control form-disabled"
+              name="password"
               placeholder="experience"
               value="{{password}}"
               required
@@ -81,6 +85,7 @@
             <input
               type="text"
               class="form-control form-disabled"
+              name="repeatPassword"
               placeholder="additional details"
               value="{{password}}"
               required

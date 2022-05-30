@@ -52,6 +52,13 @@ class UserModel
         }
     }
 
+    public function update(): void
+    {
+        $dao = new UserDAO();
+
+        $dao->update($this);
+    }
+
     public function updateToken(): void
     {
         $dao = new UserDAO();
