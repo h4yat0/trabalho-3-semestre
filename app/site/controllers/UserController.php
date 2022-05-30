@@ -16,7 +16,7 @@ class UserController extends Controller
 
             $model->name = parent::cleanPost($_POST['name']);
             $model->email = parent::cleanPost($_POST['email']);
-            $model->phoneNumber = parent::cleanPost($_POST['phoneNumber']);
+            $model->phoneNumber = str_replace(' ', '', parent::cleanPost($_POST['phoneNumber']));
             $model->password = parent::cleanPost($_POST['password']);
             $model->criptPass = base64_encode($model->password);
             $model->repeatPassword = parent::cleanPost($_POST['repeatPassword']);
@@ -31,7 +31,7 @@ class UserController extends Controller
                 self::registerValidation($model);
                 if (empty($model->error)) {
                     $model->save();
-                    header('location: ../login/index');
+                    header('location: ../login');
                 }
             }
 
