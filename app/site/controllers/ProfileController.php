@@ -12,7 +12,7 @@ class ProfileController extends Controller
     {
         $model = new UserModel();
 
-        $userInfo = $model->userInfos('6f94487da8362a5dbeb71e1b3c05de48944e28fd');
+        $userInfo = $model->userInfos('48436c03b364f7a422a3c747b66e525c570fff74');
 
         //Descriptografa a senha
         $passCript = base64_decode($userInfo->senha);
@@ -32,5 +32,14 @@ class ProfileController extends Controller
         $number="(".substr($number,0,2).") ".substr($number,2,-4)." - ".substr($number,-4);
         // primeiro substr pega apenas o DDD e coloca dentro do (), segundo subtr pega os números do 3º até faltar 4, insere o hifem, e o ultimo pega apenas o 4 ultimos digitos
         return $number;
+    }
+
+    public function edit()
+    {
+        $model = new UserModel();
+
+        $userInfo = $model->userInfos('48436c03b364f7a422a3c747b66e525c570fff74');
+
+
     }
 }
