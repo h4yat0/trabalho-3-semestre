@@ -16,16 +16,16 @@ function enableInput(bool) {
         disabled = true;
         infoDisplay = "block";
     }
+    let input =  document.getElementsByClassName('form-disabled');
+    let info = document.getElementsByClassName('profileInfo');
 
-    for(let i = 0; i < 7; i++) {
-        let input =  document.getElementsByClassName('form-disabled');
-        let info = document.getElementsByClassName('profileInfo');
+    for(let i = 0; i < input.length; i++) {
 
         if(input[i].style.display = inputDisplayTarget) {
             input[i].style.display = inputDisplay;
             input[i].disabled = disabled;
 
-            if(i < 6) info[i].style.display = infoDisplay;
+            if(i < info.length) info[i].style.display = infoDisplay;
         }
     }
 }
