@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d75ca3c1-c080-4724-940f-7061d631ff48" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/DAO/UserDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/DAO/UserDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/controllers/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/models/UserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/models/UserModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/site/views/profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/views/profile.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +59,7 @@
       <updated>1653864546200</updated>
       <workItem from="1653864548188" duration="68000" />
       <workItem from="1653864641805" duration="7000" />
-      <workItem from="1653864825346" duration="3120000" />
+      <workItem from="1653864825346" duration="3770000" />
     </task>
     <servers />
   </component>
