@@ -57,7 +57,7 @@ class UserController extends Controller
                 $_SESSION['TOKEN'] = $loginModel->token;
 
                 // Colocar para ir para algum lugar
-
+                header('location: ../home/index');
             }
         } else {
             echo "Erro no envio do post";
