@@ -250,3 +250,14 @@ body::-webkit-scrollbar-thumb {
 
 /*cards pacotes*/
 
+.card_pacote{
+  width: 15rem; 
+  height: 25rem;
+  border-radius:0;
+  
+  border: 1px ridge rgb(233, 230, 230);
+
+}
+
+
+
