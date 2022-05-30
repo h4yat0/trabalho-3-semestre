@@ -34,6 +34,9 @@ class UserController extends Controller
                     header('location: ../login/index');
                 }
             }
+
+            // Colocar para ir para algum lugar
+            header('location: ../login');
         } else {
             echo "Erro no envio do post!";
         }
