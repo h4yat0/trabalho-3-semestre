@@ -78,5 +78,5 @@ class UserDAO extends DAO {
         return $token = $stmt->fetch(PDO::FETCH_OBJ);
     }
 
-    
+
 }
