@@ -29,15 +29,15 @@
                   <label for="email">Email address</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input type="tel" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="(XX) XXXX-XXXX" required>
+                  <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" maxlength="14" placeholder="12 12345 1234" required>
                   <label for="phoneNumber">Telefone</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input type="password" class="form-control" name="password" id="password" placeholder="Senha" required>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Senha" minlength="6" required>
                   <label for="password">Senha</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input type="password" class="form-control" name="repeatPassword" id="repeatPassword" placeholder="Repedir senha" required>
+                  <input type="password" class="form-control" name="repeatPassword" id="repeatPassword" placeholder="Repedir senha" minlength="6" required>
                   <label for="repeatPassword">Repetir senha</label>
                 </div>
 
@@ -52,4 +52,10 @@
     </div>
   </div>
 </div>
+{% endblock %}
+
+{% block extraJS %}
+<script src="{{BASE}}public/vendor/cleaveJs/cleave.js"></script>
+<script src="{{BASE}}public/vendor/cleaveJs/cleave-phone.i18n.js"></script>
+<script src="{{BASE}}public/assets/js/signIn.js"></script>
 {% endblock %}
