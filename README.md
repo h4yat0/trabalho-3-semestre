@@ -111,3 +111,26 @@ $params não é uma variável obrigatória, mas quando passada deve ser da segui
 		{{variableName}}
 
 		ex: <h1>Número de passagens disponiveis: {{numeroDePassagens}}</h1>
+
+### Config file
+
+Coloque o seguinte código no arquivo /app/config/config.php
+
+Caso esteja utilizando MySQL coloque substitua o valor da propriedade 'pass' pela senha 
+	
+	<?php
+	$xamp = true;
+
+	$file = $xamp ? 'xamp.php' : 'mySQL.php';
+
+	require_once('env/' . $file);
+
+	//Diretório base do projeto, se for root, então use apenas /
+	define('BASE', '/');
+
+	//Quantidade de diretórios a ser removido do array de tratamento
+	define('REMOVE_INDEX', 0);
+
+	//Config autoload da certo
+	define('BASEDIR', dirname(__FILE__, 2));
+
