@@ -65,11 +65,11 @@ class UserModel
 
         $dao->updateToken($this);
     }
-    public function isValidSession(): bool
+    public function isValidSession(string $token): bool
     {
         $dao = new UserDAO();
 
-        if ($dao->selectToken($this->token)) {
+        if ($dao->selectToken($token)) {
             return true;
         } else {
             return false;
