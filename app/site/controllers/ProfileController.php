@@ -9,22 +9,33 @@ class ProfileController extends Controller
 {
     public function index()
     {
+        session_start();
         $model = new UserModel();
 
-        $userInfo = $model->userInfos('6f94487da8362a5dbeb71e1b3c05de48944e28fd');
+        if (isset($_SESSION))
+        {
+            if(empty($_SESSION['token'])) {
+                $_SESSION['token'] = 'Erro session inexistente';
+            } elseif ($model->isValidSession($_SESSION['token']))
+            {
+                $userInfo = $model->userInfos($_SESSION['token']);
 
-        //Descriptografa a senha
-        $passCript = base64_decode($userInfo->senha);
+                //Descriptografa a senha
+                $passCript = base64_decode($userInfo->senha);
 
-        //Formata o phone
-        $phone = $this->telephone($userInfo->telefone);
+                //Formata o phone
+                $phone = $this->telephone($userInfo->telefone);
 
-        $this->View('profile', [
-            "name" =>  "$userInfo->nome",
-            "email" => "$userInfo->email",
-            "phoneNumber" => "$phone",
-            "password" => "$passCript"
-        ]);
+                $this->View('profile', [
+                    "name" =>  "$userInfo->nome",
+                    "email" => "$userInfo->email",
+                    "phoneNumber" => "$phone",
+                    "password" => "$passCript"
+                ]);
+            } else {
+                header('location: login');
+            }
+        }
     }
 
     public function telephone($number){
