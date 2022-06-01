@@ -1,22 +1,16 @@
 <?php
 
-$xamp = false;
-
-/*
-    prod.php  => xamp
-    local.php => QA | localhost
-*/
+//Diretório base do projeto, se for root, então use apenas /
+define('BASE', '/');
 
 
-$file = $xamp ? 'xamp.php' : 'phpN.php';
-
-
-require_once('env/' . $file);
+//Quantidade de diretórios a ser removido do array de tratamento
+define('REMOVE_INDEX', 0);
 
 // Config DataBase
 $_ENV['db']['host'] = 'localhost';
 $_ENV['db']['user'] = 'root';
-$_ENV['db']['pass'] = '271202';
+$_ENV['db']['pass'] = '';
 $_ENV['db']['database'] = 'login';
 
 //Config autoload da certo
