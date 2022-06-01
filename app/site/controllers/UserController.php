@@ -44,6 +44,7 @@ class UserController extends Controller
 
     public static function login()
     {
+        session_start();
         if (isset($_POST['email']) && isset($_POST['password']) && !empty($_POST['email']) && !empty($_POST['password'])) {
             $loginModel = new UserModel();
 
@@ -58,7 +59,7 @@ class UserController extends Controller
                 $loginModel->updateToken();
 
                 // Guarda token na session
-                $_SESSION['TOKEN'] = $loginModel->token;
+                $_SESSION['token'] = $loginModel->token;
 
                 // Colocar para ir para algum lugar
                 header('location: ../home/index');
