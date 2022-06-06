@@ -42,14 +42,7 @@
     </button>
   </div>
   <header>
-  {% if logedIn == true %}
-    
     {% include './shared/partials/navbar.html.twig' %}
-
-    {% else %}
-    {% include './shared/partials/navbarLogedIn.html.twig' %}
-
-  {% endif %}
     {% block extraHeader %}{% endblock %}
   </header>
 
