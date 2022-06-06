@@ -63,6 +63,11 @@ class UserController extends Controller
 
                 // Colocar para ir para algum lugar
                 header('location: ../home/index');
+            } else {
+                $_SESSION['email'] = $loginModel->email;
+                $_SESSION['pass'] = $loginModel->password;
+
+                header('location: ../login?error=login');
             }
         } else {
             echo "Erro no envio do post";

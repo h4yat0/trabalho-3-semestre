@@ -8,6 +8,21 @@ class LoginController extends Controller
 {
     public function index()
     {
-        $this->View('login');
+        session_start();
+        if (isset($_GET['error'])) {
+            $email = $_SESSION['email'];
+            $password = $_SESSION['pass'];
+            $this->View('login', [
+                        'visibility' => '',
+                        'email' => "$email",
+                        'password' => "$password"
+                    ]
+                );
+        } else {
+            $this->View('login', [
+                    'visibility' => 'oculto'
+                ]
+            );
+        }
     }
 }

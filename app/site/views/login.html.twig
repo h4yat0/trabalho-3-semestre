@@ -2,6 +2,7 @@
 
 {% block extraHead %}
   <link href="{{BASE}}public/assets/css/cadastro.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 {% endblock %}
 
 {% block title %}Entrar{% endblock %}
@@ -18,14 +19,18 @@
             <div class="col-md-9 col-lg-8 mx-auto">
               <h3 class="login-heading mb-4">Entrar</h3>
 
+              <div class="sucesso animate__animated animate__rubberBand"  id="{{ visibility }}">
+                Email ou Senha incorretos !
+              </div>
+
               <!-- Sign In Form -->
               <form method="post" action="user/login">
                 <div class="form-floating mb-3">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required value="{{ email }}">
                   <label for="email">Email address</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input type="password" class="form-control" name="password" id="password" placeholder="Senha" required>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Senha" required value="{{ password }}">
                   <label for="password">Senha</label>
                 </div>
                 <div class="d-grid">
