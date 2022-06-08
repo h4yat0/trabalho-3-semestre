@@ -18,3 +18,8 @@
     letter-spacing: 0.05rem;
     padding: 0.75rem 1rem;
   }
+
+
+  .input-rg-cnpj {
+    display: none;
+  }
