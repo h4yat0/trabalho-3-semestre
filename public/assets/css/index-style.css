@@ -258,6 +258,7 @@ main {
   height: 25rem;
   border-radius:0;
   
+  
   border: 1px ridge rgb(233, 230, 230);
 
 }
@@ -266,25 +267,88 @@ main {
 .card-lista{
   width: 200px;
   height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
-.nome_pais{
+
+
+.nome_pais, .nome_cidade{
   font-size: 40px;
-
 }
 
-.info-pais{
+.info_pais{
   margin-bottom: 40px;
+  border: 1px ridge rgb(233, 230, 230);
+}
+
+.info_cidade{
+  margin-top: 40px;
+  border: 1px ridge rgb(233, 230, 230);
+  
+}
+
+.card_cidade{
+  margin-top: 5%;
+}
+
+.img_card_pais{
+  height: 200px; 
+  width: 200px;
+  object-fit: cover;
+}
+
+.img_card_cidade{
+  height: 200px; 
+  width: 200px;
+  object-fit: cover;
+}
+
+/*card_pacote_lista*/
+.carousel-inner {
+  padding: 1em;
+}
+
+
+.pacotes_lista {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  width: 300px;
+  border: 1px ridge rgb(233, 230, 230);
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  
+}
+@media (min-width: 768px) {
+  .carousel-item {
+    margin-right: 0;
+    flex: 0 0 33.333333%;
+    display: block;
+    
+  }
+  .carousel-inner {
+    display: flex;
+  }
+}
+
+.pacotes_lista img {
+    max-height: 100%;
 }
 
 
 
+/*teste*/
+/* 
+*{
+  box-shadow:  inset 0 0 2px rgba(255, 0 ,0, 0.8);
+} */
 
 
+ 
