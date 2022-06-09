@@ -1,6 +1,6 @@
-var multipleCardCarousel = document.querySelector(
-  "#carouselExampleControls"
-);
+
+
+  var multipleCardCarousel = document.getElementById("#card_pacotes1");
 
  
   if (window.matchMedia("(min-width: 768px)").matches) {
@@ -10,19 +10,19 @@ var multipleCardCarousel = document.querySelector(
     var carouselWidth = $(".carousel-inner")[0].scrollWidth;
     var cardWidth = $(".carousel-item").width();
     var scrollPosition = 0;
-    $("#carouselExampleControls .carousel-control-next").on("click", function () {
+    $("#card_pacotes1 .carousel-control-next").on("click", function () {
       if (scrollPosition < carouselWidth - cardWidth * 4) {
         scrollPosition += cardWidth;
-        $("#carouselExampleControls .carousel-inner").animate(
+        $("#card_pacotes1 .carousel-inner").animate(
           { scrollLeft: scrollPosition },
           600
         );
       }
     });
-    $("#carouselExampleControls .carousel-control-prev").on("click", function () {
+    $("#card_pacotes1 .carousel-control-prev").on("click", function () {
       if (scrollPosition > 0) {
         scrollPosition -= cardWidth;
-        $("#carouselExampleControls .carousel-inner").animate(
+        $("#card_pacotes1 .carousel-inner").animate(
           { scrollLeft: scrollPosition },
           600
         );
@@ -33,3 +33,5 @@ var multipleCardCarousel = document.querySelector(
   }
 
   
+
+
