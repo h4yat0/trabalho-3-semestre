@@ -54,12 +54,25 @@
                     <input class="form-check-input radio-rg-cnpj" type="radio" name="identifier" id="cnpjRadio" value="cnpj" onchange="changeLabel()">
                     <label class="form-check-label" for="inlineRadio2">CNPJ</label>
                   </div>
-                  <div class="form-floating mb-3 mt-2">
-                    <input type="text" class="form-control "id="dummy" disabled>
-                    <input type="text" class="form-control input-rg-cnpj" name="rg" id="rgInput" maxlength="14" placeholder="12.123.345-1" disabled required>
-                    <input type="text" class="form-control input-rg-cnpj" name="cnpj" id="cnpjInput" maxlength="18" placeholder="12.123.123/1234-12" disabled required>
-                    <label for="identifier" id="docI">Documento de identificação</label>
+                </div>
+                <div class="form-floating mb-3 mt-2">
+                  <input type="text" class="form-control "id="dummy" disabled>
+                  <input type="text" class="form-control input-rg-cnpj" name="rg" id="rgInput" maxlength="14" placeholder="12.123.345-1" disabled required>
+                  <input type="text" class="form-control input-rg-cnpj" name="cnpj" id="cnpjInput" maxlength="18" placeholder="12.123.123/1234-12" disabled required>
+                  <label for="identifier" id="docI">Documento de identificação</label>
+                </div>
+                <div class="mb-3" id="div-pj">
+                <hr>
+                  <label>Informações de Pessoal Juridica</label>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control input-pj" name="NomeDaEmpresa" id="NomeDaEmpresa" placeholder="Nome Da Empresa" disabled>
+                    <label for="NomeDaEmpresa">Nome da Empresa</label>
                   </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control input-pj" name="razaoSocial" id="razaoSocial" placeholder="Razão Social" disabled>
+                    <label for="razaoSocial">Razão Social</label>
+                  </div>
+                <hr>
                 </div>
                 <div class="form-floating mb-3">
                   <input type="text" class="form-control" name="cpf" id="cpf" maxlength="14" placeholder="123.123.123/12" required>

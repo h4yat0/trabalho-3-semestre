@@ -20,6 +20,6 @@
   }
 
 
-  .input-rg-cnpj {
+  .input-rg-cnpj, .input-pj, #div-pj {
     display: none;
   }
