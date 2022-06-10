@@ -74,6 +74,14 @@ class UserController extends Controller
         }
     }
 
+    public static function logout()
+    {
+        session_start();
+        session_unset();
+        session_destroy();
+        header('location: ../login');
+    }
+
     private static function registerValidation(UserModel $model): void
     {
 

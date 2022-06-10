@@ -30,7 +30,8 @@ class ProfileController extends Controller
                     "name" =>  "$userInfo->nome",
                     "email" => "$userInfo->email",
                     "phoneNumber" => "$phone",
-                    "password" => "$passCript"
+                    "password" => "$passCript",
+                    'logedIn' => true
                 ]);
             } else {
                 header('location: ../login');
