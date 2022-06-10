@@ -1,5 +1,15 @@
 
+function mostrar_cards(value){
+  let display = document.getElementById(value).style.display;
+  if (display == "none"){
+   document.getElementById(value).style.display = 'block';
+  }else{
+      document.getElementById(value).style.display= 'none';
+  }
+}
 
+  
+  
   var multipleCardCarousel = document.getElementById("#card_pacotes1");
 
  
