@@ -2,24 +2,23 @@
     min-height: 96vh;
   }
   
-  .bg-image {
-    background-image: url('../img/placeholder-01.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .login-heading {
-    font-weight: 300;
-  }
-  
-  .btn-login {
-    border-radius: 0;
-    font-size: 0.9rem;
-    letter-spacing: 0.05rem;
-    padding: 0.75rem 1rem;
-  }
+.bg-image {
+  background-image: url('../img/placeholder-01.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
+.login-heading {
+  font-weight: 300;
+}
 
-  .input-rg-cnpj, .input-pj, #div-pj {
-    display: none;
-  }
+.btn-login {
+  border-radius: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+}
+
+#div-pf, #div-pj {
+  display: none;
+}

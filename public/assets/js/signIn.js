@@ -11,14 +11,14 @@ let cpf = new Cleave('#cpf', {
   uppercase: true
 });
 
-let rg = new Cleave('#rgInput', {
+let rg = new Cleave('#rg', {
   numericOnly: true,
   delimiters: ['.', '.', '-'],
   blocks: [2, 3, 3, 1],
   uppercase: true
 });
 
-let cnpj = new Cleave('#cnpjInput', {
+let cnpj = new Cleave('#cnpj', {
   numericOnly: true,
   delimiters: ['.', '.', '/', '.', '-'],
   blocks: [2, 3, 3, 4, 2],
@@ -32,56 +32,45 @@ let cep = new Cleave('#cep', {
   uppercase: true
 });
 
-function changeLabel() {
+function changePessoa() {
+  
+  let docs = document.getElementsByClassName('input-pf-pj')
+  let pf = docs[0]
+  let pj = docs[1]
 
-  let dummy = document.getElementById('dummy')
-  let docName = document.getElementById('docI')
-  let radios =  document.getElementsByName('identifier');
+  let pfDiv =  document.getElementById('div-pf')
+  let pfInputs = document.getElementsByClassName('pf-inputs')
 
-  let docs = document.getElementsByClassName('input-rg-cnpj')
-  let rg = docs[0]
-  let cnpj = docs[1]
+  let pjDiv = document.getElementById('div-pj')
+  let pjInputs = document.getElementsByClassName('pj-inputs')
 
-  let pjInfo = document.getElementsByClassName('input-pj')
-  let divPj = document.getElementById('div-pj')
+  if(pf.checked) {
 
-  if(radios[0].checked) {
-    docName.innerHTML = 'RG'
+    pfDiv.style.display = 'block'
+    pjDiv.style.display = 'none'
+
+    for(let i = 0; i < pfInputs.length; i++){
+      pfInputs[i].disabled = false
+    }
+
+    for(let i = 0; i < pjInputs.length; i++){
+      pjInputs[i].disabled = true
+      pjInputs[i].value = ''
+    }
     
-    rg.disabled = false
-    rg.style.display = 'block'
+  } else if (pj.checked) {
+    pfDiv.style.display = 'none'
+    pjDiv.style.display = 'block'
 
-    cnpj.disabled = true
-    cnpj.style.display = 'none'
-    cnpj.value = ''
-
-    for(let i = 0; i < 2; i++){
-      pjInfo[i].disabled = true
-      pjInfo[i].style.display = 'none'
-      pjInfo[i].value = ''
+    for(let i = 0; i < pfInputs.length; i++){
+      pfInputs[i].disabled = true
+      pfInputs[i].value = ''
     }
-    divPj.style.display = 'none'
 
-    dummy.style.display = 'none'
-
-  } else if (radios[1].checked) {
-    docName.innerHTML = 'CNPJ'
-
-    rg.disabled = true
-    rg.style.display = 'none'
-    rg.value = ''
-
-    cnpj.disabled = false
-    cnpj.style.display = 'block'
-
-    for(let i = 0; i < 2; i++){
-      pjInfo[i].disabled = false
-      pjInfo[i].style.display = 'block'
-      pjInfo[i].value = ''
+    for(let i = 0; i < pjInputs.length; i++){
+      pjInputs[i].disabled = false
+      
     }
-    divPj.style.display = 'block'
-
-    dummy.style.display = 'none'
   }
 
 }
