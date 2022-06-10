@@ -92,37 +92,37 @@
   /* imagens dos cars de duvidas*/
   
   .card-container #pais1{
-    background-image: url(../img/bangkok1.jpg);
+    background-image: url(../img/imgs_paises/china.jpg);
   }
   
   .card-container #pais2 {
-    background-image: url(../img/dubai1.jpg);
+    background-image: url(../img/imgs_paises/brasil.jpg);
   }
   
   .card-container #pais3 {
-    background-image: url(../img/istanbul1.jpg);
+    background-image: url(../img/imgs_paises/eua.jpg);
   }
   .card-container #pais4{
-    background-image: url(../img/bangkok1.jpg);
+    background-image: url(../img/imgs_paises/tailandia.jpg);
   }
   
   .card-container #pais5 {
-    background-image: url(../img/dubai1.jpg);
+    background-image: url(../img/imgs_paises/inglaterra.jpg);
   }
   
   .card-container #pais6 {
-    background-image: url(../img/istanbul1.jpg);
+    background-image: url(../img/imgs_paises/singapura.jpg);
   }
   .card-container #pais7{
-    background-image: url(../img/bangkok1.jpg);
+    background-image: url(../img/imgs_paises/franca.jpg);
   }
   
   .card-container #pais8 {
-    background-image: url(../img/dubai1.jpg);
+    background-image: url(../img/imgs_paises/italia.jpg);
   }
   
   .card-container #pais9 {
-    background-image: url(../img/istanbul1.jpg);
+    background-image: url(../img/imgs_paises/japao.jpg);
   }
   
   .img_desc, .descricao{
