@@ -107,10 +107,10 @@ btn.addEventListener("click", function() {
 
 // ocultando e mostrando a div "descricao_paises"
 
-function mostrar(value){
-    let display = document.getElementById(value).style.display;
+function mostrar(){
+    let display = document.getElementById("descricao_paises").style.display;
    if (display == "none"){
-    document.getElementById(value).style.display = 'block';
+    document.getElementById("descricao_paises").style.display = 'block';
    }
 }
 
