@@ -1,0 +1,82 @@
+{
+    "countries":[
+         {
+            "countryName": "China",
+            "description": "ChinaChinaChinaChinaChinaChino",
+            "img": "/public/assets/img/imgs_descricoes/chinatown.jpg",
+            "cities":[
+                {
+                    "name": "Hong Kong",                         
+                    "descripition": "Hong Kong, ===",
+                    "img": "/public/assets/img/imgs_descricoes/hong_kong.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500
+                        },
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "25 de agosto até 14 de dezembro",
+                            "price": 2500
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 2700
+                        }
+                    ]
+                },
+                {
+                    "name": "Macau",                         
+                    "descripition": "Macau é uma ===",
+                    "img": "/public/assets/img/imgs_descricoes/macau.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "12 de dezembro até 31 de dezembro",
+                            "price": 111500
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 31 de dezembro",
+                            "price": 4444
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 5555
+                        }
+                    ]
+                },
+                {
+                    "name": "Shenzen",                         
+                    "descripition": "Shenzhen, no sudeste da China ===",
+                    "img": "/public/assets/img/imgs_descricoes/shenzhen.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "11 de dezembro até 22 de dezembro",
+                            "price": 9999
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 11 de dezembro",
+                            "price": 7777
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "23 de novembro até 21 de dezembro",
+                            "price": 8888
+                        }
+                    ]
+                }   
+            ]
+        }
+    ]
+}
