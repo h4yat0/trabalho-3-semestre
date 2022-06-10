@@ -107,12 +107,13 @@ btn.addEventListener("click", function() {
 
 // ocultando e mostrando a div "descricao_paises"
 
-function mostrar(){
-    let display = document.getElementById("descricao_paises").style.display;
+function mostrar(value){
+    let display = document.getElementById(value).style.display;
    if (display == "none"){
-    document.getElementById("descricao_paises").style.display = 'block';
+    document.getElementById(value).style.display = 'block';
    }
 }
+
 
 function desc(value){
     mostrar();
@@ -229,9 +230,10 @@ function desc(value){
             break;
     }
     
-   
-    
 }
+
+/*card pacote lista*/
+
 
 
 

@@ -1,67 +1,379 @@
 {% extends './shared/__template.html.twig' %}
 
-{% block extraHead %} <link rel="stylesheet" href="{{BASE}}public/assets/css/hero.css" />{% endblock %}
+{% block extraHead %} 
+<link rel="stylesheet" href="{{BASE}}public/assets/css/hero.css" />
+<link rel="stylesheet" href="public/assets/css/carrossel.css">
+{% endblock %}
 
 {% block title %}{% endblock %}
 
 {% block main %}
     <div class="container container-custom" style="max-width: 90%"><!--div largura da pagina-->
-        <h1>paises</h1><br>
-        <div class="container">
-            <div class="info-pais">
-                <div class="row">
+         <h1>paises</h1><br> <!--titulo da pagina-->
+        <div class="container"> <!--tudo relacionado a um pais (info do pais, info das cidades e cards)-->
+            <div class="info_pais"> <!--card com as informações do pais-->
+                <div class="row"> <!--linha do card-->
                     
-                    <div class="col-2">
-                        <div class="card-container">
-                            <div class="card-lista" id="pais1">
-                            </div>
-                        </div>
+                    <div class="col-2"> <!--coluna onde fica a imagem do card-->
+                        <img src="public/assets/css/bangkok1.jpg" class="img_card_pais" style="  height: 100%; width:100%;" >
                     </div>
                  
 
-                    <div class="col-10">
-                        <div class="row">
-                            <div class="col-4 nome_pais">nome do pais</div>
-                            <div class="col-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi expedita, odit architecto quas commodi atque! Eligendi in et nisi, dolorem ipsa nam repellat. Totam deleniti quae cupiditate quia id et?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt autem, doloribus officiis labore, quas inventore reprehenderit quo error incidunt officia aliquam iusto quia ipsam, odio sint molestiae. Error, et magni!
-                            Debitis maiores est dolor dolores. Nesciunt aliquid nulla quas quaerat doloremque minima officiis veritatis atque sapiente, illum dolore ipsum corrupti enim quia nam adipisci sit. Quaerat officia incidunt corporis dolore!</div>
-                            <div class="col-2"><button type="button" class="btn btn-outline-dark btn-custom" style="width: 20vh; ">Dark</button></div>
-                        </div>
-                    </div>    
-                </div><!--row END-->
-            </div>
-                
-
-            <div class="info-pais">
-                <div class="row">
-                    <div class="col-2">
-                        <div class="card-container">
-                            <div class="card-lista" id="pais1">
-                            </div>
-                        </div>
+                    <div class="col-8"> <!--coluna com as informações do card-->
+                            <h2>nome do pais</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolores quae eum iure accusamus? Maxime ratione molestiae quidem ab beatae in fuga, quam, ducimus reiciendis quod quia illo iusto velit!</p>
                     </div>
-                 
 
-                    <div class="col-10">
-                        <div class="row">
-                            <div class="col-4 nome_pais">nome do pais</div>
-                            <div class="col-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi expedita, odit architecto quas commodi atque! Eligendi in et nisi, dolorem ipsa nam repellat. Totam deleniti quae cupiditate quia id et?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt autem, doloribus officiis labore, quas inventore reprehenderit quo error incidunt officia aliquam iusto quia ipsam, odio sint molestiae. Error, et magni!
-                            Debitis maiores est dolor dolores. Nesciunt aliquid nulla quas quaerat doloremque minima officiis veritatis atque sapiente, illum dolore ipsum corrupti enim quia nam adipisci sit. Quaerat officia incidunt corporis dolore!</div>
-                            <div class="col-2"><button type="button" class="btn btn-outline-dark btn-custom" style="width: 20vh; ">Dark</button></div>
-                        </div>
-                    </div>    
+                    <div class="col-2" ><button type="button" class="btn btn-outline-dark btn-custom" style="width: 20vh; margin-top: 20%; " onclick="mostrar_cards('cidades1')">Dark</button>
+                    </div><!--FINAL da coluna onde fica o botão que mostrará os cards das cidades-->
+
                 </div><!--row END-->
-            </div>    
+            </div> <!--card pais END-->
                 
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+            <div class="container" id="cidades1" style="border: 1px ridge rgb(233, 230, 230);" > <!--container de todas as cidades-->
+                <div class="container" > <!--container de uma cidade (info da cidade e seus cards de pacotes)-->
+                    <div class="info_cidade"> <!--div de uma cidade com seus cards de pacotes-->
+                        <div class="row">
+                            <div class="col-10">
+                                <h2>nome da Cidade</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolores quae eum iure accusamus? Maxime ratione molestiae quidem ab beatae in fuga, quam, ducimus reiciendis quod quia illo iusto velit!</p>
+                            </div>
+                            <div class="col-2">
+                                <button type="button" class="btn btn-outline-dark btn-custom" style="width: 20vh; margin-top: 20%; " onclick="mostrar_cards('pais1_cidade1')">Dark</button>
+                            </div>
+                        </div><!--row END-->
+                    </div> <!--info cidade END-->
+
+
+                    <!--container card-pacote -->
+                        <div class="container"  style="max-width:95%; margin-top: 3%;" id="pais1_cidade1">
+                                <div id="card_pacotes1"  class="carousel " data-bs-ride="carousel"> <!--INICIO do carrossel (itens do carrosel e botões para seguir e voltar)-->
+                                    <div class="carousel-inner"> <!--div que contem os itens do carrossel-->
+
+                                        <div class="carousel-item active"><!--primeiro item do carrossel-->
+                                            <div class="pacotes_lista"><!--card do pacote-->
+                                                <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                                                <div class="card-body"> <!--corpo do card do pacote-->
+                                                    <h5 class="card-title" style="color:black;">Cidade do Cabo</h5>
+                                                    <p class="card-text" style="color:black;">
+                                                    <strong>passagem de ida e volta</strong> <br></p>
+                                                    <p style="min-height:25px;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                                                    25 de novembro até 14 de dezembro </p>  <br>
+                                                    <p>R$2500
+                                                    </p>
+                                                    <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" style="width:100%;">Go somewhere</a>
+                                                    </div><!--div d-flex justify-content-center END-->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <div class="pacotes_lista">
+                                                <div class="card_pacotes" style="width: 300px;">
+                                                    <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                                                    <div class="card-body">
+                                                        <h5 class="card-title" style="color:black;">Cidade do Cabo</h5>
+                                                        <p class="card-text" style="color:black;">
+                                                            <strong>passagem de ida e volta</strong> <br>
+                                                        </p>
+                                                        <p style="min-height:48px;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                                                            2 de abril até 5 de maio 
+                                                        </p>  <br>
+                                                        <p>R$2500</p>
+                                                        <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" style="width:100%;">Go somewhere</a>
+                                                        </div><!--div d-flex justify-content-center END-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <div class="pacotes_lista">
+                                                <div class="card_pacotes" style="width: 300px;">
+                                                    <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                                                    <div class="card-body">
+                                                        <h5 class="card-title" style="color:black;">Cidade do Cabo</h5>
+                                                        <p class="card-text" style="color:black;">
+                                                        <strong>passagem de ida e volta</strong> <br></p>
+                                                        <p style="min-height:48px;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                                                        2 de abril até 5 de maio </p>  <br>
+                                                        <p>R$2500
+                                                        </p>
+                                                        <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" style="width:100%;">Go somewhere</a>
+                                                        </div><!--div d-flex justify-content-center END-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <div class="pacotes_lista">
+                                                <div class="card_pacotes" style="width: 300px;">
+                                                    <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                                                    <div class="card-body">
+                                                        <h5 class="card-title" style="color:black;">Cidade do Cabo</h5>
+                                                        <p class="card-text" style="color:black;">
+                                                        <strong>passagem de ida e volta</strong> <br></p>
+                                                        <p style="min-height:48px;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                                                        2 de abril até 5 de maio </p>  <br>
+                                                        <p>R$2500
+                                                        </p>
+                                                        <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" style="width:100%;">Go somewhere</a>
+                                                        </div><!--div d-flex justify-content-center END-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <div class="pacotes_lista">
+                                                <div class="card_pacotes" style="width: 300px;">
+                                                    <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                                                    <div class="card-body">
+                                                        <h5 class="card-title" style="color:black;">Cidade do Cabo</h5>
+                                                        <p class="card-text" style="color:black;">
+                                                        <strong>passagem de ida e volta</strong> <br></p>
+                                                        <p style="min-height:48px;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                                                        2 de abril até 5 de maio </p>  <br>
+                                                        <p>R$2500
+                                                        </p>
+                                                        <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" style="width:100%;">Go somewhere</a>
+                                                        </div><!--div d-flex justify-content-center END-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+
+                                        <div class="carousel-item">
+                                                <div class="pacotes_lista">
+                                                    <div class="card_pacotes" style="width: 300px;">
+                                                        <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                                                        <div class="card-body">
+                                                            <h5 class="card-title" style="color:black;">Cidade do Cabo</h5>
+                                                            <p class="card-text" style="color:black;">
+                                                            <strong>passagem de ida e volta</strong> <br></p>
+                                                            <p style="min-height:48px;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                                                            10 de dezembro até 20 de novembro </p>  <br>
+                                                            <p>R$2500
+                                                            </p>
+                                                            <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" style="width:100%;">Go somewhere</a>
+                                                            </div><!--div d-flex justify-content-center END-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                    
+                                    
+                                    
+                                    
+                                    </div><!--carrosel inner END-->
+
+                                    <a class="carousel-control-prev btn btn-outline-secondary btn-custom" id="btn_prev" type="button" data-bs-target="#card_pacotes1" data-bs-slide="prev" >
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next btn btn-outline-secondary btn-custom" id="btn_next" type="button" data-bs-target="#card_pacotes1" data-bs-slide="next" >
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </a>
+                                </div> <!--carrosel END-->
+                                
+                            </div><!--container card-pacote END-->
+                </div><!--container de uma cidade END-->
+
+                <div class="container" > <!--container de uma cidade (info da cidade e seus cards de pacotes)-->
+                    <div class="info_cidade"> <!--div de uma cidade com seus cards de pacotes-->
+                        <div class="row">
+                            <div class="col-10">
+                                <h2>nome da Cidade</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolores quae eum iure accusamus? Maxime ratione molestiae quidem ab beatae in fuga, quam, ducimus reiciendis quod quia illo iusto velit!</p>
+                            </div>
+                            <div class="col-2">
+                                <button type="button" class="btn btn-outline-dark btn-custom" style="width: 20vh; margin-top: 20%; " onclick="mostrar_cards('pais1_cidade2')">Dark</button>
+                            </div>
+                        </div><!--row END-->
+                    </div> <!--info cidade END-->
+
+
+                    <!--container card-pacote -->
+                        <div class="container"  style="max-width:95%; margin-top: 3%;" id="pais1_cidade2">
+                                <div id="card_pacotes1"  class="carousel" data-bs-ride="carousel"> <!--INICIO do carrossel (itens do carrosel e botões para seguir e voltar)-->
+                                    <div class="carousel-inner"> <!--div que contem os itens do carrossel-->
+
+                                        <div class="carousel-item active"><!--primeiro item do carrossel-->
+                                            <div class="pacotes_lista"><!--card do pacote-->
+                                                <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                                                <div class="card-body"> <!--corpo do card do pacote-->
+                                                    <h5 class="card-title" style="color:black;">Cidade do Cabo</h5>
+                                                    <p class="card-text" style="color:black;">
+                                                    <strong>passagem de ida e volta</strong> <br></p>
+                                                    <p style="min-height:25px;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                                                    25 de novembro até 14 de dezembro </p>  <br>
+                                                    <p>R$2500
+                                                    </p>
+                                                    <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" style="width:100%;">Go somewhere</a>
+                                                    </div><!--div d-flex justify-content-center END-->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <div class="pacotes_lista">
+                                                <div class="card_pacotes" style="width: 300px;">
+                                                    <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                                                    <div class="card-body">
+                                                        <h5 class="card-title" style="color:black;">Cidade do Cabo</h5>
+                                                        <p class="card-text" style="color:black;">
+                                                            <strong>passagem de ida e volta</strong> <br>
+                                                        </p>
+                                                        <p style="min-height:48px;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                                                            2 de abril até 5 de maio 
+                                                        </p>  <br>
+                                                        <p>R$2500</p>
+                                                        <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" style="width:100%;">Go somewhere</a>
+                                                        </div><!--div d-flex justify-content-center END-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <div class="pacotes_lista">
+                                                <div class="card_pacotes" style="width: 300px;">
+                                                    <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                                                    <div class="card-body">
+                                                        <h5 class="card-title" style="color:black;">Cidade do Cabo</h5>
+                                                        <p class="card-text" style="color:black;">
+                                                        <strong>passagem de ida e volta</strong> <br></p>
+                                                        <p style="min-height:48px;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                                                        2 de abril até 5 de maio </p>  <br>
+                                                        <p>R$2500
+                                                        </p>
+                                                        <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" style="width:100%;">Go somewhere</a>
+                                                        </div><!--div d-flex justify-content-center END-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <div class="pacotes_lista">
+                                                <div class="card_pacotes" style="width: 300px;">
+                                                    <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                                                    <div class="card-body">
+                                                        <h5 class="card-title" style="color:black;">Cidade do Cabo</h5>
+                                                        <p class="card-text" style="color:black;">
+                                                        <strong>passagem de ida e volta</strong> <br></p>
+                                                        <p style="min-height:48px;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                                                        2 de abril até 5 de maio </p>  <br>
+                                                        <p>R$2500
+                                                        </p>
+                                                        <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" style="width:100%;">Go somewhere</a>
+                                                        </div><!--div d-flex justify-content-center END-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <div class="pacotes_lista">
+                                                <div class="card_pacotes" style="width: 300px;">
+                                                    <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                                                    <div class="card-body">
+                                                        <h5 class="card-title" style="color:black;">Cidade do Cabo</h5>
+                                                        <p class="card-text" style="color:black;">
+                                                        <strong>passagem de ida e volta</strong> <br></p>
+                                                        <p style="min-height:48px;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                                                        2 de abril até 5 de maio </p>  <br>
+                                                        <p>R$2500
+                                                        </p>
+                                                        <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" style="width:100%;">Go somewhere</a>
+                                                        </div><!--div d-flex justify-content-center END-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+
+                                        <div class="carousel-item">
+                                                <div class="pacotes_lista">
+                                                    <div class="card_pacotes" style="width: 300px;">
+                                                        <img src="public/assets/css/bangkok1.jpg" class="card-img-top" style="border-radius:0;" >
+                                                        <div class="card-body">
+                                                            <h5 class="card-title" style="color:black;">Cidade do Cabo</h5>
+                                                            <p class="card-text" style="color:black;">
+                                                            <strong>passagem de ida e volta</strong> <br></p>
+                                                            <p style="min-height:48px;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                                                            10 de dezembro até 20 de novembro </p>  <br>
+                                                            <p>R$2500
+                                                            </p>
+                                                            <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" style="width:100%;">Go somewhere</a>
+                                                            </div><!--div d-flex justify-content-center END-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                    
+                                    
+                                    
+                                    
+                                    </div><!--carrosel inner END-->
+
+                                    <a class="carousel-control-prev btn btn-outline-secondary btn-custom" id="btn_prev" type="button" data-bs-target="#card_pacotes1" data-bs-slide="prev" >
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next btn btn-outline-secondary btn-custom" id="btn_next" type="button" data-bs-target="#card_pacotes1" data-bs-slide="next" >
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </a>
+                                </div> <!--carrosel END-->
+                                
+                            </div><!--container card-pacote END-->
+                </div><!--container de uma cidade END-->
+
+
+                
+
+            </div><!--container de cidades END-->    
+                
+
+            
+           
+
+            
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        </div><!--container END-->         
     </div><!--div largura da pagina END-->
    
     
@@ -69,4 +381,9 @@
 
 {% endblock %}
 
-{% block extraJS %}{% endblock %}
+{% block extraJS %}
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="public/assets/js/carrossel.js"></script>
+ 
+{% endblock %}
