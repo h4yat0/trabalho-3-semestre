@@ -1,13 +1,13 @@
 {% extends './shared/__template.html.twig' %}
 
 {% block extraHead %}
+  <link href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css" rel="stylesheet">
   <link href="{{BASE}}public/assets/css/cadastro.css" rel="stylesheet">
 {% endblock %}
 
 {% block title %}Cadastro{% endblock %}
 
 {% block main %}
-
 <div class="container-fluid ps-md-0">
   <div class="row g-0">
     <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
@@ -27,6 +27,59 @@
                 <div class="form-floating mb-3">
                   <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
                   <label for="email">Email address</label>
+                </div>
+                <div class="mb-3">
+                  <label>Sexo:&nbsp</label>         
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sexo" id="inlineRadio1" value="m" required>
+                    <label class="form-check-label" for="inlineRadio1">M</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sex" id="inlineRadio2" value="f">
+                    <label class="form-check-label" for="inlineRadio2">F</label>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="date">Data de nascimento: &nbsp</label>
+                  <input class="form-control d-inline mt-1" type="date" name="dateOfBirth" id="date" style="max-width:200px" required>
+                </div>
+                <div class="mb-3">
+                  <label>Documento de identificação:</label>         
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input radio-rg-cnpj" type="radio" name="identifier" id="rgRadio" value="rg" onchange="changeLabel()" required>
+                    <label class="form-check-label" for="inlineRadio1">RG</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input radio-rg-cnpj" type="radio" name="identifier" id="cnpjRadio" value="cnpj" onchange="changeLabel()">
+                    <label class="form-check-label" for="inlineRadio2">CNPJ</label>
+                  </div>
+                </div>
+                <div class="form-floating mb-3 mt-2">
+                  <input type="text" class="form-control "id="dummy" disabled>
+                  <input type="text" class="form-control input-rg-cnpj" name="rg" id="rgInput" maxlength="14" placeholder="12.123.345-1" disabled required>
+                  <input type="text" class="form-control input-rg-cnpj" name="cnpj" id="cnpjInput" maxlength="18" placeholder="12.123.123/1234-12" disabled required>
+                  <label for="identifier" id="docI">Documento de identificação</label>
+                </div>
+                <div class="mb-3" id="div-pj">
+                <hr>
+                  <label>Informações de Pessoal Juridica</label>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control input-pj" name="NomeDaEmpresa" id="NomeDaEmpresa" placeholder="Nome Da Empresa" disabled>
+                    <label for="NomeDaEmpresa">Nome da Empresa</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control input-pj" name="razaoSocial" id="razaoSocial" placeholder="Razão Social" disabled>
+                    <label for="razaoSocial">Razão Social</label>
+                  </div>
+                <hr>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="cpf" id="cpf" maxlength="14" placeholder="123.123.123/12" required>
+                  <label for="cpf">CPF</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="cep" id="cep" maxlength="10" placeholder="123.123.123/12" required>
+                  <label for="cep">CEP</label>
                 </div>
                 <div class="form-floating mb-3">
                   <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" minlength="11" maxlength="14" placeholder="12 12345 1234" required>

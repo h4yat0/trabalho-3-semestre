@@ -10,32 +10,56 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
             <a href="/" class="nav-item nav-link active">Página Principal</a>
-            <a href="#" class="nav-item nav-link">Lista dos Páises</a>
+            <a href="/countriesList" class="nav-item nav-link">Lista dos Páises</a>
         </div>
     </div>
     <!-- login section -->
     <div class="nav-login-section d-flex">
-        <div class="loginBtn">
-            <a href="/login">
-                <button
-                    type="button"
-                    class="btn btn-outline-dark btn-custom"
-                >
-                    Entrar
-                </button>
-            </a>
-        </div>
-        &nbsp;
-        <div class="cadastrarBtn">
-            <a href="/cadastrar">
-                <button
-                    type="button"
-                    class="btn btn-outline-dark btn-custom"
-                >
-                    Cadastrar
-                </button>
-            </a>
-        </div>
+        {% if logedIn == false %}
+            <div class="loginBtn">
+                <a href="/login">
+                    <button
+                        type="button"
+                        class="btn btn-outline-dark btn-custom"
+                    >
+                        Entrar
+                    </button>
+                </a>
+            </div>
+            &nbsp;
+            <div class="cadastrarBtn">
+                <a href="/cadastrar">
+                    <button
+                        type="button"
+                        class="btn btn-outline-dark btn-custom"
+                    >
+                        Cadastrar
+                    </button>
+                </a>
+            </div>
+        {% else %}
+            <div class="profile">
+                <a href="/profile">
+                    <button
+                        type="button"
+                        class="btn btn-outline-dark btn-custom"
+                    >
+                        Profile
+                    </button>
+                </a>
+            </div>
+            &nbsp;
+            <div class="sair">
+                <a href="">
+                    <button
+                        type="button"
+                        class="btn btn-outline-danger btn-custom"
+                    >
+                        Sair
+                    </button>
+                </a>
+            </div>
+        {% endif %}
     </div>
 </div>
 </nav>

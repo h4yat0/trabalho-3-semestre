@@ -13,7 +13,17 @@ class PackageController extends Controller
         $this->View('package', [
             'packageName' => 'Pestana Buenos Aires',
             'numberOfPeople' => 2,
-            'typeOfPeople' => 'adultos'
+            'typeOfPeople' => 'adultos',
+            'price' => 280,
+            'imgs' => [
+                'placeholder-04.jpg',
+                'placeholder-02.jpg',
+                'placeholder-01.jpg',
+                'placeholder-02.jpg',
+                'placeholder-01.jpg',
+                'placeholder-02.jpg',
+                'placeholder-03.jpg'
+            ]
         ]);
     }
 }
