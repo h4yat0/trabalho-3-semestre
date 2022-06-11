@@ -6,16 +6,14 @@ use app\core\Controller;
 
 class CountriesListController extends Controller
 {
-
     public function __construct()
     {
     }
 
     public function index()
     {
-        $myJson =  file_get_contents('app/site/models/JSON/countriesList.json', true);
-        $myJsonData = json_decode($myJson, true);
 
+        $treatedCountriesjson = $this->getJson();
         /* TESTE
         foreach ($myJsonData as $value) {
             foreach ($value as $value1) {
@@ -34,7 +32,15 @@ class CountriesListController extends Controller
         */
 
         $this->View('countriesList', [
-            "countriesJson" => $myJsonData,
+            "countriesJson" => $treatedCountriesjson,
         ]);
+    }
+
+    public function getJson()
+    {
+        $myJson =  file_get_contents('app/site/models/JSON/countriesList.json', true);
+        $myJsonData = json_decode($myJson, true);
+
+        return $myJsonData;
     }
 }
