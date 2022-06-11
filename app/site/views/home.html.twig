@@ -25,7 +25,6 @@
 {% endblock %}
 
 {% block main %}
-  
   <div class="container container-custom" style="max-width: 70%"> <!--div que limita a largura da pagina-->
       <!-- Descrição site-->
       <div class="row g-5"> <!--dividindo em colulas-->
@@ -75,7 +74,7 @@
                                   {{package.time}} 
                               </p>  <br>
                               <p>R${{package.price}},00</p>
-                              <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" style="width:100%;">Go somewhere</a>
+                              <div class="d-flex justify-content-center"><a href="/package/index/{{package.city}}/1/{{package.price}}/{{package.imgs}}" class="btn btn-dark" style="width:100%;">Ver detalhes</a>
                               </div><!--div d-flex justify-content-center END-->
                           </div>
                       </div>
