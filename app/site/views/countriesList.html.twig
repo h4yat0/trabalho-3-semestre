@@ -29,7 +29,7 @@
                                 <p>{{country['description']}}</p>
                             </div>
 
-                            <div class="col-2" ><button type="button" class="btn btn-outline-dark btn-custom" style="width: 20vh; margin-top: 20%; " onclick="mostrar_cards('cidades{{loop.index}}')">Dark</button>
+                            <div class="col-2" ><button type="button" class="btn btn-outline-dark btn-custom" style="width: 20vh; margin-top: 20%; " onclick="mostrar_cards('cidades{{loop.index}}')">Ocultar</button>
                             </div><!--FINAL da coluna onde fica o botão que mostrará os cards das cidades-->
 
                         </div><!--row END-->
@@ -45,7 +45,7 @@
                                             <p>{{cities['descripition']}}</p>
                                         </div>
                                         <div class="col-2">
-                                            <button type="button" class="btn btn-outline-dark btn-custom" style="width: 20vh; margin-top: 20%; " onclick="mostrar_cards('pais{{loop.index}}_cidade{{loop.index}}')">Dark</button>
+                                            <button type="button" class="btn btn-outline-dark btn-custom" style="width: 20vh; margin-top: 20%; " onclick="mostrar_cards('pais{{loop.index}}_cidade{{loop.index}}')">Ocultar</button>
                                         </div>
                                     </div><!--row END-->
                                 </div> <!--info cidade END-->
@@ -73,7 +73,7 @@
                                                                             {{packages['time']}} 
                                                                         </p>  <br>
                                                                         <p>R${{packages['price']}},00</p>
-                                                                        <div class="d-flex justify-content-center"><a href="/package/index/{{cities['name']}}/2/{{packages['price']}}/{{packages['imgs']}}" class="btn btn-dark" style="width:100%;">Pacote</a>
+                                                                        <div class="d-flex justify-content-center"><a href="/package/index/{{cities['name']}}/2/{{packages['price']}}/{{packages['imgs']}}" class="btn btn-dark" style="width:100%;">Ver detalhes</a>
                                                                         </div><!--div d-flex justify-content-center END-->
                                                                     </div>
                                                                 </div>
