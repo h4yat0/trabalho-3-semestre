@@ -1,0 +1,40 @@
+<?xml version='1.0' standalone='yes'?>
+
+<packages>
+    <package>
+        <city>Cidade do Cabo</city>
+        <type>de ida e volta</type>
+        <time>25 de novembro até 14 de dezembro</time>
+        <price>4123</price>
+        <img>cidade_do_cabo.jpg</img>
+    </package>
+    <package>
+        <city>Atenas</city>
+        <type>de ida e volta</type>
+        <time>2 de abril até 14 de maio</time>
+        <price>2500</price>
+        <img>atenas.jpg</img>
+    </package>
+    <package>
+        <city>Berlim</city>
+        <type>de ida e volta</type>
+        <time>4 de abril até 16 de maio</time>
+        <price>4500</price>
+        <img>berlim.jpg</img>
+    </package>
+    <package>
+        <city>Machu Picchu</city>
+        <type>de ida e volta</type>
+        <time>6 de abril até 18 de maio</time>
+        <price>1600</price>
+        <img>machu_picchu.jpg</img>
+    </package>
+    <package>
+        <city>Sydney</city>
+        <type>de ida e volta</type>
+        <time>8 de abril até 20 de maio</time>
+        <price>5000</price>
+        <img>sydney.jpg</img>
+    </package>
+</packages>
+
