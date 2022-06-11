@@ -10,7 +10,7 @@ define('REMOVE_INDEX', 0);
 // Config DataBase
 $_ENV['db']['host'] = 'localhost';
 $_ENV['db']['user'] = 'root';
-$_ENV['db']['pass'] = '271202';
+$_ENV['db']['pass'] = '';
 $_ENV['db']['database'] = 'travel_dreams';
 
 //Config autoload da certo
