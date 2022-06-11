@@ -17,43 +17,36 @@ class UserDAO extends DAO {
 
     public function insert(UserModel $model): void
     {
-        $sql = "INSERT INTO usuarios VALUES (null, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO usuario VALUES (null, ?, ?, ?)";
 
         $stmt = $this->connect->prepare($sql);
-        $stmt->execute(array($model->name, $model->email, $model->criptPass, $model->token, $model->registerDate, $model->phoneNumber));
+        $stmt->execute(array($model->email, $model->criptPass, $model->token));
     }
 
     public function update(UserModel $model) {
-        $sql = "UPDATE usuarios SET nome=?, email=?, telefone=?, senha=? WHERE token=? LIMIT 1";
+        $sql = "UPDATE usuario SET email=?, senha=? WHERE token=? LIMIT 1";
 
         $stmt = $this->connect->prepare($sql);
-        $stmt->execute(array($model->name, $model->email, $model->phoneNumber, $model->criptPass, $model->token));
+        $stmt->execute(array($model->email, $model->criptPass, $model->token));
     }
 
     public function updateToken(UserModel $loginModel) {
-        $sql = "UPDATE usuarios SET token=? WHERE email=? AND senha=?";
+        $sql = "UPDATE usuario SET token=? WHERE email=? AND senha=?";
 
         $stmt = $this->connect->prepare($sql);
         $stmt->execute(array($loginModel->token, $loginModel->email, $loginModel->criptPass));
     }
 
     public function delete(string $email, string $token) {
-        $sql = "DELETE FROM usuarios WHERE email=? AND token=?";
+        $sql = "DELETE FROM usuario WHERE email=? AND token=?";
 
         $stmt = $this->connect->prepare($sql);
         $stmt->execute(array($email, $token));
     }
 
-    public function select(int $id) {
-        $sql = "SELECT * FROM usuarios WHERE id=?";
-
-        $stmt = $this->connect->prepare($sql);
-        $stmt->execute(array($id));
-    }
-
     public function selectEmail(string $email)
     {
-        $sql = "SELECT * FROM usuarios WHERE email=? LIMIT 1";
+        $sql = "SELECT * FROM usuario WHERE email=? LIMIT 1";
 
         $stmt = $this->connect->prepare($sql);
         $stmt->execute(array($email));
@@ -62,7 +55,7 @@ class UserDAO extends DAO {
 
     public function selectLogin(UserModel $loginModel)
     {
-        $sql = "SELECT * FROM usuarios WHERE email=? AND senha=? LIMIT 1";
+        $sql = "SELECT * FROM usuario WHERE email=? AND senha=? LIMIT 1";
 
         $stmt = $this->connect->prepare($sql);
         $stmt->execute(array($loginModel->email, $loginModel->criptPass));
@@ -70,7 +63,7 @@ class UserDAO extends DAO {
     }
 
     public function selectToken(string $token) {
-        $sql = "SELECT * FROM usuarios WHERE token=? LIMIT 1";
+        $sql = "SELECT * FROM usuario WHERE token=? LIMIT 1";
 
         $stmt = $this->connect->prepare($sql);
         $stmt->execute(array($token));

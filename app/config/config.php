@@ -11,7 +11,7 @@ define('REMOVE_INDEX', 0);
 $_ENV['db']['host'] = 'localhost';
 $_ENV['db']['user'] = 'root';
 $_ENV['db']['pass'] = '271202';
-$_ENV['db']['database'] = 'login';
+$_ENV['db']['database'] = 'travel_dreams';
 
 //Config autoload da certo
 define('BASEDIR', dirname(__FILE__, 2));
