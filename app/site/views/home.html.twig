@@ -2,8 +2,8 @@
 
 {% block extraHead %}
     <link rel="stylesheet" href="{{BASE}}public/assets/css/hero.css" />
-    <link rel="stylesheet" href="public/assets/css/carrossel.css">
-    <link rel="stylesheet" href="public/assets/css/cards_duvidas.css">
+    <link rel="stylesheet" href="{{BASE}}public/assets/css/carrossel.css">
+    <link rel="stylesheet" href="{{BASE}}public/assets/css/cards_duvidas.css">
 {% endblock %}
 
 {% block title %}Home{% endblock %}
@@ -98,7 +98,6 @@
 
   	</div>
     <!--Pacotes End-->
-
 
     <!--Duvidas-->
     <!--Introdução duvidas-->
@@ -228,7 +227,7 @@
 
         <div class="col" id="card1">
           <div class="grid-container mx-auto">
-            <div><img src="public/assets/js/hong_kong.jpg" style="width: 300px;; height:400px; object-fit:cover;" class="img_desc"></div> <!--div de uma linha-->
+            <div><img src="{{BASE}}" style="width: 300px;; height:400px; object-fit:cover;" class="img_desc"></div> <!--div de uma linha-->
             <h3 class="nome_cidade"></h3>
             <p class="descricao"></p>
             <button type="button" class="btn btn-dark btn-custom btn-transparent-custom">
@@ -239,7 +238,7 @@
 
         <div class="col" id="card2">
           <div class="grid-container mx-auto">
-            <div><img src="public/assets/js/hong_kong.jpg" style="width: 300px;; height:400px; object-fit:cover;" class="img_desc"></div> <!--div de uma linha-->
+            <div><img src="{{BASE}}" style="width: 300px;; height:400px; object-fit:cover;" class="img_desc"></div> <!--div de uma linha-->
             <h3 class="nome_cidade"></h3>
             <p class="descricao"></p>
             <button type="button" class="btn btn-dark btn-custom btn-transparent-custom">
@@ -250,7 +249,7 @@
 
         <div class="col" id="card3">
           <div class="grid-container mx-auto">
-            <div><img src="public/assets/js/hong_kong.jpg" style="width: 300px;; height:400px; object-fit:cover;" class="img_desc"></div> <!--div de uma linha-->
+            <div><img src="{{BASE}}" style="width: 300px;; height:400px; object-fit:cover;" class="img_desc"></div> <!--div de uma linha-->
             <h3 class="nome_cidade"></h3>
             <p class="descricao"></p>
             <button type="button" class="btn btn-dark btn-custom btn-transparent-custom">
@@ -259,14 +258,9 @@
           </div><!--fim div grid-container mx-auto-->
         </div>
 
-
-
-
       </div>
     </div>
     <!--Descrição End-->
-
-
 
   </div> <!--fim div largura-->
 
@@ -284,24 +278,7 @@
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
   </div>
-
-  
-
-  
   
 {% endblock %}
 
@@ -309,6 +286,6 @@
 {% block extraJS %}
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="public/assets/js/carrossel.js"></script>
+    <script src="{{BASE}}public/assets/js/carrossel.js"></script>
  
 {% endblock %}
