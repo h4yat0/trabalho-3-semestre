@@ -1,91 +1,30 @@
-*,
-*:before,
-*:after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+.login {
+  min-height: 96vh;
 }
 
-.login-img {
-  padding: 0rem;
-  margin: 0rem;
-  border-radius: 0.5rem 0rem 0rem 0.5rem;
-  background-color: black;
-  background-image: url(../img/placeholders/placeholder-01.jpg);
-  background-repeat: no-repeat;
+.bg-image {
+  background-image: url('../img/placeholders/placeholder-01.jpg');
   background-size: cover;
-  background-position-x: center;
-  background-position-y: center;
+  background-position: center;
 }
 
-form {
-  /* height: 520px;
-  width: 400px; */
-  background-color: rgba(255, 255, 255, 0.13);
-  /* position: absolute; */
-  /* transform: translate(-50%, -50%); */
-  /* top: 50%; */
-  /* left: 50%; */
-  /* border-radius: 10px; */
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  padding: 50px 35px;
-}
-form * {
-  color: #000000;
-  letter-spacing: 0.5px;
-  outline: none;
-  border: none;
-}
-
-form h3 {
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 42px;
-  text-align: center;
-}
-
-form a {
-  letter-spacing: 0;
-}
-
-label {
-  display: block;
-  margin-top: 30px;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-input {
-  display: block;
-  height: 50px;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.07);
-  border: 0.06rem solid #000000;
-  border-radius: 3px;
-  padding: 0 10px;
-  margin-top: 8px;
-  font-size: 14px;
+.login-heading {
   font-weight: 300;
 }
 
-::placeholder {
-  color: #000000;
+.btn-login {
+  border-radius: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
 }
 
-button {
-  margin-top: 50px;
-  width: 100%;
-  background-color: #43bbac;
-  color: #ffffff;
-  padding: 15px 0;
-  font-size: 18px;
-  font-weight: 600;
-  border-radius: 5px;
-  cursor: pointer;
+#div-pf, #div-pj {
+  display: none;
 }
 
-.sucesso {
-  background: #2ac874;
+.erroLogin {
+  background: #c82a2a;
   text-align: center;
   color: white;
   font-weight: bold;
@@ -94,7 +33,7 @@ button {
   margin-bottom: 15px;
 }
 
-.oculto {
+#oculto {
   display: none;
 }
 

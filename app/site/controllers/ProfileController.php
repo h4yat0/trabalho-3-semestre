@@ -30,15 +30,17 @@ class ProfileController extends Controller
                     "name" =>  "$userInfo->nome",
                     "email" => "$userInfo->email",
                     "phoneNumber" => "$phone",
-                    "password" => "$passCript"
+                    "password" => "$passCript",
+                    'logedIn' => true
                 ]);
             } else {
-                header('location: login');
+                header('location: ../login');
             }
         }
     }
 
-    public function telephone($number){
+    public function telephone($number): string
+    {
         $number="(".substr($number,0,2).") ".substr($number,2,-4)." - ".substr($number,-4);
         // primeiro substr pega apenas o DDD e coloca dentro do (), segundo subtr pega os números do 3º até faltar 4, insere o hifem, e o ultimo pega apenas o 4 ultimos digitos
         return $number;
@@ -46,35 +48,59 @@ class ProfileController extends Controller
 
     public function save()
     {
+        session_start();
         $infos = new UserModel();
 
-        $userInfo = $infos->userInfos('6f94487da8362a5dbeb71e1b3c05de48944e28fd');
-
-        if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['phoneNumber']) && isset($_POST['password']) && isset($_POST['repeatPassword']))
+        if ($infos->isValidSession($_SESSION['token']))
         {
-            $userNewInfo = new UserModel();
+            $userInfo = $infos->userInfos($_SESSION['token']);
 
-            $userNewInfo->name = parent::cleanPost($_POST['name']);
-            $userNewInfo->email = parent::cleanPost($_POST['email']);
-            $phone = preg_replace('/[#$%^&*()+=\-\[\]\';,.\/{}|":<>?~\\\\]/',' ' , parent::cleanPost($_POST['phoneNumber']));
-            $userNewInfo->phoneNumber = str_replace(' ', '', $phone);
-            $userNewInfo->password = parent::cleanPost($_POST['password']);
-            $userNewInfo->criptPass = base64_encode($userNewInfo->password);
-            $userNewInfo->repeatPassword = parent::cleanPost($_POST['repeatPassword']);
-            $userNewInfo->token = $userInfo->token;
+            if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['phoneNumber']) && isset($_POST['password']) && isset($_POST['repeatPassword']))
+            {
+                $userNewInfo = new UserModel();
 
-            if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phoneNumber']) || empty($_POST['password']) || empty($_POST['repeatPassword']))
-            {
-                $userNewInfo->error = ['emptyError' => 'Um ou mais campos vazio'];
-            } else
-            {
-                self::editValidation($userNewInfo, $userInfo->email);
-                var_dump($userNewInfo->error);
-                if (empty($userNewInfo->error)) {
-                    $userNewInfo->update();
-                    header('location: ../profile');
+                $userNewInfo->name = parent::cleanPost($_POST['name']);
+                $userNewInfo->email = parent::cleanPost($_POST['email']);
+                $phone = preg_replace('/[#$%^&*()+=\-\[\]\';,.\/{}|":<>?~\\\\]/',' ' , parent::cleanPost($_POST['phoneNumber']));
+                $userNewInfo->phoneNumber = str_replace(' ', '', $phone);
+                $userNewInfo->password = parent::cleanPost($_POST['password']);
+                $userNewInfo->criptPass = base64_encode($userNewInfo->password);
+                $userNewInfo->repeatPassword = parent::cleanPost($_POST['repeatPassword']);
+                $userNewInfo->token = $userInfo->token;
+
+                if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phoneNumber']) || empty($_POST['password']) || empty($_POST['repeatPassword']))
+                {
+                    $userNewInfo->error = ['emptyError' => 'Um ou mais campos vazio'];
+                } else
+                {
+                    self::editValidation($userNewInfo, $userInfo->email);
+                    var_dump($userNewInfo->error);
+                    if (empty($userNewInfo->error)) {
+                        $userNewInfo->update();
+                        header('location: ../profile');
+                    }
                 }
             }
+        }
+        else
+        {
+            header('location: ../login');
+        }
+    }
+
+    public function delete()
+    {
+        session_start();
+        $model = new UserModel();
+        if ($model->isValidSession($_SESSION['token']))
+        {
+            $userInfos = $model->userInfos($_SESSION['token']);
+
+            $model->delete($userInfos->email, $userInfos->token);
+        }
+        else
+        {
+            header('location: ../login');
         }
     }
 
