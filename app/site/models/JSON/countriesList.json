@@ -2,6 +2,94 @@
     "countries":[
          {
             "countryName": "China",
+            "description": "A China é uma nação muito populosa da Ásia Oriental cuja ampla paisagem abrange pradarias, desertos, montanhas, lagos, rios e mais de 14.000 km de litoral. A capital Pequim combina a arquitetura moderna com locais históricos, como o complexo de palácios da Cidade Proibida e a Praça da Paz Celestial. Xangai é um centro financeiro global repleto de arranha-céus. A emblemática Muralha da China corta a região norte do país de leste a oeste.",
+            "img": "band_china.png",
+            "cities":[
+                {
+                    "name": "Hong Kong",                         
+                    "descripition": "Hong Kong, ===",
+                    "img": "hong_kong.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "25 de agosto até 14 de dezembro",
+                            "price": 2500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 2700,
+                            "imgs": "hong_kong1-hong_kong2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Macau",                         
+                    "descripition": "Macau é uma ===",
+                    "img": "macau.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "12 de dezembro até 31 de dezembro",
+                            "price": 111500,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 31 de dezembro",
+                            "price": 4444,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 5555,
+                            "imgs": "macau1-macau2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Shenzhen",                         
+                    "descripition": "Shenzhen, no sudeste da China ===",
+                    "img": "shenzhen.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "11 de dezembro até 22 de dezembro",
+                            "price": 9999,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 11 de dezembro",
+                            "price": 7777,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "23 de novembro até 21 de dezembro",
+                            "price": 8888,
+                            "imgs":"shenzhen1-shenzhen2"
+                        }
+                    ]
+                }   
+            ]
+        },
+        {
+            "countryName": "China",
             "description": "ChinaChinaChinaChinaChinaChino",
             "img": "band_china.png",
             "cities":[
