@@ -37,11 +37,11 @@ class UserDAO extends DAO {
         $stmt->execute(array($loginModel->token, $loginModel->email, $loginModel->criptPass));
     }
 
-    public function delete(int $id) {
-        $sql = "DELETE FROM usuarios WHERE id=?";
+    public function delete(string $email, string $token) {
+        $sql = "DELETE FROM usuarios WHERE email=? AND token=?";
 
         $stmt = $this->connect->prepare($sql);
-        $stmt->execute(array($id));
+        $stmt->execute(array($email, $token));
     }
 
     public function select(int $id) {

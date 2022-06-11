@@ -31,6 +31,13 @@ class UserModel
         $dao->insert($this);
     }
 
+    public function delete(string $email, string $token): void
+    {
+        $dao = new UserDAO();
+
+        $dao->delete($email, $token);
+    }
+
     public function isRepeatedEmail(string $email): bool {
         $dao = new UserDAO();
 
