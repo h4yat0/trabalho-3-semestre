@@ -2,7 +2,7 @@
 
 {% block extraHead %} 
 <link rel="stylesheet" href="{{BASE}}public/assets/css/hero.css" />
-<link rel="stylesheet" href="public/assets/css/carrossel.css">
+<link rel="stylesheet" href="{{BASE}}public/assets/css/carrossel.css">
 {% endblock %}
 
 {% block title %}{% endblock %}
@@ -12,12 +12,16 @@
         <h1>Lorem ipsum dolor sit amet.</h1><br> <!--titulo da pagina-->
         {% for itensInTheArray in countriesJson %}
             {% for country in itensInTheArray %}
-                <div class="container"> <!--tudo relacionado a um pais (info do pais, info das cidades e cards)-->
+                <div class="container 
+                    {% if not loop.first %}
+                    mt-5
+                    {% endif %}
+                "> <!--tudo relacionado a um pais (info do pais, info das cidades e cards)-->
                     <div class="info_pais"> <!--card com as informações do pais-->
                         <div class="row"> <!--linha do card-->
               
                             <div class="col-2"> <!--coluna onde fica a imagem do card-->
-                                <img src="{{country['img']}}" class="img_card_pais" style="  height: 100%; width:100%;" >
+                                <img src="{{BASE}}public/assets/img/imgs_paises/bandeiras/{{country['img']}}" class="img_card_pais" style="  height: 100%; width:100%;" >
                             </div>
                         
                             <div class="col-8"> <!--coluna com as informações do card-->
@@ -58,7 +62,7 @@
                                                         ">
                                                             <div class="pacotes_lista">
                                                                 <div class="card_pacotes" style="width: 300px;">
-                                                                    <img src="{{cities['img']}}" class="card-img-top" style="border-radius:0;" >
+                                                                    <img src="{{BASE}}public/assets/img/imgs_cidades/imgs_descricoes/{{cities['img']}}" class="card-img-top" style="border-radius:0;" >
                                                                     <div class="card-body">
                                                                         <h5 class="card-title" style="color:black;">{{cities['name']}}</h5>
                                                                         <p class="card-text" style="color:black;">
@@ -69,7 +73,7 @@
                                                                             {{packages['time']}} 
                                                                         </p>  <br>
                                                                         <p>R${{packages['price']}},00</p>
-                                                                        <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" style="width:100%;">Go somewhere</a>
+                                                                        <div class="d-flex justify-content-center"><a href="#" class="btn btn-dark" style="width:100%;">Pacote</a>
                                                                         </div><!--div d-flex justify-content-center END-->
                                                                     </div>
                                                                 </div>
