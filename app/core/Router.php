@@ -97,14 +97,21 @@ class Router
 
     public function getParams()
     {
-        if (count($this->uriData) < 2) {
+        $uri = $this->uriData;
+
+        if (count($uri) < 2) {
             return [];
         }
 
         $params = [];
 
-        for ($i = 2; $i < count($this->uriData); $i++) {
-            $params[] = $this->uriData[$i];
+        for ($i = 2; $i < count($uri); $i++) {
+            if (strpos($uri[$i], '-') > 0) {
+                $subArray = explode('-', $uri[$i]);
+                $params[] = $subArray;
+            } else {
+                $params[] = $uri[$i];
+            }
         }
 
         return $params;
