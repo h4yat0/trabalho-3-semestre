@@ -92,37 +92,37 @@
   /* imagens dos cars de duvidas*/
   
   .card-container #pais1{
-    background-image: url(../img/imgs_paises/china.jpg);
+    background-image: url(../img/imgs_paises/cards_duvidas/china.jpg);
   }
   
   .card-container #pais2 {
-    background-image: url(../img/imgs_paises/brasil.jpg);
+    background-image: url(../img/imgs_paises/cards_duvidas/brasil.jpg);
   }
   
   .card-container #pais3 {
-    background-image: url(../img/imgs_paises/eua.jpg);
+    background-image: url(../img/imgs_paises/cards_duvidas/eua.jpg);
   }
   .card-container #pais4{
-    background-image: url(../img/imgs_paises/tailandia.jpg);
+    background-image: url(../img/imgs_paises/cards_duvidas/tailandia.jpg);
   }
   
   .card-container #pais5 {
-    background-image: url(../img/imgs_paises/inglaterra.jpg);
+    background-image: url(../img/imgs_paises/cards_duvidas/inglaterra.jpg);
   }
   
   .card-container #pais6 {
-    background-image: url(../img/imgs_paises/singapura.jpg);
+    background-image: url(../img/imgs_paises/cards_duvidas/singapura.jpg);
   }
   .card-container #pais7{
-    background-image: url(../img/imgs_paises/franca.jpg);
+    background-image: url(../img/imgs_paises/cards_duvidas/franca.jpg);
   }
   
   .card-container #pais8 {
-    background-image: url(../img/imgs_paises/italia.jpg);
+    background-image: url(../img/imgs_paises/cards_duvidas/italia.jpg);
   }
   
   .card-container #pais9 {
-    background-image: url(../img/imgs_paises/japao.jpg);
+    background-image: url(../img/imgs_paises/cards_duvidas/japao.jpg);
   }
   
   .img_desc, .descricao{
