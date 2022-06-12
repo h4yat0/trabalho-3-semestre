@@ -141,7 +141,6 @@ function desc(value){
             img3.src=''
             img1.src+="public/assets/img/imgs_cidades/imgs_descricoes/hong_kong.jpg"
             img2.src+="public/assets/img/imgs_cidades/imgs_descricoes/macau.jpg"
-            
             img3.src+="public/assets/img/imgs_cidades/imgs_descricoes/shenzhen.jpg"
             break;
         case "pais2":
@@ -178,7 +177,7 @@ function desc(value){
             nome3.innerHTML="Lopburi"
             desc1.innerHTML="Bangkok, a capital da Tailândia, é uma grande cidade conhecida pelos santuários ornamentados e pela animada vida urbana. O rio Chao Phraya, repleto de barcos, abastece a rede de canais, passando pelo distrito real de Rattanakosin, onde fica o opulento Grande Palácio e seu sagrado templo Wat Phra Kaew. Nas proximidades, fica o templo Wat Pho, que conta com um enorme Buda reclinado. Na margem oposta, encontra-se o Templo Wat Arun, com uma escadaria íngreme e um pináculo em estilo khmer."
             desc2.innerHTML="Mais de 400 templos foram erguidos na região que hoje é tombada como patrimônio da humanidade pela Unesco. E ainda que os monumentos estejam longe de transmitir a imponência que tinham no passado"
-            desc3.innerHTML="Lopburi é uma das cidades mais antigas da Tailândia, uma antiga capital e a segunda capital depois que Ayutthaya foi estabelecida em 1350. Foi abandonada depois que o rei Narai faleceu em 1688, mas partes foram restauradas em 1856 pelo rei Mongkut (Rei Rama IV) e em 1864 tornou-se a capital do verão. Existem duas áreas centrais em Lopburi: Cidade Nova e Cidade Velha. A maioria dos locais importantes, além da estação de trem, fica na Cidade Velha; ônibus chegam e partem da Cidade Nova. Lopburi é famosa pelas centenas de macacos comedores de caranguejo que invadem a Cidade Velha, especialmente na área ao redor de Phra Prang Sam Yod e do Santuário Phra Kaan. Fique de olho nos macacos pendurados em árvores e fios e sentados em telhados e saliências, e esteja ciente de que eles têm alguns maus hábitos desagradáveis, incluindo defecar em pedestres desavisados ​​de seus poleiros, pular nas pessoas para pegar comida e roubar sacolas que eles suspeitam pode conter algo comestível. Os macacos também têm uma propensão a roubar óculos, chapéus, câmeras, cigarros, garrafas de água e qualquer coisa que possam arrancar de uma bolsa ou bolsos."
+            desc3.innerHTML="Lopburi é uma das cidades mais antigas da Tailândia, uma antiga capital e a segunda capital depois que Ayutthaya foi estabelecida em 1350. Foi abandonada depois que o rei Narai faleceu em 1688, mas partes foram restauradas em 1856 pelo rei Mongkut (Rei Rama IV) e em 1864 tornou-se a capital do verão. Existem duas áreas centrais em Lopburi: Cidade Nova e Cidade Velha. A maioria dos locais importantes, além da estação de trem, fica na Cidade Velha; ônibus chegam e partem da Cidade Nova."
             img1.src=''
             img2.src=''
             img3.src=''
