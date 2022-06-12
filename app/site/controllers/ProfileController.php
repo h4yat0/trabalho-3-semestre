@@ -140,16 +140,18 @@ class ProfileController extends Controller
 
 
             $model->delete($userInfos->email, $userInfos->token);
+            header('location: ../login');
         } else {
             header('location: ../login');
         }
     }
 
-    private static function editValidation(UserModel $model, string $email): void
+    private static function editValidation(UserModel $userModel, string $email): void
     {
+        // EDITAR ISSO
 
         //Valida nome
-        if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/", $model->name)) {
+        if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/", $userModel->name)) {
             $model->error = ['nameError' => 'Nome inválido'];
         }
 
