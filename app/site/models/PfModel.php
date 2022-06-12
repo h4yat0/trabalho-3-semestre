@@ -11,13 +11,14 @@ class PfModel
     public string $gender;
     public string $rg;
     public string $birthday;
+    public array $error = [];
 
-    public function save(): void
+    public function save($id): void
     {
-
         $dao = new PfDAO();
 
-        $dao->insert($this);
+
+        $dao->insert($this, $id);
     }
 
     public function delete(string $clientCode): void

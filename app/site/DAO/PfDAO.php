@@ -10,12 +10,12 @@ class PfDAO extends \app\core\DAO
         parent::__construct();
     }
 
-    public function insert(PfModel $model): void
+    public function insert(PfModel $model, string $id): void
     {
-        $sql = "INSERT INTO pessoa_fisica VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO pessoa_fisica (cliente_codigo, cpf, nome_completo, sexo, rg, data_nascimento) VALUES (?, ?, ?, ?, ?, ?)";
 
         $stmt = $this->connect->prepare($sql);
-        $stmt->execute(array($model->cpf, $model->name, $model->gender, $model->rg, $model->birthday));
+        $stmt->execute(array($id, $model->cpf, $model->name, $model->gender, $model->rg, $model->birthday));
     }
 
     public function update(PfModel $model, String $clientCode) {
