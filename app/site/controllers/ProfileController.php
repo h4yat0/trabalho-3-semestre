@@ -12,12 +12,10 @@ class ProfileController extends Controller
         session_start();
         $model = new UserModel();
 
-        if (isset($_SESSION))
-        {
-            if(empty($_SESSION['token'])) {
+        if (isset($_SESSION)) {
+            if (empty($_SESSION['token'])) {
                 $_SESSION['token'] = 'Erro session inexistente';
-            } elseif ($model->isValidSession($_SESSION['token']))
-            {
+            } elseif ($model->isValidSession($_SESSION['token'])) {
                 $userInfo = $model->userInfos($_SESSION['token']);
 
                 //Descriptografa a senha
@@ -37,11 +35,37 @@ class ProfileController extends Controller
                 header('location: ../login');
             }
         }
+
+        // MODELO DE COMO PASSAR AS VARIAVEIS:
+        // $this->View('profile', [
+
+        //     "pfpj" => "pf",
+        //     // If pf
+        //     "name" =>  "Lorem ipsum dolor sit amet.",
+        //     "email" => "email@email.com",
+        //     "cpf" => "123.123.123-12",
+        //     "rg" => "12.123.637-7",
+        //     "sex" => "f",
+        //     "dateOfBirth" => "2002-04-03", // YYYY-MM-DD
+
+        //     // if pj
+        //     "NomeDaEmpresa" => "asdihauioshdEmore",
+        //     "razaoSocial" => "aisudhidushaiudhiasuhdihusad",
+        //     "cnpj" => "12.123.123/1234-12",
+
+        //     //anyway
+
+        //     "password" => "fsduihsujdkfhisdfu",
+        //     "hidenPassword" => str_split("fsduihsujdkfhisdfu"), //use the same data as string
+        //     "phoneNumber" => "11 1234 1234",
+        //     "cep" => "12345.123",
+        //     "logedIn" => true
+        // ]);
     }
 
     public function telephone($number): string
     {
-        $number="(".substr($number,0,2).") ".substr($number,2,-4)." - ".substr($number,-4);
+        $number = "(" . substr($number, 0, 2) . ") " . substr($number, 2, -4) . " - " . substr($number, -4);
         // primeiro substr pega apenas o DDD e coloca dentro do (), segundo subtr pega os números do 3º até faltar 4, insere o hifem, e o ultimo pega apenas o 4 ultimos digitos
         return $number;
     }
@@ -51,28 +75,24 @@ class ProfileController extends Controller
         session_start();
         $infos = new UserModel();
 
-        if ($infos->isValidSession($_SESSION['token']))
-        {
+        if ($infos->isValidSession($_SESSION['token'])) {
             $userInfo = $infos->userInfos($_SESSION['token']);
 
-            if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['phoneNumber']) && isset($_POST['password']) && isset($_POST['repeatPassword']))
-            {
+            if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['phoneNumber']) && isset($_POST['password']) && isset($_POST['repeatPassword'])) {
                 $userNewInfo = new UserModel();
 
                 $userNewInfo->name = parent::cleanPost($_POST['name']);
                 $userNewInfo->email = parent::cleanPost($_POST['email']);
-                $phone = preg_replace('/[#$%^&*()+=\-\[\]\';,.\/{}|":<>?~\\\\]/',' ' , parent::cleanPost($_POST['phoneNumber']));
+                $phone = preg_replace('/[#$%^&*()+=\-\[\]\';,.\/{}|":<>?~\\\\]/', ' ', parent::cleanPost($_POST['phoneNumber']));
                 $userNewInfo->phoneNumber = str_replace(' ', '', $phone);
                 $userNewInfo->password = parent::cleanPost($_POST['password']);
                 $userNewInfo->criptPass = base64_encode($userNewInfo->password);
                 $userNewInfo->repeatPassword = parent::cleanPost($_POST['repeatPassword']);
                 $userNewInfo->token = $userInfo->token;
 
-                if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phoneNumber']) || empty($_POST['password']) || empty($_POST['repeatPassword']))
-                {
+                if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phoneNumber']) || empty($_POST['password']) || empty($_POST['repeatPassword'])) {
                     $userNewInfo->error = ['emptyError' => 'Um ou mais campos vazio'];
-                } else
-                {
+                } else {
                     self::editValidation($userNewInfo, $userInfo->email);
                     var_dump($userNewInfo->error);
                     if (empty($userNewInfo->error)) {
@@ -81,9 +101,7 @@ class ProfileController extends Controller
                     }
                 }
             }
-        }
-        else
-        {
+        } else {
             header('location: ../login');
         }
     }
@@ -92,14 +110,11 @@ class ProfileController extends Controller
     {
         session_start();
         $model = new UserModel();
-        if ($model->isValidSession($_SESSION['token']))
-        {
+        if ($model->isValidSession($_SESSION['token'])) {
             $userInfos = $model->userInfos($_SESSION['token']);
 
             $model->delete($userInfos->email, $userInfos->token);
-        }
-        else
-        {
+        } else {
             header('location: ../login');
         }
     }
