@@ -9,13 +9,14 @@ class PjModel
     public string $socialReason;
     public string $companyName;
     public string $cnpj;
+    public array $error = [];
 
-    public function save(): void
+    public function save(string $id): void
     {
 
         $dao = new PjDAO();
 
-        $dao->insert($this);
+        $dao->insert($this, $id);
     }
 
     public function delete(string $clientCode): void
@@ -36,6 +37,6 @@ class PjModel
     {
         $dao = new PjDAO();
 
-        return $datas = $dao->selectClientCode($clientCode);
+        return $datas = $dao->selectClient($clientCode);
     }
 }

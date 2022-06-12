@@ -3,42 +3,13 @@
 namespace app\site\controllers;
 
 use app\core\Controller;
+use app\site\models\ClientModel;
+use app\site\models\PfModel;
+use app\site\models\PjModel;
 use app\site\models\UserModel;
 
 class UserController extends Controller
 {
-    public static function login()
-    {
-        session_start();
-        if (isset($_POST['email']) && isset($_POST['password']) && !empty($_POST['email']) && !empty($_POST['password'])) {
-            $loginModel = new UserModel();
-
-            $loginModel->email = parent::cleanPost($_POST['email']);
-            $loginModel->password = parent::cleanPost($_POST['password']);
-            $loginModel->criptPass = base64_encode($loginModel->password);
-
-            // Verifica se existe esse usuário
-            if ($loginModel->isValidLogin($loginModel)) {
-                // Cria um token para session
-                $loginModel->token = sha1(uniqid() . date('d-m-Y-H-i-s'));
-                $loginModel->updateToken();
-
-                // Guarda token na session
-                $_SESSION['token'] = $loginModel->token;
-
-                // Colocar para ir para algum lugar
-                header('location: ../home');
-            } else {
-                $_SESSION['email'] = $loginModel->email;
-                $_SESSION['pass'] = $loginModel->password;
-
-                header('location: ../login?error=login');
-            }
-        } else {
-            echo "Erro no envio do post";
-        }
-    }
-
     public static function logout()
     {
         session_start();
@@ -47,5 +18,30 @@ class UserController extends Controller
         header('location: ../login');
     }
 
+    public function teste()
+    {
+        $model1 = new UserModel();
+        $model2 = new ClientModel();
+        $model3 = new PjModel();
 
+        $model1->email = 'teste@teste.com';
+        $model1->criptPass = '12345678';
+
+        $model1->setIdUser($model1->save());
+        $num = $model1->getIdUser();
+
+        $model2->cep = 'aaaa';
+        $model2->registerDate = 'aaaa';
+        $model2->phoneNumber = '1234561111';
+
+        $model3->companyName = 'aaaa';
+        $model3->socialReason = 'aaaa';
+        $model3->cnpj = '1234561111';
+
+        $idCliente = $model2->save($num);
+        $model2->setIdClient($idCliente);
+
+        $model3->save($model2->getIdClient());
+        var_dump($model2->getIdClient());
+    }
 }

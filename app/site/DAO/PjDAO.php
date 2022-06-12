@@ -3,6 +3,7 @@
 namespace app\site\DAO;
 
 use app\site\models\PjModel;
+use PDO;
 
 class PjDAO extends \app\core\DAO
 {
@@ -10,12 +11,12 @@ class PjDAO extends \app\core\DAO
         parent::__construct();
     }
 
-    public function insert(PjModel $model): void
+    public function insert(PjModel $model, string $id): void
     {
-        $sql = "INSERT INTO pessoa_juridica VALUES (?, ?, ?)";
+        $sql = "INSERT INTO pessoa_juridica VALUES (?, ?, ?, ?)";
 
         $stmt = $this->connect->prepare($sql);
-        $stmt->execute(array($model->socialReason, $model->companyName, $model->cnpj));
+        $stmt->execute(array($id, $model->socialReason, $model->companyName, $model->cnpj));
     }
 
     public function update(PjModel $model, String $clientCode) {
@@ -32,7 +33,7 @@ class PjDAO extends \app\core\DAO
         $stmt->execute(array($clientCode));
     }
 
-    public function selectClientCode(string $clientCode) {
+    public function selectClient(string $clientCode) {
         $sql = "SELECT * FROM pessoa_juridica WHERE cliente_codigo=? LIMIT 1";
 
         $stmt = $this->connect->prepare($sql);

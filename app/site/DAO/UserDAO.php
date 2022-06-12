@@ -10,13 +10,13 @@ use app\site\models\UserModel;
 use PDO;
 
 class UserDAO extends DAO {
-
-    public function  __construct() {
+    public function  __construct()
+    {
         parent::__construct();
     }
-
-    public function insert(UserModel $model): void
+    public function insert(UserModel $model)
     {
+        session_start();
         $sql = "INSERT INTO usuario VALUES (null, ?, ?, ?)";
 
         $stmt = $this->connect->prepare($sql);

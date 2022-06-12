@@ -3,6 +3,9 @@
 namespace app\site\controllers;
 
 use app\core\Controller;
+use app\site\models\ClientModel;
+use app\site\models\PfModel;
+use app\site\models\PjModel;
 use app\site\models\UserModel;
 
 class ProfileController extends Controller
@@ -10,57 +13,71 @@ class ProfileController extends Controller
     public function index()
     {
         session_start();
-        $model = new UserModel();
+        $modelUser = new UserModel();
+        $modelClient = new ClientModel();
+        $modelPf = new PfModel();
+        $modelPj = new PjModel();
+
 
         if (isset($_SESSION)) {
             if (empty($_SESSION['token'])) {
                 $_SESSION['token'] = 'Erro session inexistente';
-            } elseif ($model->isValidSession($_SESSION['token'])) {
-                $userInfo = $model->userInfos($_SESSION['token']);
+            } elseif ($modelUser->isValidSession($_SESSION['token'])) {
+                $userInfo = $modelUser->userInfos($_SESSION['token']);
+                $clientInfo = $modelClient->clientInfos($userInfo->id);
 
-                //Descriptografa a senha
-                $passCript = base64_decode($userInfo->senha);
+                if ($modelPf->isPf($clientInfo->codigo))
+                {
+                    $pfInfo = $modelPf->clientInfos($clientInfo->codigo);
 
-                //Formata o phone
-                $phone = $this->telephone($userInfo->telefone);
+                    //Descriptografa a senha
+                    $passCript = base64_decode($userInfo->senha);
 
-                $this->View('profile', [
-                    "name" =>  "$userInfo->nome",
-                    "email" => "$userInfo->email",
-                    "phoneNumber" => "$phone",
-                    "password" => "$passCript",
-                    'logedIn' => true
-                ]);
+                    //Formata o phone
+                    $phone = $this->telephone($clientInfo->telefone);
+
+                    $this->View('profile', [
+                        "pfpj" => "pf",
+                        "name" => "$pfInfo->nome_completo",
+                        "email" => "$userInfo->email",
+                        "cpf" => "$pfInfo->cpf",
+                        "rg" => "$pfInfo->rg",
+                        "sex"=> "$pfInfo->sexo",
+                        "dateOfBirth" => "$pfInfo->data_nascimento",
+                        "password" => "$passCript",
+                        "hidenPassword" => str_split("$passCript"),
+                        "phoneNumber" => "$phone",
+                        "cep" => "$clientInfo->cep",
+                        "logedIn" => true
+                    ]);
+
+                } else {
+                    $pj = $modelPj->clientInfos($clientInfo->codigo);
+
+                    //Descriptografa a senha
+                    $passCript = base64_decode($userInfo->senha);
+
+                    //Formata o phone
+                    $phone = $this->telephone($clientInfo->telefone);
+
+                    $this->View('profile', [
+                        "pfpj" => "pj",
+                        "NomeDaEmpresa" => "$pj->nome_empresa",
+                        "razaoSocial" => "$pj->razao_social",
+                        "cnpj" => "$pj->cnpj",
+                        "email" => "$userInfo->email",
+                        "password" => "$passCript",
+                        "hidenPassword" => str_split("$passCript"),
+                        "phoneNumber" => "$phone",
+                        "cep" => "$clientInfo->cep",
+                        "logedIn" => true
+                    ]);
+                }
+
             } else {
                 header('location: ../login');
             }
         }
-
-        // MODELO DE COMO PASSAR AS VARIAVEIS:
-        // $this->View('profile', [
-
-        //     "pfpj" => "pf",
-        //     // If pf
-        //     "name" =>  "Lorem ipsum dolor sit amet.",
-        //     "email" => "email@email.com",
-        //     "cpf" => "123.123.123-12",
-        //     "rg" => "12.123.637-7",
-        //     "sex" => "f",
-        //     "dateOfBirth" => "2002-04-03", // YYYY-MM-DD
-
-        //     // if pj
-        //     "NomeDaEmpresa" => "asdihauioshdEmore",
-        //     "razaoSocial" => "aisudhidushaiudhiasuhdihusad",
-        //     "cnpj" => "12.123.123/1234-12",
-
-        //     //anyway
-
-        //     "password" => "fsduihsujdkfhisdfu",
-        //     "hidenPassword" => str_split("fsduihsujdkfhisdfu"), //use the same data as string
-        //     "phoneNumber" => "11 1234 1234",
-        //     "cep" => "12345.123",
-        //     "logedIn" => true
-        // ]);
     }
 
     public function telephone($number): string
@@ -110,20 +127,31 @@ class ProfileController extends Controller
     {
         session_start();
         $model = new UserModel();
+        $clientModel = new ClientModel();
+        $pfModel = new PfModel();
+        $pjModel = new PjModel();
+
+
         if ($model->isValidSession($_SESSION['token'])) {
             $userInfos = $model->userInfos($_SESSION['token']);
+            $dataClient = $clientModel->clientInfos($userInfos->id);
+            $pfModel->delete($dataClient->codigo);
+            $pjModel->delete($dataClient->codigo);
+
 
             $model->delete($userInfos->email, $userInfos->token);
+            header('location: ../login');
         } else {
             header('location: ../login');
         }
     }
 
-    private static function editValidation(UserModel $model, string $email): void
+    private static function editValidation(UserModel $userModel, string $email): void
     {
+        // EDITAR ISSO
 
         //Valida nome
-        if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/", $model->name)) {
+        if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/", $userModel->name)) {
             $model->error = ['nameError' => 'Nome inválido'];
         }
 

@@ -3,10 +3,14 @@
 namespace app\site\controllers;
 
 use app\core\Controller;
+use app\site\models\ClientModel;
+use app\site\models\PfModel;
+use app\site\models\PjModel;
 use app\site\models\UserModel;
 
 class CadastrarController extends Controller
 {
+
     public function index()
     {
         session_start();
@@ -29,28 +33,73 @@ class CadastrarController extends Controller
 
     public static function save()
     {
+        session_start();
+        // Verifica se existe um post dos campos que se repetem independente da "pessoa"
+        if (isset($_POST['email']) && isset($_POST['cep']) && isset($_POST['phoneNumber']) && isset($_POST['password']) && isset($_POST['repeatPassword']) && isset($_POST['pessoa'])) {
 
-        if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['phoneNumber']) && isset($_POST['password']) && isset($_POST['repeatPassword'])) {
-            $model = new UserModel();
+            // Campos que todos os tipos de pessoas usam
+            $modelClient = new ClientModel();
+            $modelUser = new UserModel();
 
-            $model->name = parent::cleanPost($_POST['name']);
-            $model->email = parent::cleanPost($_POST['email']);
-            $model->phoneNumber = str_replace(' ', '', parent::cleanPost($_POST['phoneNumber']));
-            $model->password = parent::cleanPost($_POST['password']);
-            $model->criptPass = base64_encode($model->password);
-            $model->repeatPassword = parent::cleanPost($_POST['repeatPassword']);
+            $modelUser->email = parent::cleanPost($_POST['email']);
+            $modelClient->phoneNumber = str_replace(' ', '', parent::cleanPost($_POST['phoneNumber']));
+            $modelUser->password = parent::cleanPost($_POST['password']);
+            $modelClient->cep = preg_replace('/[^0-9]/', '', parent::cleanPost($_POST['cep']));
+            $modelUser->criptPass = base64_encode($modelUser->password);
+            $modelUser->repeatPassword = parent::cleanPost($_POST['repeatPassword']);
             date_default_timezone_set('America/Sao_Paulo');
-            $model->setRegisterDate(date('d/m/Y'));
+            $modelClient->setRegisterDate(date('d/m/Y'));
 
             // Valida se não tem nenhum campo vazio
-            if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phoneNumber']) || empty($_POST['password']) || empty($_POST['repeatPassword'])) {
-                $model->error = ['emptyError' => 'Um ou mais campos vazio'];
+            if (empty($_POST['email']) || empty($_POST['cep']) || empty($_POST['phoneNumber']) || empty($_POST['password']) || empty($_POST['repeatPassword'])) {
+                $modelUser->error = ['emptyError' => 'Um ou mais campos vazio'];
             } else {
 
-                self::registerValidation($model);
-                if (empty($model->error)) {
-                    $model->save();
-                    header('location: ../login');
+                self::userValidation($modelUser);
+                if (empty($modelUser->error)) {
+                    $modelUser->setIdUser($modelUser->save());
+                    $modelClient->setIdClient($modelClient->save($modelUser->getIdUser()));
+                }
+            }
+
+
+            if ($_POST['pessoa'] === 'pf')
+            {
+                $modelPf = new PfModel();
+                $modelPf->name = parent::cleanPost($_POST['name']);
+                $modelPf->cpf = preg_replace('/[^0-9]/', '', parent::cleanPost($_POST['cpf']));
+                $modelPf->rg = preg_replace('/[^0-9]/', '', parent::cleanPost($_POST['rg']));
+                $modelPf->gender = parent::cleanPost($_POST['sex']);
+                $modelPf->birthday = parent::cleanPost($_POST['dateOfBirth']);
+
+                if (empty($_POST['name']) || empty($_POST['cpf']) || empty($_POST['rg']) || empty($_POST['sex']) || empty($_POST['dateOfBirth'])) {
+                    $modelPf->error = ['emptyError' => 'Um ou mais campos vazio'];
+                } else {
+
+                    self::pfValidation($modelPf);
+                    if (empty($model->error)) {
+                        $modelPf->save($modelClient->getIdClient());
+                    }
+                }
+
+            }
+
+            if ($_POST['pessoa'] === 'pj')
+            {
+                $modelPj = new PjModel();
+
+                $modelPj->companyName = parent::cleanPost($_POST['NomeDaEmpresa']);
+                $modelPj->socialReason = parent::cleanPost($_POST['razaoSocial']);
+                $modelPj->cnpj = preg_replace('/[^0-9]/', '', parent::cleanPost($_POST['cnpj']));;
+
+                if (empty($_POST['NomeDaEmpresa']) || empty($_POST['razaoSocial']) || empty($_POST['cnpj'])) {
+                    $modelPj->error = ['emptyError' => 'Um ou mais campos vazio'];
+                } else {
+
+                    self::pjValidation($modelPj);
+                    if (empty($model->error)) {
+                        $modelPj->save($modelClient->getIdClient());
+                    }
                 }
             }
 
@@ -61,13 +110,35 @@ class CadastrarController extends Controller
         }
     }
 
-    private static function registerValidation(UserModel $model): void
-    {
 
+    private static function pfValidation(PfModel $pfModel)
+    {
         //Valida nome
-        if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/", $model->name)) {
-            $model->error = ['nameError' => 'Nome inválido'];
+        if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/", $pfModel->name)) {
+            $pfModel->error = ['nameError' => 'Nome inválido'];
         }
+
+        //Valida se cpf tem 11 digitos
+        if (strlen($pfModel->cpf) !== 11) {
+            $pfModel->error = ['cpfError' => 'Tamanho de cpf inválido'];
+        }
+
+        //Valida se rg possui 9 digitos
+        if (strlen($pfModel->rg) !== 9) {
+            $pfModel->error = ['rgError' => 'Tamanho de rg inválido'];
+        }
+    }
+
+    private static function pjValidation(PjModel $pjModel)
+    {
+        // Valida se o cnpj tem 14 digitos
+        if (strlen($pjModel->cnpj) !== 14) {
+            $pjModel->error = ['cnpjError' => 'Tamanho inválido'];
+        }
+    }
+
+    private static function userValidation(UserModel $model): void
+    {
 
         //Valida email
         if (!filter_var($model->email, FILTER_VALIDATE_EMAIL)) {

@@ -11,13 +11,35 @@ class UserModel
     public string $repeatPassword;
     public string $token = "";
     public array $error = [];
+    public ?string $idUser = null;
 
-    public function save(): void
+    /**
+     * @return string
+     */
+    public function getIdUser(): string
     {
+        return $this->idUser;
+    }
 
+    /**
+     * @param string $idUser
+     */
+    public function setIdUser(string $idUser): void
+    {
+        $this->idUser = $idUser;
+    }
+
+
+
+    public function save()
+    {
         $dao = new UserDAO();
 
         $dao->insert($this);
+
+        $datas = $dao->selectLogin($this);
+
+        return $datas['id'];
     }
 
     public function delete(string $email, string $token): void

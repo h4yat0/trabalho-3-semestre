@@ -3,6 +3,7 @@
 namespace app\site\DAO;
 
 use app\site\models\PfModel;
+use PDO;
 
 class PfDAO extends \app\core\DAO
 {
@@ -10,12 +11,12 @@ class PfDAO extends \app\core\DAO
         parent::__construct();
     }
 
-    public function insert(PfModel $model): void
+    public function insert(PfModel $model, string $id): void
     {
-        $sql = "INSERT INTO pessoa_fisica VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO pessoa_fisica (cliente_codigo, cpf, nome_completo, sexo, rg, data_nascimento) VALUES (?, ?, ?, ?, ?, ?)";
 
         $stmt = $this->connect->prepare($sql);
-        $stmt->execute(array($model->cpf, $model->name, $model->gender, $model->rg, $model->birthday));
+        $stmt->execute(array($id, $model->cpf, $model->name, $model->gender, $model->rg, $model->birthday));
     }
 
     public function update(PfModel $model, String $clientCode) {
@@ -39,5 +40,14 @@ class PfDAO extends \app\core\DAO
         $stmt->execute(array($clientCode));
 
         return $datas = $stmt->fetch(PDO::FETCH_OBJ);
+    }
+
+    public function isPf($id)
+    {
+        $sql = "SELECT * FROM pessoa_fisica WHERE cliente_codigo=? LIMIT 1";
+
+        $stmt = $this->connect->prepare($sql);
+        $stmt->execute(array($id));
+        return $user = $stmt->fetch();
     }
 }
