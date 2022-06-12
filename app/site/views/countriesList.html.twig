@@ -29,7 +29,7 @@
                                 <p>{{country['description']}}</p>
                             </div>
 
-                            <div class="col-2" ><button type="button" class="btn btn-outline-dark btn-custom" style="width: 20vh; margin-top: 20%; " onclick="mostrar_cards('cidades{{loop.index}}')">Ocultar</button>
+                            <div class="col-2" ><button type="button" class="btn btn-outline-dark btn-custom" id="btn-cidades{{loop.index}}" style="width: 20vh; margin-top: 20%;" onclick="mostrar_cards('cidades{{loop.index}}', 'btn-cidades{{loop.index}}')">Ocultar</button>
                             </div><!--FINAL da coluna onde fica o botão que mostrará os cards das cidades-->
 
                         </div><!--row END-->
@@ -45,13 +45,13 @@
                                             <p>{{cities['descripition']}}</p>
                                         </div>
                                         <div class="col-2">
-                                            <button type="button" class="btn btn-outline-dark btn-custom" style="width: 20vh; margin-top: 20%; " onclick="mostrar_cards('pais{{loop.index}}_cidade{{loop.index}}')">Ocultar</button>
+                                            <button type="button" class="btn btn-outline-dark btn-custom" id="btn_pais{{loop.parent.loop.index}}_cidade{{loop.index}}" style="width: 20vh; margin-top: 20%;" onclick="mostrar_cards('pais{{loop.parent.loop.index}}_cidade{{loop.index}}', 'btn_pais{{loop.parent.loop.index}}_cidade{{loop.index}}')">Ocultar</button>
                                         </div>
                                     </div><!--row END-->
                                 </div> <!--info cidade END-->
 
                                 <!--container card-pacote -->
-                                    <div class="container"  style="max-width:95%; margin-top: 3%;" id="pais{{loop.index}}_cidade{{loop.index}}">
+                                    <div class="container"  style="max-width:95%; margin-top: 3%;" id="pais{{loop.parent.loop.index}}_cidade{{loop.index}}">
                                             <div id="card_pacotes1"  class="carousel " data-bs-ride="carousel"> <!--INICIO do carrossel (itens do carrosel e botões para seguir e voltar)-->
                                                 <div class="carousel-inner"> <!--div que contem os itens do carrossel-->
                                                     {% for packages in cities['packages'] %}
@@ -111,7 +111,7 @@
 {% endblock %}
 
 {% block extraJS %}
-    
+    <script src="public/assets/js/countriesList.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="public/assets/js/carrossel.js"></script>
  
