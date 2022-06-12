@@ -27,31 +27,148 @@
           </button>
         </div>
         <div class="row">
-          <div class="col pb-3">
-            <label class="labels">Nome Completo</label>
-            <input
-              type="text"
-              class="form-control form-disabled"
-              name="name"
-              placeholder="enter your name"
-              value="{{name}}"
-              required
-              disabled
-            />
-            <div class="profileInfo">{{name}}</div>
-          </div>
+          {% if pfpj == "pf" %}
+            <div class="col pb-3">
+              <label class="labels">Nome Completo</label>
+              <input
+                type="text"
+                class="form-control form-disabled"
+                name="name"
+                id="name"
+                value="{{name}}"
+                placeholder="Seu nome completo"
+                required
+                disabled
+              />
+              <div class="profileInfo">{{name}}</div>
+            </div>
+            <div class="col pb-3">
+              <label class="labels">CPF</label>
+              <input
+                type="text"
+                class="form-control form-disabled"
+                name="cpf"
+                id="cpf"
+                maxlength="14"
+                value="{{cpf}}"
+                placeholder="123.123.123-12"
+                required
+                disabled
+              />
+              <div class="profileInfo">{{cpf}}</div>
+            </div>
+            <div class="col pb-3">
+              <label class="labels">RG</label>
+              <input
+                type="text"
+                class="form-control form-disabled"
+                name="rg"
+                id="rg"
+                value="{{rg}}"
+                placeholder="12.123.637-7"
+                required
+                disabled
+              />
+              <div class="profileInfo">{{rg}}</div>
+            </div>
+            <div class="col-md-12 pb-3">
+              <label class="labels">Sexo:&nbsp</label>
+              <div class="form-check form-check-inline form-disabled">
+                <input class="form-check-input pf-inputs form-disabled" type="radio" name="sex" id="sexRadioM" value="m" {% if sex == 'm' %}checked{% endif %} disabled required>
+                <label class="form-check-label" for="inlineRadio1">M</label>
+              </div>
+              <div class="form-check form-check-inline form-disabled">
+                <input class="form-check-input" type="radio" name="sex" id="sexRadioF" value="f" {% if sex == 'f' %}checked{% endif %} >
+                <label class="form-check-label" for="inlineRadio2">F</label>
+              </div>
+              <div class="profileInfo" style="display: inline-block">{{sex|upper}}</div>
+            </div>
+            <div class="col-md-12 pb-3">
+              <label class="labels">Data de Nascimento:&nbsp</label>
+              <input
+                class="form-control d-inline mt-1 form-disabled" 
+                type="date" 
+                name="dateOfBirth" 
+                id="date" 
+                style="max-width:200px"
+                value="{{dateOfBirth}}"
+                disabled 
+                required
+              />
+            </div>
+
+          {% elseif pfpj == "pj" %}
+            <div class="col pb-3">
+              <label class="labels">Nome da Empresa</label>
+              <input
+                type="text"
+                class="form-control form-disabled"
+                name="NomeDaEmpresa"
+                id="NomeDaEmpresa"
+                value="{{NomeDaEmpresa}}"
+                placeholder="Nome Da Empresa"
+                required
+                disabled
+              />
+              <div class="profileInfo">{{NomeDaEmpresa}}</div>
+            </div>
+            <div class="col-md-12 pb-3">
+              <label class="labels">Razão Social</label>
+              <input
+                type="text"
+                class="form-control form-disabled"
+                name="razaoSocial"
+                id="razaoSocial"
+                value="{{razaoSocial}}"
+                placeholder="Razão Social"
+                required
+                disabled
+              />
+              <div class="profileInfo">{{razaoSocial}}</div>
+            </div>
+            <div class="col pb-3">
+              <label class="labels">CNPJ</label>
+              <input
+                type="text"
+                class="form-control form-disabled"
+                name="cnpj"
+                id="cnpj"
+                value="{{cnpj}}"
+                placeholder="12.123.123/1234-12"
+                required
+                disabled
+              />
+              <div class="profileInfo">{{cnpj}}</div>
+            </div>
+          {% endif %}
           <div class="col-md-12 pb-3">
             <label class="labels">Telefone</label>
             <input
               type="text"
               class="form-control form-disabled"
               name="phoneNumber"
+              id="phoneNumber"
               placeholder="enter phone number"
               value="{{phoneNumber}}"
+              minlength="11"
               required
               disabled
             />
             <div class="profileInfo">{{phoneNumber}}</div>
+          </div>
+          <div class="col-md-12 pb-3">
+            <label class="labels">CEP</label>
+            <input
+              type="text"
+              class="form-control form-disabled"
+              name="cep"
+              id="cep"
+              placeholder="12345.123"
+              value="{{cep}}"
+              required
+              disabled
+            />
+            <div class="profileInfo">{{cep}}</div>
           </div>
           <div class="col-md-12 pb-3">
             <label class="labels">Email</label>
@@ -78,9 +195,9 @@
               required
               disabled
             />
-            <div class="profileInfo">{{password}}</div>
+            <div class="profileInfo">{% for char in hidenPassword %}*{% endfor %}</div>
           </div>
-          <div class="col-md-12 pb-3">
+          <div class="col-md-12 pb-3 form-disabled">
             <label class="labels">Confirmação de Senha</label>
             <input
               type="text"
@@ -91,7 +208,7 @@
               required
               disabled
             />
-            <div class="profileInfo">{{password}}</div>
+            <div class="profileInfo">{% for char in hidenPassword %}*{% endfor %}</div>
           </div>
         </div>
 
@@ -127,5 +244,8 @@
 {% endblock %}
 
 {% block extraJS %}
+<script src="{{BASE}}public/vendor/cleaveJs/cleave.js"></script>
+<script src="{{BASE}}public/vendor/cleaveJs/cleave-phone.i18n.js"></script>
 <script src="{{BASE}}public/assets/js/profile.js"></script>
+<script src="{{BASE}}public/assets/js/signIn.js"></script>
 {% endblock %}

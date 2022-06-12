@@ -2,80 +2,1009 @@
     "countries":[
          {
             "countryName": "China",
-            "description": "ChinaChinaChinaChinaChinaChino",
-            "img": "/public/assets/img/imgs_descricoes/chinatown.jpg",
+            "description": "A China é uma nação muito populosa da Ásia Oriental cuja ampla paisagem abrange pradarias, desertos, montanhas, lagos, rios e mais de 14.000 km de litoral. ",
+            "img": "band_china.png",
             "cities":[
                 {
                     "name": "Hong Kong",                         
-                    "descripition": "Hong Kong, ===",
-                    "img": "/public/assets/img/imgs_descricoes/hong_kong.jpg",
+                    "descripition": "Hong Kong, ex-colônia britânica, é um território autônomo no sudeste da China.",
+                    "img": "hong_kong.jpg",
                     "packages": [
                         {
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
-                            "price": 1500
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
                         },
                         {
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
-                            "price": 1500
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
                         },
                         {
                             "type": "só volta",
                             "time": "25 de agosto até 14 de dezembro",
-                            "price": 2500
+                            "price": 2500,
+                            "imgs": "hong_kong1-hong_kong2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
-                            "price": 2700
+                            "price": 2700,
+                            "imgs": "hong_kong1-hong_kong2"
                         }
                     ]
                 },
                 {
                     "name": "Macau",                         
-                    "descripition": "Macau é uma ===",
-                    "img": "/public/assets/img/imgs_descricoes/macau.jpg",
+                    "descripition": "Macau é uma região autônoma na costa sul da China continental, separada de Hong Kong pelo delta do rio das Pérolas.",
+                    "img": "macau.jpg",
                     "packages": [
                         {
                             "type": "ida e volta",
                             "time": "12 de dezembro até 31 de dezembro",
-                            "price": 111500
+                            "price": 111500,
+                            "imgs": "macau1-macau2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 31 de dezembro",
-                            "price": 4444
+                            "price": 4444,
+                            "imgs": "macau1-macau2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
-                            "price": 5555
+                            "price": 5555,
+                            "imgs": "macau1-macau2"
                         }
                     ]
                 },
                 {
-                    "name": "Shenzen",                         
-                    "descripition": "Shenzhen, no sudeste da China ===",
-                    "img": "/public/assets/img/imgs_descricoes/shenzhen.jpg",
+                    "name": "Shenzhen",                         
+                    "descripition": "Shenzhen, no sudeste da China, é uma metrópole moderna que liga Hong Kong ao continente chinês. ",
+                    "img": "shenzhen.jpg",
                     "packages": [
                         {
                             "type": "ida e volta",
                             "time": "11 de dezembro até 22 de dezembro",
-                            "price": 9999
+                            "price": 9999,
+                            "imgs":"shenzhen1-shenzhen2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 11 de dezembro",
-                            "price": 7777
+                            "price": 7777,
+                            "imgs":"shenzhen1-shenzhen2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "23 de novembro até 21 de dezembro",
-                            "price": 8888
+                            "price": 8888,
+                            "imgs":"shenzhen1-shenzhen2"
                         }
                     ]
                 }   
+            ]
+        },
+        {
+            "countryName": "Brasil",
+            "description": "O Brasil, um vasto país sul-americano, estende-se da Bacia Amazônica, no norte, até os vinhedos e as gigantescas Cataratas do Iguaçu, no sul.",
+            "img": "band_brasil.png",
+            "cities":[
+                {
+                    "name": "Rio de janeiro",                         
+                    "descripition": "O Rio de Janeiro é uma grande cidade brasileira à beira-mar, famosa pelas praias de Copacabana e Ipanema, pela estátua de 38 metros de altura do Cristo Redentor",
+                    "img": "rio_de_janeiro.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "25 de agosto até 14 de dezembro",
+                            "price": 2500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 2700,
+                            "imgs": "hong_kong1-hong_kong2"
+                        }
+                    ]
+                },
+                {
+                    "name": "São Paulo",                         
+                    "descripition": "São Paulo, centro financeiro do Brasil, está entre as cidades mais populosas do mundo, com diversas instituições culturais e uma rica tradição arquitetônica.",
+                    "img": "sao_paulo.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "12 de dezembro até 31 de dezembro",
+                            "price": 111500,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 31 de dezembro",
+                            "price": 4444,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 5555,
+                            "imgs": "macau1-macau2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Salvador",                         
+                    "descripition": "Salvador, a capital do estado da Bahia no nordeste do Brasil.",
+                    "img": "salvador.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "11 de dezembro até 22 de dezembro",
+                            "price": 9999,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 11 de dezembro",
+                            "price": 7777,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "23 de novembro até 21 de dezembro",
+                            "price": 8888,
+                            "imgs":"shenzhen1-shenzhen2"
+                        }
+                    ]
+                }   
+            ]
+        },
+        {
+            "countryName": "Estados Unidos",
+            "description": "Os EUA são um país com 50 estados que cobrem uma vasta faixa da América do Norte, com o Alasca ao noroeste e o Havaí no Oceano Pacífico, estendendo a presença do país.",
+            "img": "band_eua.png",
+            "cities":[
+                {
+                    "name": "Los Angeles",                         
+                    "descripition": "Los Angeles é uma grande cidade do sul da Califórnia e também o centro da indústria de cinema e televisão do país.",
+                    "img": "los_angeles.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "25 de agosto até 14 de dezembro",
+                            "price": 2500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 2700,
+                            "imgs": "hong_kong1-hong_kong2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Orlando",                         
+                    "descripition": "Orlando, uma cidade no centro da Flórida, abriga mais de uma dezena de parques temáticos. ",
+                    "img": "orlando.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "12 de dezembro até 31 de dezembro",
+                            "price": 111500,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 31 de dezembro",
+                            "price": 4444,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 5555,
+                            "imgs": "macau1-macau2"
+                        }
+                    ]
+                },
+                {
+                    "name": "New York",                         
+                    "descripition": "A cidade de Nova York compreende 5 distritos situados no encontro do rio Hudson com o Oceano Atlântico.",
+                    "img": "new_york.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "11 de dezembro até 22 de dezembro",
+                            "price": 9999,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 11 de dezembro",
+                            "price": 7777,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "23 de novembro até 21 de dezembro",
+                            "price": 8888,
+                            "imgs":"shenzhen1-shenzhen2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Miami",                         
+                    "descripition": "Miami é uma cidade internacional no extremo sudeste da Flórida. Sua influência cubana se reflete nos cafés e lojas de charutos que ocupam a Calle Ocho, em Little Havana.",
+                    "img": "miami.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "11 de dezembro até 22 de dezembro",
+                            "price": 9999,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 11 de dezembro",
+                            "price": 7777,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "23 de novembro até 21 de dezembro",
+                            "price": 8888,
+                            "imgs":"shenzhen1-shenzhen2"
+                        }
+                    ]
+                }   
+            ]
+        },
+        {
+            "countryName": "Tailandia",
+            "description": "A Tailândia é um país do Sudeste Asiático conhecido pelas praias tropicais, pelos palácios reais suntuosos, pelas ruínas antigas e pelos templos ornamentados com figuras de Buda.",
+            "img": "band_tailandia.png",
+            "cities":[
+                {
+                    "name": "Bangkok",                         
+                    "descripition": "Bangkok, a capital da Tailândia, é uma grande cidade conhecida pelos santuários ornamentados e pela animada vida urbana.",
+                    "img": "bangkok.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "25 de agosto até 14 de dezembro",
+                            "price": 2500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 2700,
+                            "imgs": "hong_kong1-hong_kong2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Ayutthaya",                         
+                    "descripition": "Mais de 400 templos foram erguidos na região que hoje é tombada como patrimônio da humanidade pela Unesco.",
+                    "img": "ayutthaya.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "12 de dezembro até 31 de dezembro",
+                            "price": 111500,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 31 de dezembro",
+                            "price": 4444,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 5555,
+                            "imgs": "macau1-macau2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Lopburi",                         
+                    "descripition": "Lopburi é uma das cidades mais antigas da Tailândia, uma antiga capital e a segunda capital depois que Ayutthaya foi estabelecida em 1350.",
+                    "img": "lopburi.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "11 de dezembro até 22 de dezembro",
+                            "price": 9999,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 11 de dezembro",
+                            "price": 7777,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "23 de novembro até 21 de dezembro",
+                            "price": 8888,
+                            "imgs":"shenzhen1-shenzhen2"
+                        }
+                    ]
+                }   
+            ]
+        },
+        {
+            "countryName": "Inglaterra",
+            "description": "A Inglaterra, local de nascimento de Shakespeare e dos Beatles, é um país nas ilhas britânicas que faz fronteira com a Escócia e o País de Gales.",
+            "img": "band_inglaterra.png",
+            "cities":[
+                {
+                    "name": "Londres",                         
+                    "descripition": "Londres, capital da Inglaterra e do Reino Unido, é uma cidade do século 21 com uma história que remonta à era romana.",
+                    "img": "londres.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "25 de agosto até 14 de dezembro",
+                            "price": 2500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 2700,
+                            "imgs": "hong_kong1-hong_kong2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Manchester",                         
+                    "descripition": "Manchester é uma grande cidade no noroeste da Inglaterra com uma rica herança industrial. ",
+                    "img": "manchester.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "12 de dezembro até 31 de dezembro",
+                            "price": 111500,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 31 de dezembro",
+                            "price": 4444,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 5555,
+                            "imgs": "macau1-macau2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Liverpool",                         
+                    "descripition": "Liverpool é uma cidade portuária situada no noroeste da Inglaterra, onde o rio Mersey se encontra com o Mar da Irlanda.",
+                    "img": "liverpool.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "11 de dezembro até 22 de dezembro",
+                            "price": 9999,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 11 de dezembro",
+                            "price": 7777,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "23 de novembro até 21 de dezembro",
+                            "price": 8888,
+                            "imgs":"shenzhen1-shenzhen2"
+                        }
+                    ]
+                }   
+            ]
+        },
+        {
+            "countryName": "Singapura",
+            "description": "Uma cidade-estado insular situada ao sul da Malásia, é um centro financeiro global com clima tropical e população multicultural. Seu centro colonial gira em torno do Padang.",
+            "img": "band_singapura.png",
+            "cities":[
+                {
+                    "name": "Chinatown",                         
+                    "descripition": "O labirinto de ruas estreitas de Chinatown inclui a Chinatown Food Street, com seus restaurantes que servem pratos tradicionais como arroz com frango hainanês, macarrão e satay.",
+                    "img": "chinatown.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "25 de agosto até 14 de dezembro",
+                            "price": 2500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 2700,
+                            "imgs": "hong_kong1-hong_kong2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Sentosa Island",                         
+                    "descripition": "Sentosa, que significa paz e tranquilidade em língua malaia, é uma ilha resort em Singapura.",
+                    "img": "sentosa.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "12 de dezembro até 31 de dezembro",
+                            "price": 111500,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 31 de dezembro",
+                            "price": 4444,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 5555,
+                            "imgs": "macau1-macau2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Distrito Colonial",                         
+                    "descripition": "Descubra Cingapura como foi do início do século 19 até 1965 nesta excursão turística pelas relíquias e monumentos do passado colonial do país.",
+                    "img": "distrito_colonial.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "11 de dezembro até 22 de dezembro",
+                            "price": 9999,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 11 de dezembro",
+                            "price": 7777,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "23 de novembro até 21 de dezembro",
+                            "price": 8888,
+                            "imgs":"shenzhen1-shenzhen2"
+                        }
+                    ]
+                }   
+            ]
+        },
+        {
+            "countryName": "França",
+            "description": "A França, na Europa Ocidental, tem cidades medievais, aldeias alpinas e praias mediterrâneas. Paris, sua capital, é famosa pelas casas de alta costura, museus de arte clássica, como o Louvre, e monumentos como a Torre Eiffel.",
+            "img": "band_franca.png",
+            "cities":[
+                {
+                    "name": "Paris",                         
+                    "descripition": "Paris, a capital da França, é uma importante cidade europeia e um centro mundial de arte, moda, gastronomia e cultura.",
+                    "img": "paris.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "25 de agosto até 14 de dezembro",
+                            "price": 2500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 2700,
+                            "imgs": "hong_kong1-hong_kong2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Lyon",                         
+                    "descripition": "Lyon, cidade na histórica região francesa do Ródano-Alpes, está situada na junção dos rios Ródano e Saône. ",
+                    "img": "lyon.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "12 de dezembro até 31 de dezembro",
+                            "price": 111500,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 31 de dezembro",
+                            "price": 4444,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 5555,
+                            "imgs": "macau1-macau2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Nice",                         
+                    "descripition": "Nice, capital do departamento dos Alpes Marítimos, na Riviera Francesa, está localizada na praia de seixos da Baie des Anges.",
+                    "img": "nice.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "11 de dezembro até 22 de dezembro",
+                            "price": 9999,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 11 de dezembro",
+                            "price": 7777,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "23 de novembro até 21 de dezembro",
+                            "price": 8888,
+                            "imgs":"shenzhen1-shenzhen2"
+                        }
+                    ]
+                }   
+            ]
+        },
+        {
+            "countryName": "Itália",
+            "description": "A Itália, país europeu com uma longa costa mediterrânea, deixou uma marca poderosa na culinária e na cultura ocidentais.",
+            "img": "band_italia.png",
+            "cities":[
+                {
+                    "name": "Roma",                         
+                    "descripition": "Roma, a capital da Itália, é uma cidade cosmopolita, enorme, com quase 3.000 anos de arte, arquitetura e cultura influentes no mundo todo e à mostra.",
+                    "img": "roma.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "25 de agosto até 14 de dezembro",
+                            "price": 2500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 2700,
+                            "imgs": "hong_kong1-hong_kong2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Milão",                         
+                    "descripition": "Milão, uma metrópole na região da Lombardia ao norte da Itália, é uma capital mundial da moda e do design.",
+                    "img": "milao.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "12 de dezembro até 31 de dezembro",
+                            "price": 111500,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 31 de dezembro",
+                            "price": 4444,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 5555,
+                            "imgs": "macau1-macau2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Veneza",                         
+                    "descripition": "Veneza, a capital da região de Vêneto, no norte da Itália, é formada por mais de 100 pequenas ilhas em uma lagoa no Mar Adriático.",
+                    "img": "veneza.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "11 de dezembro até 22 de dezembro",
+                            "price": 9999,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 11 de dezembro",
+                            "price": 7777,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "23 de novembro até 21 de dezembro",
+                            "price": 8888,
+                            "imgs":"shenzhen1-shenzhen2"
+                        }
+                    ]
+                }   
+            ]
+        },
+        {
+            "countryName": "Japão",
+            "description": "O Japão, país insular no Oceano Pacífico, tem cidades densas, palácios imperiais, parques nacionais montanhosos e milhares de santuários e templos.",
+            "img": "band_japao.png",
+            "cities":[
+                {
+                    "name": "Tokyo",                         
+                    "descripition": "Tóquio, a movimentada capital do Japão, combina o estilo ultramoderno com o tradicional, desde arranha-céus iluminados por neon a templos históricos.",
+                    "img": "tokyo.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "25 de agosto até 14 de dezembro",
+                            "price": 2500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 2700,
+                            "imgs": "hong_kong1-hong_kong2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Kyoto",                         
+                    "descripition": "Kyoto, antiga capital do Japão, é uma cidade da ilha de Honshu, famosa por seus vários templos clássicos budistas.",
+                    "img": "kyoto.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "12 de dezembro até 31 de dezembro",
+                            "price": 111500,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 31 de dezembro",
+                            "price": 4444,
+                            "imgs": "macau1-macau2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 5555,
+                            "imgs": "macau1-macau2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Osaka",                         
+                    "descripition": "Osaka é uma grande cidade portuária e um centro comercial na ilha japonesa de Honshu.",
+                    "img": "osaka.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "11 de dezembro até 22 de dezembro",
+                            "price": 9999,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "22 de agosto até 11 de dezembro",
+                            "price": 7777,
+                            "imgs":"shenzhen1-shenzhen2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "23 de novembro até 21 de dezembro",
+                            "price": 8888,
+                            "imgs":"shenzhen1-shenzhen2"
+                        }
+                    ]
+                }   
+            ]
+        },
+        {
+            "countryName": "Grecia",
+            "description": "A Grécia é um país do sudeste da Europa com milhares de ilhas espalhadas pelos mares Egeu e Jônico",
+            "img": "band_grecia.png",
+            "cities":[
+                {
+                    "name": "Atenas",                         
+                    "descripition": "Atenas é a capital da Grécia. A cidade também foi o centro da Grécia Antiga, um império e civilização poderosos, e ainda é dominada por monumentos do século V a.C.",
+                    "img": "atenas.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "25 de agosto até 14 de dezembro",
+                            "price": 2500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 2700,
+                            "imgs": "hong_kong1-hong_kong2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "countryName": "África do Sul",
+            "description": "A África do Sul é um país situado na extremidade sul do continente africano e marcado por vários ecossistemas diferentes.",
+            "img": "band_africa_do_sul.png",
+            "cities":[
+                {
+                    "name": "Cidade do Cabo",                         
+                    "descripition": "A Cidade do Cabo é uma cidade portuária na costa sudoeste da África do Sul, em uma península ao pé da imponente Montanha da Mesa.",
+                    "img": "cidade_do_cabo.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "25 de agosto até 14 de dezembro",
+                            "price": 2500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 2700,
+                            "imgs": "hong_kong1-hong_kong2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "countryName": "Alemanha",
+            "description": "A África do Sul é um país situado na extremidade sul do continente africano e marcado por vários ecossistemas diferentes.",
+            "img": "band_alemanha.png",
+            "cities":[
+                {
+                    "name": "Berlim",                         
+                    "descripition": "A Cidade do Cabo é uma cidade portuária na costa sudoeste da África do Sul, em uma península ao pé da imponente Montanha da Mesa.",
+                    "img": "berlim.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "25 de agosto até 14 de dezembro",
+                            "price": 2500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 2700,
+                            "imgs": "hong_kong1-hong_kong2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "countryName": "Peru",
+            "description": "O Peru é um país da América do Sul que abriga uma parte da Floresta Amazônica e Machu Picchu, uma antiga cidade inca na cordilheira dos Andes.",
+            "img": "band_peru.png",
+            "cities":[
+                {
+                    "name": "Machu Picchu",                         
+                    "descripition": "Machu Picchu é uma cidadela inca que fica no alto da Cordilheira dos Andes no Peru, acima do vale do rio Urubamba.",
+                    "img": "machu_picchu.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "25 de agosto até 14 de dezembro",
+                            "price": 2500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 2700,
+                            "imgs": "hong_kong1-hong_kong2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "countryName": "Austrália",
+            "description": "A Austrália é um país continental cercado pelos oceanos Índico e Pacífico. Suas principais cidades, Sydney, Brisbane, Melbourne, Perth e Adelaide, são costeiras.",
+            "img": "band_australia.png",
+            "cities":[
+                {
+                    "name": "Sydney",                         
+                    "descripition": "Sydney, capital do estado de Nova Gales do Sul e uma das maiores cidades da Austrália.",
+                    "img": "machu_picchu.jpg",
+                    "packages": [
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida e volta",
+                            "time": "25 de dezembro até 30 de dezembro",
+                            "price": 1500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "só volta",
+                            "time": "25 de agosto até 14 de dezembro",
+                            "price": 2500,
+                            "imgs": "hong_kong1-hong_kong2"
+                        },
+                        {
+                            "type": "ida, com escala, volta",
+                            "time": "27 de novembro até 14 de dezembro",
+                            "price": 2700,
+                            "imgs": "hong_kong1-hong_kong2"
+                        }
+                    ]
+                }
             ]
         }
     ]

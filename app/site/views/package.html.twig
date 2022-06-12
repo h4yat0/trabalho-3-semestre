@@ -15,16 +15,13 @@
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     {% for img in imgs %}
+                        <div class="carousel-item
                         {% if loop.first %}
-                            <div class="carousel-item active">
-                                <img src="{{BASE}}public/assets/img/{{img}}" class="package-img" alt="...">
-                            </div>
-                            
-                            {% else %}
-                                <div class="carousel-item">
-                                    <img src="{{BASE}}public/assets/img/{{img}}" class="package-img" alt="...">
-                                </div>
-                        {% endif %}
+                        active
+                        {% endif %}    
+                        ">
+                            <img src="{{BASE}}public/assets/img/imgs_xml_json/{{img}}.jpg" class="package-img" alt="...">
+                        </div>
                     {% endfor %}
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

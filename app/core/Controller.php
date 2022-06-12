@@ -14,6 +14,7 @@ abstract class Controller
         $page .= '.html.twig';
         $loader = new \Twig\Loader\FilesystemLoader('app/site/views');
         $twig = new \Twig\Environment($loader);
+        $twig->addGlobal('BASE', BASE);
         echo $twig->render($page, $params);
     }
 
