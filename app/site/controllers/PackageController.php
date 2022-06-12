@@ -8,14 +8,25 @@ use app\site\models\UserModel;
 class PackageController extends Controller
 {
 
-    public function index(string $packageName, int $numberOfPeople, int $price, array $imgs)
+    public function index(string $packageName, int $numberOfPeople, string $type, string $time, int $price, array $imgs)
     {
-        $packageName = str_replace('%20', ' ', $packageName);
+        $packageNameFormated = $this->format($packageName);
+        $typeFormated = $this->format($type);
+        $timeFormated = $this->format($time);
         $this->View('package', [
-            'packageName' => $packageName,
+            'packageName' => $packageNameFormated,
             'numberOfPeople' => $numberOfPeople,
+            'type' =>  $typeFormated,
+            'time' => $timeFormated,
             'price' => $price,
             'imgs' => $imgs
         ]);
+    }
+
+    public function format(string $param)
+    {
+        $param = str_replace('%20', ' ', $param);
+        $param = str_replace('%C3%A9', 'é', $param);
+        return $param;
     }
 }
