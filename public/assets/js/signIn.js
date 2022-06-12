@@ -4,33 +4,39 @@ let phoneNumber = new Cleave('#phoneNumber', {
     phoneRegionCode: 'BR'
 })
 
-let cpf = new Cleave('#cpf', {
-  numericOnly: true,
-  delimiters: ['.', '.', '-'],
-  blocks: [3, 3, 3, 2],
-  uppercase: true
-});
-
-let rg = new Cleave('#rg', {
-  numericOnly: true,
-  delimiters: ['.', '.', '-'],
-  blocks: [2, 3, 3, 1],
-  uppercase: true
-});
-
-let cnpj = new Cleave('#cnpj', {
-  numericOnly: true,
-  delimiters: ['.', '.', '/', '.', '-'],
-  blocks: [2, 3, 3, 4, 2],
-  uppercase: true
-});
-
 let cep = new Cleave('#cep', {
   numericOnly: true,
   delimiters: ['-'],
   blocks: [5, 3],
   uppercase: true
 });
+
+if (document.getElementById('cpf') != null){
+  let cpf = new Cleave('#cpf', {
+    numericOnly: true,
+    delimiters: ['.', '.', '-'],
+    blocks: [3, 3, 3, 2],
+    uppercase: true
+  });
+  let rg = new Cleave('#rg', {
+    numericOnly: true,
+    delimiters: ['.', '.', '-'],
+    blocks: [2, 3, 3, 1],
+    uppercase: true
+  });
+}
+
+if (document.getElementById('cnpj') != null){
+  let cnpj = new Cleave('#cnpj', {
+    numericOnly: true,
+    delimiters: ['.', '.', '/', '-'],
+    blocks: [2, 3, 3, 4, 2],
+    uppercase: true
+  });
+
+}
+
+
 
 function changePessoa() {
   
