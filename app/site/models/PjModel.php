@@ -37,6 +37,6 @@ class PjModel
     {
         $dao = new PjDAO();
 
-        return $datas = $dao->selectClientCode($clientCode);
+        return $datas = $dao->selectClient($clientCode);
     }
 }

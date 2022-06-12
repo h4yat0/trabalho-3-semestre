@@ -44,4 +44,13 @@ class ClientDAO extends \app\core\DAO
 
         return $datas = $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function selectClientInfos(string $id) {
+        $sql = "SELECT * FROM cliente WHERE usuario_id=? LIMIT 1";
+
+        $stmt = $this->connect->prepare($sql);
+        $stmt->execute(array($id));
+
+        return $datas = $stmt->fetch(PDO::FETCH_OBJ);
+    }
 }

@@ -3,6 +3,7 @@
 namespace app\site\DAO;
 
 use app\site\models\PfModel;
+use PDO;
 
 class PfDAO extends \app\core\DAO
 {
@@ -39,5 +40,14 @@ class PfDAO extends \app\core\DAO
         $stmt->execute(array($clientCode));
 
         return $datas = $stmt->fetch(PDO::FETCH_OBJ);
+    }
+
+    public function isPf($id)
+    {
+        $sql = "SELECT * FROM pessoa_fisica WHERE cliente_codigo=? LIMIT 1";
+
+        $stmt = $this->connect->prepare($sql);
+        $stmt->execute(array($id));
+        return $user = $stmt->fetch();
     }
 }

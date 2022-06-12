@@ -41,4 +41,15 @@ class PfModel
 
         return $datas = $dao->selectClientCode($clientCode);
     }
+
+    public function isPf($id)
+    {
+        $dao = new PfDAO();
+
+        if ($dao->isPf($id)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

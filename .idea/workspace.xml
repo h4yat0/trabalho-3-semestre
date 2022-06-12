@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d75ca3c1-c080-4724-940f-7061d631ff48" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cfc8526a-fe15-4172-b682-63476a1413b6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cfc8526a-fe15-4172-b682-63476a1413b6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/site/DAO/ClientDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/DAO/ClientDAO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/site/DAO/PfDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/DAO/PfDAO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/site/DAO/PjDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/DAO/PjDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/DAO/UserDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/DAO/UserDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/controllers/CadastrarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/controllers/CadastrarController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/controllers/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/site/controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/controllers/ProfileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/site/models/ClientModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/models/ClientModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/site/models/PfModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/models/PfModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/site/models/PjModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/models/PjModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/models/UserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/models/UserModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/views/cadastrar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/views/cadastrar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/site/views/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/site/views/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="deploy-aguiar" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -92,6 +88,7 @@
       <workItem from="1654863196730" duration="3288000" />
       <workItem from="1654963853054" duration="5901000" />
       <workItem from="1655036025921" duration="13399000" />
+      <workItem from="1655055214119" duration="1112000" />
     </task>
     <servers />
   </component>

@@ -33,12 +33,12 @@ class PjDAO extends \app\core\DAO
         $stmt->execute(array($clientCode));
     }
 
-    public function selectClientCode(string $clientCode) {
+    public function selectClient(string $clientCode) {
         $sql = "SELECT * FROM pessoa_juridica WHERE cliente_codigo=? LIMIT 1";
 
         $stmt = $this->connect->prepare($sql);
         $stmt->execute(array($clientCode));
 
-        return $datas = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $datas = $stmt->fetch(PDO::FETCH_OBJ);
     }
 }

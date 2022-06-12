@@ -69,6 +69,6 @@ class ClientModel
     {
         $dao = new ClientDAO();
 
-        return $datas = $dao->selectUserId($userId);
+        return $datas = $dao->selectClientInfos($userId);
     }
 }
