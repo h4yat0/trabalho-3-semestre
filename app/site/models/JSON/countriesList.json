@@ -102,25 +102,25 @@
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "rio_de_janeiro1-rio_de_janeiro2"
                         },
                         {
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "rio_de_janeiro1-rio_de_janeiro2"
                         },
                         {
                             "type": "só volta",
                             "time": "25 de agosto até 14 de dezembro",
                             "price": 2500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "rio_de_janeiro1-rio_de_janeiro2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 2700,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "rio_de_janeiro1-rio_de_janeiro2"
                         }
                     ]
                 },
@@ -133,19 +133,19 @@
                             "type": "ida e volta",
                             "time": "12 de dezembro até 31 de dezembro",
                             "price": 111500,
-                            "imgs": "macau1-macau2"
+                            "imgs": "sao_paulo1-sao_paulo2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 31 de dezembro",
                             "price": 4444,
-                            "imgs": "macau1-macau2"
+                            "imgs": "sao_paulo1-sao_paulo2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 5555,
-                            "imgs": "macau1-macau2"
+                            "imgs": "sao_paulo1-sao_paulo2"
                         }
                     ]
                 },
@@ -158,19 +158,19 @@
                             "type": "ida e volta",
                             "time": "11 de dezembro até 22 de dezembro",
                             "price": 9999,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"salvador1-salvador2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 11 de dezembro",
                             "price": 7777,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"salvador1-salvador2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "23 de novembro até 21 de dezembro",
                             "price": 8888,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"salvador1-salvador2"
                         }
                     ]
                 }   
@@ -190,25 +190,25 @@
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "los_angeles1-los_angeles2"
                         },
                         {
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "los_angeles1-los_angeles2"
                         },
                         {
                             "type": "só volta",
                             "time": "25 de agosto até 14 de dezembro",
                             "price": 2500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "los_angeles1-los_angeles2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 2700,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "los_angeles1-los_angeles2"
                         }
                     ]
                 },
@@ -221,19 +221,19 @@
                             "type": "ida e volta",
                             "time": "12 de dezembro até 31 de dezembro",
                             "price": 111500,
-                            "imgs": "macau1-macau2"
+                            "imgs": "orlando1-orlando2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 31 de dezembro",
                             "price": 4444,
-                            "imgs": "macau1-macau2"
+                            "imgs": "orlando1-orlando2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 5555,
-                            "imgs": "macau1-macau2"
+                            "imgs": "orlando1-orlando2"
                         }
                     ]
                 },
@@ -246,19 +246,19 @@
                             "type": "ida e volta",
                             "time": "11 de dezembro até 22 de dezembro",
                             "price": 9999,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"new_york1-new_york2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 11 de dezembro",
                             "price": 7777,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"new_york1-new_york2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "23 de novembro até 21 de dezembro",
                             "price": 8888,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"new_york1-new_york2"
                         }
                     ]
                 },
@@ -271,19 +271,19 @@
                             "type": "ida e volta",
                             "time": "11 de dezembro até 22 de dezembro",
                             "price": 9999,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"miami1-miami2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 11 de dezembro",
                             "price": 7777,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"miami1-miami2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "23 de novembro até 21 de dezembro",
                             "price": 8888,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"miami1-miami2"
                         }
                     ]
                 }   
@@ -391,25 +391,25 @@
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "londres1-londres2"
                         },
                         {
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "londres1-londres2"
                         },
                         {
                             "type": "só volta",
                             "time": "25 de agosto até 14 de dezembro",
                             "price": 2500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "londres1-londres2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 2700,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "londres1-londres2"
                         }
                     ]
                 },
@@ -422,19 +422,19 @@
                             "type": "ida e volta",
                             "time": "12 de dezembro até 31 de dezembro",
                             "price": 111500,
-                            "imgs": "macau1-macau2"
+                            "imgs": "manchester1-manchester2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 31 de dezembro",
                             "price": 4444,
-                            "imgs": "macau1-macau2"
+                            "imgs": "manchester1-manchester2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 5555,
-                            "imgs": "macau1-macau2"
+                            "imgs": "manchester1-manchester2"
                         }
                     ]
                 },
@@ -447,19 +447,19 @@
                             "type": "ida e volta",
                             "time": "11 de dezembro até 22 de dezembro",
                             "price": 9999,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"liverpool1-liverpool2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 11 de dezembro",
                             "price": 7777,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"liverpool1-liverpool2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "23 de novembro até 21 de dezembro",
                             "price": 8888,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"liverpool1-liverpool2"
                         }
                     ]
                 }   
@@ -479,25 +479,25 @@
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "chinatown1-chinatown2"
                         },
                         {
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "chinatown1-chinatown2"
                         },
                         {
                             "type": "só volta",
                             "time": "25 de agosto até 14 de dezembro",
                             "price": 2500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "chinatown1-chinatown2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 2700,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "chinatown1-chinatown2"
                         }
                     ]
                 },
@@ -510,19 +510,19 @@
                             "type": "ida e volta",
                             "time": "12 de dezembro até 31 de dezembro",
                             "price": 111500,
-                            "imgs": "macau1-macau2"
+                            "imgs": "sentosa1-sentosa2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 31 de dezembro",
                             "price": 4444,
-                            "imgs": "macau1-macau2"
+                            "imgs": "sentosa1-sentosa2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 5555,
-                            "imgs": "macau1-macau2"
+                            "imgs": "sentosa1-sentosa2"
                         }
                     ]
                 },
@@ -535,19 +535,19 @@
                             "type": "ida e volta",
                             "time": "11 de dezembro até 22 de dezembro",
                             "price": 9999,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"distrito_colonial1-distrito_colonial2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 11 de dezembro",
                             "price": 7777,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"distrito_colonial1-distrito_colonial2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "23 de novembro até 21 de dezembro",
                             "price": 8888,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"distrito_colonial1-distrito_colonial2"
                         }
                     ]
                 }   
@@ -567,25 +567,25 @@
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "paris1-paris2"
                         },
                         {
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "paris1-paris2"
                         },
                         {
                             "type": "só volta",
                             "time": "25 de agosto até 14 de dezembro",
                             "price": 2500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "paris1-paris2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 2700,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "paris1-paris2"
                         }
                     ]
                 },
@@ -598,19 +598,19 @@
                             "type": "ida e volta",
                             "time": "12 de dezembro até 31 de dezembro",
                             "price": 111500,
-                            "imgs": "macau1-macau2"
+                            "imgs": "lyon1-lyon2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 31 de dezembro",
                             "price": 4444,
-                            "imgs": "macau1-macau2"
+                            "imgs": "lyon1-lyon2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 5555,
-                            "imgs": "macau1-macau2"
+                            "imgs": "lyon1-lyon2"
                         }
                     ]
                 },
@@ -623,19 +623,19 @@
                             "type": "ida e volta",
                             "time": "11 de dezembro até 22 de dezembro",
                             "price": 9999,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"nice1-nice2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 11 de dezembro",
                             "price": 7777,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"nice1-nice2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "23 de novembro até 21 de dezembro",
                             "price": 8888,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"nice1-nice2"
                         }
                     ]
                 }   
@@ -655,25 +655,25 @@
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "roma1-roma2"
                         },
                         {
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "roma1-roma2"
                         },
                         {
                             "type": "só volta",
                             "time": "25 de agosto até 14 de dezembro",
                             "price": 2500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "roma1-roma2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 2700,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "roma1-roma2"
                         }
                     ]
                 },
@@ -686,19 +686,19 @@
                             "type": "ida e volta",
                             "time": "12 de dezembro até 31 de dezembro",
                             "price": 111500,
-                            "imgs": "macau1-macau2"
+                            "imgs": "milao1-milao2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 31 de dezembro",
                             "price": 4444,
-                            "imgs": "macau1-macau2"
+                            "imgs": "milao1-milao2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 5555,
-                            "imgs": "macau1-macau2"
+                            "imgs": "milao1-milao2"
                         }
                     ]
                 },
@@ -711,19 +711,19 @@
                             "type": "ida e volta",
                             "time": "11 de dezembro até 22 de dezembro",
                             "price": 9999,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"veneza1-veneza2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 11 de dezembro",
                             "price": 7777,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"veneza1-veneza2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "23 de novembro até 21 de dezembro",
                             "price": 8888,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"veneza1-veneza2"
                         }
                     ]
                 }   
@@ -743,25 +743,25 @@
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "tokyo1-tokyo2"
                         },
                         {
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "tokyo1-tokyo2"
                         },
                         {
                             "type": "só volta",
                             "time": "25 de agosto até 14 de dezembro",
                             "price": 2500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "tokyo1-tokyo2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 2700,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "tokyo1-tokyo2"
                         }
                     ]
                 },
@@ -774,19 +774,19 @@
                             "type": "ida e volta",
                             "time": "12 de dezembro até 31 de dezembro",
                             "price": 111500,
-                            "imgs": "macau1-macau2"
+                            "imgs": "kyoto1-kyoto2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 31 de dezembro",
                             "price": 4444,
-                            "imgs": "macau1-macau2"
+                            "imgs": "kyoto1-kyoto2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 5555,
-                            "imgs": "macau1-macau2"
+                            "imgs": "kyoto1-kyoto2"
                         }
                     ]
                 },
@@ -799,19 +799,19 @@
                             "type": "ida e volta",
                             "time": "11 de dezembro até 22 de dezembro",
                             "price": 9999,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"osaka1-osaka2"
                         },
                         {
                             "type": "só volta",
                             "time": "22 de agosto até 11 de dezembro",
                             "price": 7777,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"osaka1-osaka2"
                         },
                         {
                             "type": "ida, com escala, volta",
-                            "time": "23 de novembro até 21 de dezembro",
+                            "time": "23 de novembro até 21 de dezembro", 
                             "price": 8888,
-                            "imgs":"shenzhen1-shenzhen2"
+                            "imgs":"osaka1-osaka2"
                         }
                     ]
                 }   
@@ -831,25 +831,25 @@
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "atenas1-atenas2"
                         },
                         {
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "atenas1-atenas2"
                         },
                         {
                             "type": "só volta",
                             "time": "25 de agosto até 14 de dezembro",
                             "price": 2500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "atenas1-atenas2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 2700,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "atenas1-atenas2"
                         }
                     ]
                 }
@@ -869,25 +869,25 @@
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "cidade_do_cabo1-cidade_do_cabo2"
                         },
                         {
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "cidade_do_cabo1-cidade_do_cabo2"
                         },
                         {
                             "type": "só volta",
                             "time": "25 de agosto até 14 de dezembro",
                             "price": 2500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "cidade_do_cabo1-cidade_do_cabo2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 2700,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "cidade_do_cabo1-cidade_do_cabo2"
                         }
                     ]
                 }
@@ -907,25 +907,25 @@
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "berlim1-berlim2"
                         },
                         {
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "berlim1-berlim2"
                         },
                         {
                             "type": "só volta",
                             "time": "25 de agosto até 14 de dezembro",
                             "price": 2500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "berlim1-berlim2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 2700,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "berlim1-berlim2"
                         }
                     ]
                 }
@@ -945,25 +945,25 @@
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "machu_picchu1-machu_pichhu2"
                         },
                         {
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "machu_picchu1-machu_pichhu2"
                         },
                         {
                             "type": "só volta",
                             "time": "25 de agosto até 14 de dezembro",
                             "price": 2500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "machu_picchu1-machu_pichhu2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 2700,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "machu_picchu1-machu_pichhu2"
                         }
                     ]
                 }
@@ -977,31 +977,31 @@
                 {
                     "name": "Sydney",                         
                     "descripition": "Sydney, capital do estado de Nova Gales do Sul e uma das maiores cidades da Austrália.",
-                    "img": "machu_picchu.jpg",
+                    "img": "sydney.jpg",
                     "packages": [
                         {
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "sydney1-sydney2"
                         },
                         {
                             "type": "ida e volta",
                             "time": "25 de dezembro até 30 de dezembro",
                             "price": 1500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "sydney1-sydney2"
                         },
                         {
                             "type": "só volta",
                             "time": "25 de agosto até 14 de dezembro",
                             "price": 2500,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "sydney1-sydney2"
                         },
                         {
                             "type": "ida, com escala, volta",
                             "time": "27 de novembro até 14 de dezembro",
                             "price": 2700,
-                            "imgs": "hong_kong1-hong_kong2"
+                            "imgs": "sydney1-sydney2"
                         }
                     ]
                 }
