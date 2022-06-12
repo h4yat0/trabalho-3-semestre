@@ -13,7 +13,7 @@
 Para a utilização desse projeto se faz necessário algumas tecnologias, essas sendo:
 
 - PHP 8.1.2 ou superior;
-- MySQL ou MariaDB;
+- MySQL/MariaDB;
 - Composer;
 
 ### Instalando componentes
@@ -25,20 +25,28 @@ Para a utilização desse projeto se faz necessário algumas tecnologias, essas 
 
 	Rode o seguinte camando na raiz do projeto 
 		
-		php composer.phar install
+		composer update
 
-- Caso esteja rodando pelo XAMP:
-	Instale o composer na pasta do php 
+- Para o banco de dados tanto xamp quanto mySQL podem ser utilizados. acesse o arquivo /app/config/config.php e altere o campo pass
+	<br>
+	- Para utilizar o xamp altere o campo para uma string vazia
+			
+			$_ENV['db']['pass'] = '';
+	- Para utilizar o mySQL altere o campo para a senha do seu banco local
+			
+			$_ENV['db']['pass'] = '';
+
+###### Em caso de exceção relaciona a PDO
+	
+- Procure o arquivo php.ini na pasta em que o mesmo está instalado
+- Abra o arquivo e procure por pdo utilizando ctrl+f
+- Localize a linha com o conteudo a seguir
+	
+		;extension=pdo_mysql
+- Caso exista um ponto e virgula no incio da linha, removo-o resultando em:
+
+		extension=pdo_mysql
 		
-		https://getcomposer.org/download/
-
-	Rode o seguinte comando na raiz do projeto
-
-		composer install
-
-Independente do caso rode o seguinte comando na raiz do projeto
-
-	composer update
 
 #### Estrutura do projeto
 
