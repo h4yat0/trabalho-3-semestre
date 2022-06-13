@@ -50,4 +50,21 @@ class PfDAO extends \app\core\DAO
         $stmt->execute(array($id));
         return $user = $stmt->fetch();
     }
+    public function selectCpf(string $cpf)
+    {
+        $sql = "SELECT * FROM pessoa_fisica WHERE cpf=? LIMIT 1";
+
+        $stmt = $this->connect->prepare($sql);
+        $stmt->execute(array($cpf));
+        return $user = $stmt->fetch();
+    }
+
+    public function selectRg(string $rg)
+    {
+        $sql = "SELECT * FROM pessoa_fisica WHERE rg=? LIMIT 1";
+
+        $stmt = $this->connect->prepare($sql);
+        $stmt->execute(array($rg));
+        return $user = $stmt->fetch();
+    }
 }

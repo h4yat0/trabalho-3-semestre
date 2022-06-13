@@ -41,4 +41,13 @@ class PjDAO extends \app\core\DAO
 
         return $datas = $stmt->fetch(PDO::FETCH_OBJ);
     }
+
+    public function selectCnpj(string $cnpj)
+    {
+        $sql = "SELECT * FROM pessoa_juridica WHERE cnpj=? LIMIT 1";
+
+        $stmt = $this->connect->prepare($sql);
+        $stmt->execute(array($cnpj));
+        return $user = $stmt->fetch();
+    }
 }

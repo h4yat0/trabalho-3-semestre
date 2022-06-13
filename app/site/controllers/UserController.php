@@ -17,4 +17,11 @@ class UserController extends Controller
         session_destroy();
         header('location: ../login');
     }
+
+    public function teste()
+    {
+       parent::View('cadastrar', [
+           'cpfUsed' => true
+       ]);
+    }
 }

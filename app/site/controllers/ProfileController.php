@@ -90,37 +90,83 @@ class ProfileController extends Controller
     public function save()
     {
         session_start();
-        $infos = new UserModel();
+        $modelUser = new UserModel();
+        $modelClient = new ClientModel();
+        $modelPf = new PfModel();
+        $modelPj = new PjModel();
 
-        if ($infos->isValidSession($_SESSION['token'])) {
-            $userInfo = $infos->userInfos($_SESSION['token']);
+        if ($modelUser->isValidSession($_SESSION['token'])) {
+            $userInfo = $modelUser->userInfos($_SESSION['token']);
+            $clientInfo = $modelClient->clientInfos($userInfo->id);
 
-            if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['phoneNumber']) && isset($_POST['password']) && isset($_POST['repeatPassword'])) {
-                $userNewInfo = new UserModel();
+            $modelUser->email = parent::cleanPost($_POST['email']);
+            $modelUser->password = parent::cleanPost($_POST['password']);
+            $modelUser->criptPass = base64_encode($modelUser->password);
+            $modelUser->repeatPassword = parent::cleanPost($_POST['repeatPassword']);
+            $modelClient->cep = parent::cleanPost($_POST['cep']);
+            $modelClient->phoneNumber = preg_replace('/[#$%^&*()+=\-\[\]\';,.\/{}|":<>?~\\\\]/', ' ', parent::cleanPost($_POST['phoneNumber']));
+            $modelUser->token = $userInfo->token;
 
-                $userNewInfo->name = parent::cleanPost($_POST['name']);
-                $userNewInfo->email = parent::cleanPost($_POST['email']);
-                $phone = preg_replace('/[#$%^&*()+=\-\[\]\';,.\/{}|":<>?~\\\\]/', ' ', parent::cleanPost($_POST['phoneNumber']));
-                $userNewInfo->phoneNumber = str_replace(' ', '', $phone);
-                $userNewInfo->password = parent::cleanPost($_POST['password']);
-                $userNewInfo->criptPass = base64_encode($userNewInfo->password);
-                $userNewInfo->repeatPassword = parent::cleanPost($_POST['repeatPassword']);
-                $userNewInfo->token = $userInfo->token;
+            $modelUser->update();
+            $modelClient->update($userInfo->id);
 
-                if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phoneNumber']) || empty($_POST['password']) || empty($_POST['repeatPassword'])) {
-                    $userNewInfo->error = ['emptyError' => 'Um ou mais campos vazio'];
+            if ($modelPf->isPf($clientInfo->codigo)) {
+                $modelPf->cpf = preg_replace('/[^0-9]/', '', parent::cleanPost($_POST['cpf']));
+                $modelPf->name = parent::cleanPost($_POST['name']);
+                $modelPf->gender = parent::cleanPost($_POST['sex']);
+                $modelPf->rg = preg_replace('/[^0-9]/', '', parent::cleanPost($_POST['rg']));
+                $modelPf->birthday = parent::cleanPost($_POST['dateOfBirth']);
+
+                $modelPf->update($clientInfo->codigo);
+            } else if (!$modelPf->isPf($clientInfo->codigo)){
+                $modelPj->socialReason = parent::cleanPost($_POST['razaoSocial']);
+                $modelPj->companyName = parent::cleanPost($_POST['NomeDaEmpresa']);
+                $modelPj->cnpj = preg_replace('/[^0-9]/', '', parent::cleanPost($_POST['cnpj']));
+
+                $modelPj->update($clientInfo->codigo);
+            }
+
+            // Valida se não tem nenhum campo comum vazio
+            if (empty($_POST['email']) || empty($_POST['cep']) || empty($_POST['phoneNumber']) || empty($_POST['password']) || empty($_POST['repeatPassword'])) {
+                $modelUser->error = ['emptyError' => 'Um ou mais campos vazio'];
+            } else {
+
+                self::editValidation($modelUser, $modelClient, $modelPf, $modelPj, $modelUser->email, $modelPf->rg, $modelPf->cpf, $modelPj->cnpj);
+                if (empty($modelUser->error) && empty($modelClient->error)) {
+                    $modelClient->update($userInfo->id);
+                    $modelUser->update();
                 } else {
-                    self::editValidation($userNewInfo, $userInfo->email);
-                    var_dump($userNewInfo->error);
-                    if (empty($userNewInfo->error)) {
-                        $userNewInfo->update();
-                        header('location: ../profile');
-                    }
+                    var_dump($modelClient->error);
+                    var_dump($modelUser->error);
                 }
             }
-        } else {
-            header('location: ../login');
-        }
+
+            // Verifica se pf ta vazio
+            if (empty($_POST['name']) || empty($_POST['cpf']) || empty($_POST['rg']) || empty($_POST['sex']) || empty($_POST['dateOfBirth'])) {
+                $modelPf->error = ['emptyError' => 'Um ou mais campos vazio'];
+            } else {
+                self::editValidation($modelUser, $modelClient, $modelPf, $modelPj, $modelUser->email, $modelPf->rg, $modelPf->cpf, $modelPj->cnpj);
+                if (empty($modelPf->error)) {
+                    $modelPf->update($clientInfo->codigo);
+                } else {
+                    var_dump($modelPf->error);
+                }
+            }
+
+            // Verifica se pj está vazio
+            if (empty($_POST['NomeDaEmpresa']) || empty($_POST['razaoSocial']) || empty($_POST['cnpj'])) {
+                $modelPj->error = ['emptyError' => 'Um ou mais campos vazio'];
+            } else {
+                self::editValidation($modelUser, $modelClient, $modelPf, $modelPj, $modelUser->email, $modelPf->rg, $modelPf->cpf, $modelPj->cnpj);
+                if (empty($modelPj->error)) {
+                    $modelPj->update($clientInfo->codigo);
+                } else {
+                    var_dump($modelPj->error);
+                }
+            }
+
+            header('location: ../profile');
+        } else header('location: ../login');
     }
 
     public function delete()
@@ -146,38 +192,55 @@ class ProfileController extends Controller
         }
     }
 
-    private static function editValidation(UserModel $userModel, string $email): void
+    private static function editValidation(UserModel $userModel, ClientModel $clientModel, PfModel $pfModel, PjModel $pjModel, string $email, string $rg, string $cpf, string $cnpj): void
     {
-        // EDITAR ISSO
 
         //Valida nome
-        if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/", $userModel->name)) {
-            $model->error = ['nameError' => 'Nome inválido'];
+        if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/", $pfModel->name)) {
+            $pfModel->error = ['nameError' => 'Nome inválido'];
         }
 
         //Valida email
-        if (!filter_var($model->email, FILTER_VALIDATE_EMAIL)) {
-            $model->error = ['emailError' => 'Email inválido'];
+        if (!filter_var($userModel->email, FILTER_VALIDATE_EMAIL)) {
+            $userModel->error = ['emailError' => 'Email inválido'];
         }
 
         //Valida telefone
-        if (!is_numeric($model->phoneNumber)) {
-            $model->error = ['phoneError' => 'Telefone inválido'];
+        if (!is_numeric($clientModel->phoneNumber)) {
+            $clientModel->error = ['phoneError' => 'Telefone inválido'];
         }
 
         //Valida se senha tem mais que 6 dígitos
-        if (strlen($model->password) < 6) {
-            $model->error = ['passError' => 'Tamanho mínimo de senha não atingido'];
+        if (strlen($userModel->password) < 6) {
+            $userModel->error = ['passError' => 'Tamanho mínimo de senha não atingido'];
         }
 
         //Verifica se o email está sendo usado por outra conta
-        if ($model->isRepeatedEmail($model->email) && $model->email !== $email) {
-            $model->error = ['usedEmailError' => 'Email não disponível'];
+        if ($userModel->isRepeatedEmail($userModel->email) && $userModel->email !== $email) {
+            $userModel->error = ['usedEmailError' => 'Email não disponível'];
+        }
+
+        // Verifica se o cpf já foi utilizado
+        if ($pfModel->isRepeatedCpf($pfModel->cpf) && $pfModel->cpf !== $cpf)
+        {
+            $pfModel->error = ['usedCpfError' => 'Cpf não disponível'];
+        }
+
+        // Verifica se o rg já foi utilizado
+        if ($pfModel->isRepeatedRg($pfModel->rg) && $pfModel->rg !== $rg)
+        {
+            $pfModel->error = ['usedRgError' => 'RG não disponível'];
+        }
+
+        // Verifica se o cnpj já foi utilizado
+        if ($pjModel->isRepeatedCnpj($pjModel->cnpj) && $pjModel->cnpj !== $cnpj)
+        {
+            $pjModel->error = ['usedCnpjError' => 'CNPJ não disponível'];
         }
 
         //Valida se senhas são iguais
-        if ($model->password !== $model->repeatPassword) {
-            $model->error = ['repeatPassError' => 'Senhas diferentes'];
+        if ($userModel->password !== $userModel->repeatPassword) {
+            $userModel->error = ['repeatPassError' => 'Senhas diferentes'];
         }
     }
 }
