@@ -90,7 +90,7 @@ class CadastrarController extends Controller
 
                 $modelPj->companyName = parent::cleanPost($_POST['NomeDaEmpresa']);
                 $modelPj->socialReason = parent::cleanPost($_POST['razaoSocial']);
-                $modelPj->cnpj = preg_replace('/[^0-9]/', '', parent::cleanPost($_POST['cnpj']));;
+                $modelPj->cnpj = preg_replace('/[^0-9]/', '', parent::cleanPost($_POST['cnpj']));
 
                 if (empty($_POST['NomeDaEmpresa']) || empty($_POST['razaoSocial']) || empty($_POST['cnpj'])) {
                     $modelPj->error = ['emptyError' => 'Um ou mais campos vazio'];

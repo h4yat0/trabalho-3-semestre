@@ -8,7 +8,7 @@ class PjModel
 {
     public string $socialReason;
     public string $companyName;
-    public string $cnpj;
+    public ?string $cnpj = '';
     public array $error = [];
 
     public function save(string $id): void
@@ -38,5 +38,15 @@ class PjModel
         $dao = new PjDAO();
 
         return $datas = $dao->selectClient($clientCode);
+    }
+
+    public function isRepeatedCnpj(string $cnpj): bool {
+        $dao = new PjDAO();
+
+        if ($dao->selectCnpj($cnpj)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

@@ -6,10 +6,10 @@ use app\site\DAO\PfDAO;
 
 class PfModel
 {
-    public string $cpf;
-    public string $name;
+    public string $cpf = '';
+    public string $name = '';
     public string $gender;
-    public string $rg;
+    public string $rg ='';
     public string $birthday;
     public array $error = [];
 
@@ -47,6 +47,26 @@ class PfModel
         $dao = new PfDAO();
 
         if ($dao->isPf($id)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function isRepeatedCpf(string $cpf): bool {
+        $dao = new PfDAO();
+
+        if ($dao->selectCpf($cpf)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function isRepeatedRg(string $rg): bool {
+        $dao = new PfDAO();
+
+        if ($dao->selectCpf($rg)) {
             return true;
         } else {
             return false;
